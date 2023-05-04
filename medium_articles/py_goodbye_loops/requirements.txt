@@ -1,0 +1,3 @@
+numpy 
+
+# sometimes in windows you need to do python3 -m pip install <lib_name>
