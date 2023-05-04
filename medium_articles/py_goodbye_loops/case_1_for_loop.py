@@ -29,9 +29,10 @@ def sum(num: int) -> None:
 
 
 
-sum(150000000) # 15 mil numbers 
+sum(150000000) # 150 mil numbers 
 '''  
-Sum is: 11249999925000000
+Sum is: 11249999925000000 aka 11,249,999,925,000,000 
+"Eleven quadrillion, two hundred forty-nine trillion, nine hundred ninety-nine billion, nine hundred twenty-five million."
 Time operation: 8.082597732543945
 '''
 
