@@ -7,3 +7,27 @@ creating an excel spreedsheet.
 Below we are creating 150,000,000 mil rows and 4 col filed 
 with random values between 0 and 50 
 '''
+
+import time 
+import numpy as np 
+import pandas as pd 
+
+dataframe = pd.DataFrame(
+    np.random.randint(1, 50, size=(150000000, 4)), columns=('a', 'b', 'c', 'd') 
+) 
+
+dataframe.shape 
+dataframe.head() 
+
+# we will create a new col 'ratio' to find the ratio of the col 'd' and 'c' using loops 
+
+def create_ratio_col(): 
+    '''  '''
+    start_time = time.time() 
+    dataframe['ratio'] = 100 * (dataframe['d'] / dataframe['c'])
+    end_time = time.time() 
+    print(end_time - start_time) 
+
+
+create_ratio_col() # 1.8 sec NOTE 150 mil as appose to 1 mil 
+

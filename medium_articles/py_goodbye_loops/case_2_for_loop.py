@@ -12,8 +12,27 @@ import time
 import numpy as np 
 import pandas as pd 
 
-df = pd.DataFrame(np.random.randint(0, 50, size=(150000000)), columns=('a', 'b', 'c', 'd')) 
-df.shape 
-df.head() 
+dataframe = pd.DataFrame(
+    np.random.randint(1, 50, size=(1000000, 4)), columns=('a', 'b', 'c', 'd') 
+) 
+
+dataframe.shape 
+dataframe.head() 
 
 # we will create a new col 'ratio' to find the ratio of the col 'd' and 'c' using loops 
+
+def create_ratio_col(): 
+    '''  '''
+    start_time = time.time() 
+    
+    for idx, row in dataframe.iterrows(): 
+        # create new column 
+        dataframe.at[idx, 'ratio'] = 100 * (row['d'] / row['c'])
+    
+    end_time = time.time() 
+
+    print(end_time - start_time) 
+
+
+create_ratio_col() # 54 sec 
+
