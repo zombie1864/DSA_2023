@@ -26,7 +26,7 @@ def main():
 
 
 
-def prob_00_mini_wait_time(): # RECORD_TIME:  BEST_TIME: 
+def prob_00_longest_cp(): # RECORD_TIME:  BEST_TIME: 
     ''' write a fn to find the longest common prefix str in a list[str], if no common prefix 
     return empty str 
 	'''
@@ -50,6 +50,31 @@ def _longest_cp(words:List[str]) -> str:
         cp += first_word[idx]
 
     return cp 
+
+
+def prob_01_plus_one(): 
+    '''  Given a large int, represented as list[int] are ordered from most significant to least in 
+    left to right order. Inc the large integer by one and return the resulting list[int]
+    '''
+    res_1 = _plus_one([1, 2, 3])
+    res_2 = _plus_one([9])
+    res_3 = _plus_one([9, 9, 9])
+
+    print('pass' if res_1 == [1, 2, 4] else res_1)
+    print('pass' if res_2 == [1, 0] else res_2)
+    print('pass' if res_3 == [1, 0, 0, 0] else res_3)
+
+
+def _plus_one(nums:List[int]) -> List[int]: 
+    '''  
+    ''' 
+    if not nums:  return [1] 
+
+    if nums[-1] < 9: 
+        nums[-1] += 1 
+        return nums 
+    else: 
+        return _plus_one(nums[:-1]) + [0]
 
 
 
