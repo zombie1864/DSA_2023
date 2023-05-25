@@ -2,7 +2,7 @@
     Requires a lot of knowledge and is more geared for mid-senior lvl softwware engineers
     Most of the time, if asked, it would be "How would you design this app/web/etc" 
 
-    [clinet-server model]: 
+    [3-clinet-server model]: 
         []_client talks to server via an API. 
             - Client is an app that makes the req for data 
 
@@ -34,4 +34,11 @@
                 - HTTP sends resp with IP address of server 
                 - in each end TCP is listening and awaiting info from the provided IP address 
                     - a port is used to listen for info 
+
+    [4-Network Protocols]: 
+        []_IP address: an address given to each machine connected to the public 
+        internet. IPv4 consits of four numbers separated by dots `a.b.c.d` 
+            - all four numbers are between 0 and 255 
+            - private networks will always be in the following format 
+                192.168.c.d
 '''

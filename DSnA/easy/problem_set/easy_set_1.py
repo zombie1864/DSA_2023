@@ -75,6 +75,36 @@ def _plus_one(nums:List[int]) -> List[int]:
         return nums 
     else: 
         return _plus_one(nums[:-1]) + [0]
+    
+
+def prob_02_len_of_last_word(): 
+    ''' Given a str consisting of words and spaces, return the len of the last word
+    '''
+    res_1 = _len_of_last_word('hello world')
+    res_2 = _len_of_last_word('   fly me   to   the moon  ')
+    print('pass' if res_1 == 5 else res_1) 
+    print('pass' if res_2 == 4 else res_2)
+
+
+def _len_of_last_word(sent:str) -> int: 
+    '''  
+    []_VAR arr = sent.split(' ')
+    []_VAR words = [] 
+    []_itr(arr, el)
+        []_IF el != ' ' 
+            []_words.append(el) 
+    []_RETURN len(words[-1])
+
+    O(n)_t: O(n)
+    O(n)_s: O(n)
+    '''
+    arr, words = sent.split(' '), []
+    
+    for el in arr: 
+        if el != '': 
+            words.append(el)
+ 
+    return len(words[-1]) 
 
 
 
