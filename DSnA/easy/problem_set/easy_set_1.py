@@ -107,7 +107,38 @@ def _len_of_last_word(sent:str) -> int:
     return len(words[-1]) 
 
 
+def prob_03_top_k_frequent_elements():
+    '''  Given a List[int], nums, and an int k, return the k most frequent el
+    '''
+    res_1 = _top_k_frequent_elements([1, 1, 1, 2, 2, 3], 2) 
+    ans_1 = [1, 2]
+    print('pass' if res_1 == ans_1 else res_1)
 
+
+def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]: 
+    '''  
+    []_VAR freq = {}
+    []_itr(nums, num)
+        []_IF num in freq
+            []_freq[num] += 1
+        []_ELSE
+            []_freq[num] = 1 
+    []_VAR freq_arr =  [int(key) for key, val in freq.items() if val > 1]
+    RETURN freq_arr[:k + 1]
+    O(n)_t: O(n)
+    O(n)_s: O(n)
+    '''
+    freq = {}
+    
+    for num in nums: 
+        if str(num) in freq: 
+            freq[str(num)] += 1 
+        else: 
+            freq[str(num)] = 1 
+  
+    freq_arr = [int(key) for key, val in freq.items() if val > 1] 
+
+    return freq_arr[: k + 1] 
 
 
 
