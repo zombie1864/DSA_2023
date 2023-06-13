@@ -140,6 +140,50 @@ def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]:
 
     return freq_arr[: k + 1] 
 
+def prob_04_linked_list_rm_dups():
+    ''' Suppose you have a list of random names you wish to put in alphabet order. In memory there 
+    are two ways to do this - first with an array and second with linked list. Using an arr ds has 
+    limitations that a linked list overcomes. The limitations of an arr is its size and inefficient 
+    insertion/deletion operations. The size limitation is tied to low-level/hardware limitation. 
+    Arrs have a fixed size determined at the time of creation. If the initial arr size is too small 
+    it leads to overflow and requires resizing which is time-consuming and memory intensive. A linked 
+    list can grow dynamically eliminating the need for pre-allocation. The insertion/deletion of entries 
+    in array take O(n) to index into arr where linked-list takes O(1) by using pointers to locate data. 
+    Linked-list use pointers | data | addr | -> | data | addr | that points to data in memory and do 
+    not need to be adjacent like an array--existing in "cyber space". B/c of the vectorization nature 
+    of a linked-list their exist different types of linked list. 
+
+        Single linked list: Navigation is forward only 
+        Double linked list: forward and backward navigation 
+        circular linked list: last el is linked to the first el
+
+    Given the head of a sorted linked list, delete all duplication and return the linked list sorted. 
+    '''
+    res_1 = _linked_list_rm_dups([1, 1, 2])
+    res_2 = _linked_list_rm_dups([2, 2, 2, 3, 4, 9, 9])
+    print('pass' if res_1 == [1, 2] else res_1)
+    print('pass' if res_2 == [2, 3, 4, 9] else res_2)
+
+
+def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
+    '''  
+    []_range(0, len(nums) - 1, idx)
+        []_IF nums[idx] == nums[idx + 1]
+            []_nums.remove(nums[idx])
+    []_RETURN nums 
+    '''
+    idx = 0 
+
+    while idx < len(nums) - 1: 
+        if nums[idx] == nums[idx + 1]: 
+            # a == b, arr.remove(a); no update to idx 
+            nums.remove(nums[idx])
+        else: 
+            # allowed to move forward in the arr 
+            idx += 1
+
+    return nums
+
 
 
 
