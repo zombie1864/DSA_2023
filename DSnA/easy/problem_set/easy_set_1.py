@@ -25,6 +25,14 @@ def main():
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
+class Root:
+    def __init__(self, val=0, left=None, right=None): 
+        self._val   = val 
+        self._left  = left 
+        self._right = right 
+
+
+
 
 def prob_00_longest_cp(): # RECORD_TIME:  BEST_TIME: 
     ''' write a fn to find the longest common prefix str in a list[str], if no common prefix 
@@ -183,6 +191,86 @@ def _linked_list_rm_dups(nums:List[int]) -> List[int]:
             idx += 1
 
     return nums
+
+
+def prob_05_BT_inorder_traversal():
+    ''' Given the root of a binary treet (BT), return the `inorder` traversal of 
+    its nodes' value
+    '''
+    root                = Root(1)
+    root._right         = Root(2)
+    root._right._left   = Root(3)
+    res  = _BT_inorder_traversal(root)
+    
+    print('pass' if res == [1, 3, 2] else res)
+
+
+def _BT_inorder_traversal(Tree:Root, seen:Union[None, int]=[]) -> List[int]: 
+    '''  
+    []_IF Tree.val == None 
+        []_RETURN seen 
+    []_IF Tree._left != None
+        []_fn(Tree._left, seen)
+    []_IF Tree._right != None 
+        []_fn(Tree.left, seen.append(Tree.val))
+    []_RETURN fn(Tree, seen.append(Tree.val))
+    '''
+    return _BT_inorder_traversal(Tree._left) + [Tree._val] + _BT_inorder_traversal(Tree._right) if Tree else []
+
+
+
+def prob_06_same_BT():
+    ''' Given the roots of two BTs p and q, write a fn to check if they are the same or not.
+    '''
+    p           = Root(1)
+    p._left     = Root(2) 
+    p._right    = Root(3) 
+    q           = Root(1) 
+    q._left     = Root(2) 
+    q._right    = Root(3) 
+    n           = Root(1)
+    n._left     = Root(2)
+    m           = Root(1) 
+    m._right    = Root(2)
+    x           = Root(1)
+    x._left     = Root(2) 
+    x._right    = Root(1) 
+    y           = Root(1)
+    y._left     = Root(1)
+    y._right    = Root(2) 
+    res_1 = _same_BT(p, q)
+    res_2 = _same_BT(n, m)
+    res_3 = _same_BT(x, y)
+    print('pass' if res_1 else res_1)
+    print('pass' if not res_2 else res_2)
+    print('pass' if not res_3 else res_3)
+
+
+
+def _same_BT(tree1:Root, tree2:Root) -> bool: 
+    '''  
+    []_VAR cond_1 = tree1._val != tree2._val 
+    []_VAR cond_2 = tree1._left IS NOT none AND tree2._left IS none 
+    []_VAR cond_3 = tree1._left IS none AND tree2._left IS NOT none 
+    []_VAR cond_4 = tree1._right IS none AND tree2._right IS NOT none 
+    []_VAR cond_5 = tree1._right IS NOT none AND tree2._right IS none 
+    
+    []_IF cond_1 OR cond_2 OR cond_3 OR cond_4 OR cond_5 
+        []_RETURN false 
+    
+    []_IF tree1._val != tree2._val 
+        []_RETURN false 
+    []_IF tree1._left AND tree2._left 
+        []_RETURN fn(tree1._left, tree2._left)
+    []_IF tree1._right and tree2._right 
+        []_RETURN fn(tree1._right, tree2._right) 
+    []_RETURN true 
+    '''
+    if tree1 is None and tree2 is None : # 
+        return True 
+    if tree1 is None or tree2 is None or tree1._val != tree2._val: 
+        return False 
+    return _same_BT(tree1._left, tree2._left) and _same_BT(tree1._right, tree2._right)
 
 
 
