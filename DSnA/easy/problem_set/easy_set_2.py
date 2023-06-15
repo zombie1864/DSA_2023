@@ -66,6 +66,7 @@ def prob_01_sym_tree():
 
 def _sym_tree(tree:BT) -> bool: 
     '''  
+    []_VAR lhs_nodes = [tree.val] + fn(tree.left) + fn(tree.right)
     '''
 
 
