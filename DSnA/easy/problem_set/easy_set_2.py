@@ -25,6 +25,7 @@ def main():
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
+
 class BT:
     ''' Class to build BTs '''
     def __init__(self, val=0, left=None, right=None): 
@@ -34,14 +35,14 @@ class BT:
 
 
 
-def prob_01_sym_tree():
+def prob_00_sym_tree():
     '''  Given the root of a BT, check whether it is symmetric 
-    sym_tree: 
-            1
-           / \
-          2   2
-         / \ / \
-        3  4 4  3 
+    sym_tree:        tree: 
+            1            1 
+           / \          / \
+          2   2        2   2
+         / \ / \        \   \
+        3  4 4  3        3   3
     '''
     sym_tree                = BT(1)
     sym_tree.left           = BT(2)
@@ -50,6 +51,7 @@ def prob_01_sym_tree():
     sym_tree.right          = BT(2)
     sym_tree.right.left     = BT(4)
     sym_tree.right.right    = BT(3)
+    #-----------------------------
     tree                    = BT(1)
     tree.left               = BT(2)
     tree.left.right         = BT(3)
@@ -57,7 +59,7 @@ def prob_01_sym_tree():
     tree.right.right        = BT(3)
 
     res_1 = _sym_tree(sym_tree) 
-    res_2 = _sym_tree(sym_tree) 
+    res_2 = _sym_tree(tree) 
 
     print('pass' if res_1 else res_1)
     print('pass' if not res_2 else res_2)
@@ -66,10 +68,17 @@ def prob_01_sym_tree():
 
 def _sym_tree(tree:BT) -> bool: 
     '''  
-    []_VAR lhs_nodes = [tree.val] + fn(tree.left) + fn(tree.right)
+    []_
     '''
+    return _sym(tree, tree)
 
 
+def _sym(t1, t2): 
+    if  t1 is None and t2 is None: # BC - empty tree/null tree 
+        return True 
+    if t1 is None or t2 is None: 
+        return False 
+    return t1.val == t2.val and _sym(t1.right, t2.left) and _sym(t1.left, t2.right)
 
 
 if __name__ == '__main__':
