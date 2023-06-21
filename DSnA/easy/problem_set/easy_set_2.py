@@ -80,6 +80,48 @@ def _sym(t1, t2):
         return False 
     return t1.val == t2.val and _sym(t1.right, t2.left) and _sym(t1.left, t2.right)
 
+def prob_01_BT_max_depth() -> None: 
+    '''  Given the root for a BT find the max depth, i.e. the length of the 
+    deepest node from its root
+
+    tree_1:   tree_2: 
+        3          1 
+       / \        / \
+      9  20      2   3
+        /  \        / 
+       15   7      4 
+                    \
+                     5
+                    / \
+                   6   7 
+    '''
+    tree_1              = BT(3)
+    tree_1.left         = BT(9)
+    tree_1.right        = BT(20)
+    tree_1.right.left   = BT(15) 
+    tree_1.right.right  = BT(7)
+    #----------------------
+    tree_2                          = BT(1)
+    tree_2.left                     = BT(2)
+    tree_2.right                    = BT(3)
+    tree_2.right.left               = BT(4)
+    tree_2.right.left.right         = BT(5) 
+    tree_2.right.left.right.left    = BT(6) 
+    tree_2.right.left.right.right   = BT(7) 
+    res_1 = _BT_max_depth(tree_1)
+    res_2 = _BT_max_depth(tree_2)
+
+    print('pass' if res_1 == 3 else res_1)
+    print('pass' if res_2 == 5 else res_2)
+
+
+def _BT_max_depth(tree:BT) -> int: 
+    '''  
+    []_
+    O(n)_t: 
+    O(n)_s: 
+    '''
+
 
 if __name__ == '__main__':
 
