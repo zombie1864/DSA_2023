@@ -1,0 +1,307 @@
+{   
+    "background.enabled": true, 
+    "background.loop": false, 
+    "background.useDefault": false, 
+    "background.useFront": false, 
+    "background.style": {
+        "content": "''",
+        "pointer-events": "none",
+        "z-index": "99999", 
+        "filter": "brightness(60%)", 
+        "background-size": "100% 100%", 
+        "background-position": "center", 
+        "opacity": 0.6
+    },
+    "background.customImages": [
+        // "https://wallpapercave.com/wp/wp5420405.jpg",
+        // "https://wallpapercave.com/wp/wp5420405.jpg",
+        // "https://www.azutura.com/media/catalog/product/cache/52/image/650x/040ec09b1e35df139433887a97daa66f/W/S/WS-45874_WP.jpg",
+        // "https://www.azutura.com/media/catalog/product/cache/52/image/650x/040ec09b1e35df139433887a97daa66f/W/S/WS-45874_WP.jpg",
+        // "https://wallpaper.dog/large/5500609.jpg",
+        // "https://wallpaper.dog/large/5500609.jpg",
+        // "https://northsail.io/assets/bg/articles/ruby-ide-switching-from-rubymine-to-vscode-c3e91a2a45b13a4ffc0ea8409457a9b9330804ba410954cfed1bc53b58b7d2a0.jpg",
+        // "https://wallpaperaccess.com/full/1386429.jpg",  // [ BLACK WALLPAPER ]
+        // "https://wallpaperaccess.com/full/1386429.jpg",  // [ BLACK WALLPAPER ]
+        // "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v500-ning-17-retrofuturism_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e24447ba7427a41f7e68b66a3a6a9241",
+        "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v500-ning-17-retrofuturism_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e24447ba7427a41f7e68b66a3a6a9241",
+        "https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v500-ning-17-retrofuturism_1.jpg?w=1300&dpr=1&fit=default&crop=default&q=80&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e24447ba7427a41f7e68b66a3a6a9241",
+    ],
+    "editor.fontSize": 13.5,
+    "editor.wordWrap": "on",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.letterSpacing": 2,
+    "terminal.integrated.lineHeight": 1.3,
+    "synthwave84.brightness": 0.95,
+    "code-runner.runInTerminal": true,
+    "workbench.colorCustomizations" : {
+    
+
+
+
+
+    "[GitHub Dark Default]": {
+        "editor.background": "#000000"
+    },
+        "editor.lineHighlightBorder": "#772083",
+        "terminal.foreground" : "#00fd37",
+        "terminal.background" : "#000000",
+        "terminal.integrated.shell.osx": "/bin/bash",
+    },
+    "editor.multiCursorModifier": "ctrlCmd",
+    "files.autoSave": "afterDelay",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "json.maxItemsComputed": 50000,
+    "notebook.cellToolbarLocation": {
+        "jupyter-notebook": "right"
+    },
+    "notebook.lineNumbers": "on",
+    "jupyter.colorizeInputBox": false,
+    "notebook.insertToolbarLocation": "betweenCells",
+    "notebook.showCellStatusBar": "hidden",
+    "notebook.cellToolbarVisibility": "hover",
+    "material-icon-theme.folders.associations": {
+        "my_virtual_env": "vm",
+        "DSnA":"graphql"
+    },
+    // this section is decaded to giving custom code tags for python according to theme code - github dark theme mode 
+    // in conjunction to accomblish this i am using the vscode extension TODO highlight
+    "todohighlight.keywords": [ // Exact red color taken from githubs src code color code - f97583 
+      {
+          "text": "DOC",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": ">>>",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "NOTE",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "REQ",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "DESC",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "GOAL ",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "RVD",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "RFE",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "PROB",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "DSGN",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "!!!",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "WARNING",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "RETURN",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "ERR",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "QSTN",
+          "color": "#f0f975", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "ANS",
+          "color": "#77f975", 
+          "backgroundColor": "false"
+      },
+      {
+        "text": "FN_TESTED",
+        "color": "#77f975", 
+        "backgroundColor": "#A020F0"
+    },
+      {
+          "text": "[]_",
+          "color": "#f9a875", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "[X]_",
+          "color": "#77f975", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "[x]_",
+          "color": "#77f975", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "[-]_",
+          "color": "#f97583", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "O(n)_t",
+          "color": "#f975d6", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "O(n)_s",
+          "color": "#f975d6", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "|",
+          "color": "#b87fa9", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "〉",
+          "color": "#b87fa9", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "〈",
+          "color": "#b87fa9", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "::",
+          "color": "#b8b565", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "RECORD_TIME",
+          "color": "#80eaff", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "jsxElStart",
+          "color": "#c468ad", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "jsxElEnd",
+          "color": "#c468ad", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "{/*",
+          "color": "#c468ad", 
+          "backgroundColor": "false"
+      },
+      {
+          "text": "*/}",
+          "color": "#c468ad", 
+          "backgroundColor": "false"
+      },
+      {
+        "text": "PRODUCTS_SECTION_ONLY",
+        "color": "#77f975", 
+        "backgroundColor": "#c468ad"
+    },
+],
+"code-runner.executorMap": {
+
+    "javascript": "node",
+    "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "php": "php",
+    "python": "python -u",
+    "perl": "perl",
+    "perl6": "perl6",
+    "ruby": "ruby",
+    "go": "go run",
+    "lua": "lua",
+    "groovy": "groovy",
+    "powershell": "powershell -ExecutionPolicy ByPass -File",
+    "bat": "cmd /c",
+    "shellscript": "bash",
+    "fsharp": "fsi",
+    "csharp": "scriptcs",
+    "vbscript": "cscript //Nologo",
+    "typescript": "ts-node",
+    "coffeescript": "coffee",
+    "scala": "scala",
+    "swift": "swift",
+    "julia": "julia",
+    "crystal": "crystal",
+    "ocaml": "ocaml",
+    "r": "Rscript",
+    "applescript": "osascript",
+    "clojure": "lein exec",
+    "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+    "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+    "racket": "racket",
+    "scheme": "csi -script",
+    "ahk": "autohotkey",
+    "autoit": "autoit3",
+    "dart": "dart",
+    "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+    "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+    "haskell": "runhaskell",
+    "nim": "nim compile --verbosity:0 --hints:off --run",
+    "lisp": "sbcl --script",
+    "kit": "kitc --run",
+    "v": "v run",
+    "sass": "sass --style expanded",
+    "scss": "scss --style expanded",
+    "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+    "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "sml": "cd $dir && sml $fileName"
+},
+"[python]": {
+    "editor.formatOnType": true
+},
+"jupyter.interactiveWindow.cellMarker.decorateCells": false,
+"[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+},
+"workbench.colorTheme": "GitHub Dark Default",
+"[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+}
+  }
