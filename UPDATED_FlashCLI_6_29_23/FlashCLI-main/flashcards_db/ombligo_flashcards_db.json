@@ -1,0 +1,54 @@
+{
+    "0": [
+        "What does the SOLID principle stand for? ",
+        "\\n\\t[S]ingle responsibility principle (SRP) \\n\\t[O]pen/closed principle \\n\\t[L]iskov substitution principle \\n\\t[I]nterface segregation principle \\n\\t[D]ependency inversion principle"
+    ],
+    "1": [
+        "What are the 5 different HTTP status catagory? ",
+        "\\n\\t100 - Informational requests \\n\\t200 - Successful requets \\n\\t300 - Used for redirects \\n\\t400 - Clientside errors \\n\\t500 - Serverside errors "
+    ],
+    "2": [
+        "What are the three HTTP functions that can be used to perform network request? ",
+        "\\n\\t1. XMLHttpRequest\\n\\t2.fetch\\n\\taxios"
+    ],
+    "3": [
+        "What are the 3 ways you can make HTTP request with js, which is builtin methods, which require 3rd party dependency? ",
+        "\\n\\t1. XMLHttpRequest : built-in \\n\\t2. fetch: built-in\\n\\t3. axios : requires 3rd party library plug-in "
+    ],
+    "4": [
+        "What would the js code look like if you are making an HTTP GET request to `https://testAPI.com/avg_home_cost` and then log the HTTP response? ",
+        "\\n\\tlet httpObj = new XMLHttpRequest; \\n\\thttpObj.open('GET','https://testAPI.com/avg_home_cost'); //init XHR obj \\n\\thttpObj.send(); // Opens connection and sends the req to the server/API \\n\\thttpObj.onload = function() { // Handles http resp from server/API \\n\\t\\tconst data = httpObj.response; \\n\\t\\tconsole.log(data)\\n\\t}; "
+    ],
+    "5": [
+        "Suppose you have two js fn, getData and sendData. If you were using XHR to perform networking communication how would you modularize the code that handles the networking logic so that it can be used as a function call within the getData and sendData fn? ",
+        "\\n\\t1. Write the code that handles the http cycle - creating http obj, init http obj, transmit http obj, handle http resp. \\n\\t2. Put the transmission logic into a fn named sendHttpRequest(method, url)\\n\\t3. promiseify the transmission since it is an asynch process\\n\\tCODE EX: \\n\\tconst = function sendHttpRequest(method, url) {\\n\\t\\tconst promise = new Promise(function (resolve, reject) {\\n\\t\\t\\tconst httpObj = new XMLHttpRequest();\\n\\t\\t\\thttpObj.open(method, url);\\n\\t\\t\\thttp.Obj.send();\\n\\t\\t\\thttpObj.onload = function () {\\n\\t\\t\\t\\tresolve(httpObj.response);\\n\\t\\t\\t};\\n\\t\\t});\\n\\t\\treturn promise; \\n\\t}; \\n\\n\\tconst getData = function () {\\n\\t\\tsendHttpRequest('GET', 'https://testAPI.com/avg_home_cost').then(function(responseData) {\\n\\t\\t\\tconsole.log(responseData);\\n\\t\\t});\\n\\t};"
+    ],
+    "6": [
+        "What is a monolithic architecture?",
+        "A traditional software model that is self-contained and independent from other apps. It is singular and large-computing network with onde code base that couples all of the business logic together. "
+    ],
+    "7": [
+        "What is the benefit of having `__init__.py` within a dir/folder? ",
+        "It turns the dir/folder into a package so that every global VAR within __init__.py can be accessible in any scripts inside the dir/folder> It also allows you to import a script within the a script that is inside the dir/folder. "
+    ],
+    "8": [
+        "In backend development there is something called TCP - what does it stand for and what is TCP? ",
+        "\\n\\t[T]ransmission \\n\\t[C]ontrol \\n\\t[P]rotocol\\n\\tTCP is a standard that defines how to establish and maintain a network session by which applications can exchange data. TCP works with Internet Protocol, IP. IP defines how computers send packets of data to each other. Together TCP and IP define internet communication. "
+    ],
+    "9": [
+        "How does TCP work? ",
+        "It works when a connection is established between applications and maintained until the applications at each end finished exchanging data.\\n\\tTCP performs the following actions: \\n\\t\\tDetermine how to break data into packets that a network can deliver - via IP \\n\\t\\tSends packets to and accepts packets from the network layer \\n\\t\\tManage flow control \\n\\t\\tHandles re-transmission of dropped packets, to provide error-free transmission (no data left behind)\\n\\t\\tAcknowledge all packets that arrive "
+    ],
+    "10": [
+        "In web development a simplification is made in regards to HTTP - since most programs don't require the detail mechanism of HTTP. What is the details involving HTTP, TCP, and IP for a backend program to send HTML file to the client-side? ",
+        "When a server send HTML it uses HTTP. The HTTP program connects with TCP to set up connection and send the file using IP. The TCP layer takes the file and divides the file into data packets, numbers them, and forwards them individually to the IP for delivery. "
+    ],
+    "11": [
+        "How is an HTML file sent using HTTP, TCP, and IP; i.e. how is the data transmitted - give step by step explanation? ",
+        "HTML file is sent from HTTP to TCP to break down and bundle the data. Each package of data is sent to the IP layer for transmission. Each package has a source and a destination IP. To increase transmission rate packages may be sent along multiple routes. The TCP layer on the client-side waits until all packets have been received If any are missing the TCP layer on the client-side sends a request for retransmission of any missing data bundle. The TCP on the client-side assembles the packaged data into the HTML file and sends it to the recieving application. "
+    ],
+    "12": [
+        "What is a downside of TCP network? ",
+        "It is prune to latency, due to its error detection, and jitter due to missing data. "
+    ]
+}
