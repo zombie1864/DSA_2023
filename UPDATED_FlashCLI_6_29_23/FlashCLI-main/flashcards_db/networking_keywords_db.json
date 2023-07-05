@@ -1,0 +1,37 @@
+{
+    "0": [
+        "single",
+        "responsibility",
+        "open",
+        "close",
+        "liskov",
+        "interface",
+        "segregation",
+        "dependency",
+        "principle"
+    ],
+    "1": [
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "informational",
+        "successful",
+        "redirects",
+        "clientside",
+        "serverside"
+    ],
+    "11": [
+        "http",
+        "tcp"
+    ],
+    "2": [
+        "xmlhttprequest",
+        "fetch",
+        "axios"
+    ],
+    "12": [
+        "latency"
+    ]
+}
