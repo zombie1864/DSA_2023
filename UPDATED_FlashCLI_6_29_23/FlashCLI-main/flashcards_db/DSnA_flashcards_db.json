@@ -1,0 +1,130 @@
+{
+    "0": [
+        "Given an itr, how can you determine if an itr contains any item which satifies some condition? How can you determine if all items in the iter satifies said condition?",
+        "\\n\\tPseudo: \\n\\t\\tANY[cond FOR itr]\\n\\t\\tALL[cond FOR itr]\\n\\tCode:\\n\\t\\tany(itr)\\n\\t\\tall(itr)"
+    ],
+    "1": [
+        "What is the pseudocode for a listComp and dictComp?",
+        "listComp: [VAR/COND FOR VAR in itr] \\n\\t\\tdictComp: {k:v for k,v in itr.items()}"
+    ],
+    "2": [
+        "Given D1 and D2 w type Dict[str,int], how do you determine the max amt that can be generated from D2 if D1 is mapping rubric?",
+        "min( [D2[i]//D1[i] if i in D1 else 0 for i in D1] )\\n\\tIn essence you take the min[listComp]"
+    ],
+    "3": [
+        "What do ds contain and how does ds behave diff in OOP vs FOP?",
+        "ds contain: data which can be either qualitative or quantitative. In short notation it would be\\n\\tD(\u03a9,\u211d) : \u03a9 \u2227 \u211d \u2208 dt\\n\\t\u03a9 = qualitative, where \u03a9 -> str\\n\\t\u211d = quantitative, where \u211d -> Union[int,float]\\n\\t\u2234ds(dt)\\n\\tds can have func associated w them, bound together as part of a class \u2234 ds(dt,F) where F is a func space, F \u2208 {f: f \u220b ds}\\n\\tIn FOP a func can work w multi ds and is not bound to a specific ds.\\n\\tEx is a basic itr func which can itr a str or arr"
+    ],
+    "4": [
+        "What is data?",
+        "Data contains either or both qualitative info and or quantitative info\\n\\tD(\u03a9,\u211d)\\n\\t\u03a9 = qualitative, where \u03a9 -> str\\n\\t\u211d = quantitative, where \u211d -> Union[int,float]"
+    ],
+    "5": [
+        "What is the describtive definition of ds? ",
+        "A specialized format for generating, processing, retrieving, and storing data."
+    ],
+    "6": [
+        "What is the set diff between two sets? Is this a commutative property?",
+        "\\n\\tPseudo:\\n\\t\\tDIFF(s_1, s_2)\\n\\tCode:\\n\\t\\ts_1.difference(s_2)\\n\\tAnti-commutative property:\\n\\t\\tDIFF(s_1,s_2) != DIFF(s_2,s_1)\\n\\tEX:\\n\\t\\tDIFF({1,2,3,4,5,6},{1,2,3}) = {4,5,6}\\n\\t\\tDIFF({1,2,3},{1,2,3,4,5,6}) = set()"
+    ],
+    "8": [
+        "What is the diff btw the two pseudo?\\n\\t[VAR/COND FOR itr]\\n\\t\\t-vs-\\n\\t[VAR FOR itr COND]",
+        "[VAR/COND FOR itr] req COND to be ternary, where within the list IF[NOT COND] another value is used in place of the el\\n\\tEX:\\n\\t\\t[n if n % 2 else '_' for n in range(20)] \\n\\t\\t=> ['_', 1, '_', 3, '_', 5, '_', 7, '_', 9, '_', 11, '_', 13, '_', 15, '_', 17, '_', 19]\\nWhere as [VAR FOR itr COND] does not req ternary\\n\\tEX:\\n\\t\\t[n for n in range(20) if n % 2] \\n\\t\\t=> [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\\nNo COND for el in [VAR FOR itr COND]"
+    ],
+    "9": [
+        "What is the pseudo for a listComp that does double itr?",
+        "[VAR/cond FOR inner_itr in outter_itr FOR VAR in inner_itr]\\n\\t[EX]:\\n\\t\\ttxt = (('hello', 'world'), ('halo', 'ring'))\\n\\t\\tlistComp = [word for pair in txt for word in pair]\\n\\t\\tprint(listComp) #=> ['hello', 'world', 'halo', 'ring']"
+    ],
+    "10": [
+        "In pseudo, some builtin fn returns a new ds\\n\\t\\tds.fn() => DS'\\n\\tHow would you write, in pseudo, the DS' to be stored in a VAR?",
+        "VAR:dt = ds.fn()\\n\\tWhere dt is the datatype"
+    ],
+    "11": [
+        "In general what is the best way to handle input options from user, when the user has multiple options to choose from? ",
+        "Put all options (OPTIs) into a dict\\n\\nEX:\\n\\t\\td = { \\t0: \"no one likes this\",\\n\\t\\t\\t1: \"{} likes this\",\\n\\t\\t\\t2: \"{} and {} likes this\",\\n\\t\\t\\t3: \"{}, {}, and {} likes this\"\\n\\t\\t}"
+    ],
+    "13": [
+        " Provide a mathematical description of ds. I.e. what are ds in a mathematical sense?",
+        "ds \u2208 {dt: dt \u2286 {str, List, Dict, int, float, Tuple, None}}"
+    ],
+    "14": [
+        "What is the purpose of ds?",
+        "To store data for the purpose of being used w various algos. Data is info and is all abt storage of it to be used for processing"
+    ],
+    "15": [
+        "What OPT can be performed to the following bool logic?\\n\\tIF cond_1 RETURN res\\n\\tELIF cond_2 RETURN res\\n\\tWhere both cluase return the same res?",
+        "Combine the two caluse into a single clause\\n\\t\\tIF cond_1 OR cond_2 RETURN res"
+    ],
+    "16": [
+        "What is the junction of two sets? what does junction of two sets mean?",
+        "\\n\\tPseudo:\\n\\t\\ts1.JUNC(s2)\\n\\tCode:\\n\\t\\ts1.intersection(s2)\\n\\treturns a set of common values found in both sets"
+    ],
+    "17": [
+        "What is O(n)t for 'in' operator in py?",
+        "for List/Tuple O(n)\\n\\t\\tfor set/Dict O(1)"
+    ],
+    "18": [
+        "What is the O(n)t for List.sort()?",
+        "List.sort() will always take O(nlogn)"
+    ],
+    "19": [
+        "How to replace a sub-str with a new str of a larger str?",
+        " str.replace(txt, new_txt)\\n\\t\\t[EX]:\\n\\t\\t'Python for beginners'.replace('P', 'J')\\n\\t\\t\\t#=> 'Jython for beginners'\\n\\t\\t'Python for beginners'.replace('beginners', 'experts')\\n\\t\\t\\t#=> 'Python for experts'"
+    ],
+    "20": [
+        "What method is used to find the idx of a sub_str within a str?",
+        "    str.find(sub_str)\\n\\t[EX]:\\n\\t\\t'python'.find('p') \\t#=> 0\\n\\t\\t'python'.find('thon') \\t#=> 2\\n\\t\\t'python'.find('P') \\t#=> -1\\n\\t\\t'python'.find('z') \\t#=> -1"
+    ],
+    "21": [
+        "How to check if multiple keys exist in a dict? I.e. does key_1, ..., key_n exist in dict?",
+        "UnOpt method:\\n\\t\\t\\tIF ('key_1', ...,'key_n') IN dict.keys()\\n\\t\\tOpt method:\\n\\t\\t\\treq_keys = ('key_1', ...,'key_n')\\n\\t\\t\\tIF all(key IN dict FOR key in req_keys)"
+    ],
+    "22": [
+        "What is the scope of a WHILE loop, i.e. what VAR access does the business logic have within a WHILE loop?",
+        "static VAR are accessable to the business logic inside the WHILE block. However dynamic VARs should be defined outside the loop to allow mutation of VAR. Once a WHILE loop has been init the op will always begin at the beginning of a WHILE loop and dynamic VAR are mutatble outside the loop."
+    ],
+    "23": [
+        "What is the diff between the two codes?\\n\\ti = 0\\t\\t\\ti = 0\\n\\tm = 'hello'\\t\\twhile i < 10:\\n\\twhile i < 10:\\t\\t   m = 'hello'\\n\\t   print(i, m)\\t\\t   if i == 5:\\n\\t   if i == 5:\\t\\t\\tm = 'hi'\\n\\t\\tm = 'hi'\\t\\tprint(i, m)\\n\\t   i +=1\\t\\t   i += 1",
+        "In the 1st code once i == 5; mutation occurs and change is kept for i > 5, m = 'hi'. In the 2nd code mutation happens only for i == 5; it isn't kept, i > 5 m = 'hello'"
+    ],
+    "24": [
+        "What is the diff btw floating point division and int division?",
+        "Floating point division yeilds a float num while int division, which uses the '//' op, yeilds to a int num\\n\\t[EX]:\\n\\t\\t5 / 2 #=> 2.5\\n\\t\\t5 // 2 #=> 2"
+    ],
+    "25": [
+        "When err handling what is the diff btw an expected err vs an unexpected err? Provide ans w pseudo. ",
+        "Unexpected err does not have cond for failure\\ntry \\t\\t\\t\\ttry \\n   IF cond RAISE TypeErr(msg)\\t...unexpected err in code...\\n except TypeErr as err \\t except TypeErr as err \\n   RETURN repr(err)\\t\\t   RAISE TypeErr(msg)\\n\\t\\t\\t\\t\\n[EX]:\\ntry: \\t\\t\\t\\ttry: \\n   if len(str) == 0:\\t\\t\\t   num_1 / num_2\\n      raise ValueError('str is empty')\\nexcept ValueError as err: \\t\\t except ZeroDivisionError: \\n   return repr(err)\\t\\t\\t   raise ZeroDivisionError('num_2 cannot be 0')\\n\\t\\t\\t\\t\\nUnexpected err does not have cond for failure"
+    ],
+    "26": [
+        "What method can you use to determine the lesser btw two ints?",
+        "min(num1, num2)"
+    ],
+    "27": [
+        "What method can you use to determine the greater val btw two ints?",
+        "max(num1, num2)"
+    ],
+    "28": [
+        "Classes take in init data when inst e.g. `VAR ex = SomeEx(data)`. \\nHow do you store the data internally in a class? ",
+        "All data are stored within the `def __init__(self, data)`. To have the \\n data be made globally accessable to all other class methods you store the \\n data within `__init__` as `self._data = data`, where the `_` after `self`\\n signifies \"internal/private\" usage to the class. "
+    ],
+    "29": [
+        "What does the following return, `sorted(\"918\")`?",
+        "List[str]: `[\"1\", \"8\", \"9\"]`"
+    ],
+    "30": [
+        "What is the output of the following len(44)?",
+        "TypeError: Object of type 'int' has no len()\\n`len(str)` can only be performed on str type"
+    ],
+    "31": [
+        "Is the following possible in py, list(num), where num = 1234? ",
+        "No, list(num) is possible if num = '1234'. However if num:int then \\nlistComp:[int(n) for n in list(str(num))]"
+    ],
+    "32": [
+        "What is the diff(str.index(sub_str), str.find(sub_str))?",
+        "str.find(sub_str) return -1 if sub_str not found. \\n\\tstr.index(sub_str) returns ValueError if sub_str not found"
+    ],
+    "33": [
+        "How do you quickly convert a str into a list of chars? ",
+        "By using the spread op `*`, [*str]\\n\\tEx:\\n\\t\\ts = 'jeff'\\n\\t\\t[*s] #=> ['j', 'e', 'f', 'f']"
+    ]
+}

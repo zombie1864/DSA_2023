@@ -1,0 +1,70 @@
+{
+    "0": [
+        "What does ajax stand for?",
+        "Async Js And Xml; AJAX"
+    ],
+    "1": [
+        "Is xml still being used?",
+        "No it has been replaced with JSON as the standard to send and recieve data"
+    ],
+    "2": [
+        "What does JSON stand for?",
+        "JavaScript Object Notation; JSON "
+    ],
+    "3": [
+        "What are the stages involved in the http lifecyle? ",
+        "|Clientside -> req -> API server|\\n\\t\\t|\\t    <-resp\\t\\t|\\n"
+    ],
+    "4": [
+        "What is the difference between static websites and dynamic websites? [from a UI perspective]",
+        "Static website cannot accept UI inputs while dynamic websites can and update the webpage based on UI input"
+    ],
+    "5": [
+        "What are is the constrain of dynamic websites that have UI inputs to update components of a webpage? ",
+        "Dynamic websites puts constrain on the DOM by having the DOM tree be re-rendered everytime an eventListener detects changes. This has performance issues. "
+    ],
+    "6": [
+        "Why are todo list apps ideal for testing new frameworks or libraries?",
+        "It provides a way to exhibit how the CRUD (Create, Read, Update, Delete) behaviors are implemented using a specific technology. \\n\\t[]_Add new item to the list (create) \\n\\t[]_View the existing list (Read)\\n\\t[]_Change the completion status of each item (update)\\n\\t[]_remove items from the list (Delete)"
+    ],
+    "7": [
+        "In the Js world what are the primative datatypes? ",
+        "Numbers, boolean, strings, undefined, and null "
+    ],
+    "8": [
+        "In the Js world what is the diff('let', 'var')?",
+        "The keyword 'var' is a function scope VAR meaning that it can be used anywhere within the function. 'let', however is block scoped meaning that it can only be used within the block that it is defined. \\nEx: Using var\\n\\tfunction alpha() {\\n\\t\\tvar x = 25; \\n\\t\\tconsole.log(x); //=> 25\\n\\t\\tx += 5; \\n\\t\\tconsole.log(x); //=> 30\\n\\t}\\nEx: Using let\\n\\tfunction alpha() {\\n\\t\\tvar x = 25; \\n\\t\\tif (x === 25) {\\n\\t\\t\\tlet y = 5; // VAR y can only be used within this block\\n\\t\\t\\tconsole.log(x + y); //=> 30\\n\\t\\t}\\n\\t\\tconsole.log(x + y); //=> error\\n\\t\\t// VAR y cannot be used here\\n\\t}"
+    ],
+    "9": [
+        "What are Objects in the Js world? ",
+        "Objects are dynamic collections of attributes with properties (pairs of keys and values)"
+    ],
+    "10": [
+        "In Js are the keys of string data type (dt) only? ",
+        "No in Js you can have the keys be either a string or variable - however the common practice is to omit the use of strings for keys "
+    ],
+    "11": [
+        "In a typical MVC monolithic application what is actually being sent to the frontend when an http request is made? ",
+        "files are being send typically HTML, CSS, and JavaScript files. "
+    ],
+    "12": [
+        "What is the difference between http and ftp servers? ",
+        "FTP servers can send files of any type where as http is restricted to html,css,Js,images,and videos file formats. "
+    ],
+    "13": [
+        "what are the three things included in a url address? ",
+        "The protocol, which states which protocol is being used to access the content be it either http, https, or ftp, the domain which states the IP address and finally the path which refers to a file or location on the server. The path can also include parameters for querying purposes. "
+    ],
+    "14": [
+        "What does JS allow you to do on the DOM when there is content? ",
+        "Allows you to manipulate the content (html)El), style (css), and structure (html) of a webpage "
+    ],
+    "15": [
+        "What are the numerious ways that you can select an el from the DOM using Js? ",
+        "\\n\\tdocument.getElementById()\\n\\t\\t[]_allows you to select el by id ATTR\\n\\t\\t[]_returns htmlEl\\n\\tdocument.getElementsByClassName()\\n\\t\\tselects all el that contain the same value for the class ATTR\\n\\t\\t[]_returns an arr of htmlEl\\n\\tdocument.getElementsByTagName()\\n\\t\\t[]_selects all el by tag name in the order that they appear on the DOM\\n\\t\\t[]_returns an arr of htmlEl\\n\\tdocument.querySelector()\\n\\t\\t[]_selects el by selectorValue of either tag name, class value, or id value\\n\\t\\t[]_returns an htmlEl\\n\\tdocument.querySelectorAll()\\n\\t\\treturns an arr of el by selectorValue"
+    ],
+    "16": [
+        "When working with pure Js, often you will be writing `document...`. What is the best way to reduce the redundancy of writing `document...`? ",
+        "Create a wrapper fn that returns either an htmlEl or aan arr of htmlEl\\n\\tfunction htmlEl(value) {\\n\\t\\treturn document.querySelector((value)\\n\\t}"
+    ]
+}
