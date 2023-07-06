@@ -66,5 +66,29 @@
     "16": [
         "When working with pure Js, often you will be writing `document...`. What is the best way to reduce the redundancy of writing `document...`? ",
         "Create a wrapper fn that returns either an htmlEl or aan arr of htmlEl\\n\\tfunction htmlEl(value) {\\n\\t\\treturn document.querySelector((value)\\n\\t}"
+    ],
+    "17": [
+        "In general what are the common technologies used in the tech industry for frontend development? ",
+        "HTML, CSS, JavaScript, React angular or Vue, webpack, Babel, NPM, and git with github. "
+    ],
+    "18": [
+        "What is webpack and babel? ",
+        "Webpack is a module bundler that helps manage and optimize the assets of a web application and babel is a js compiler that allows developers to use newer versions of js and write code in a way that is compatible with older browsers -- i.e. converts new js to older versions. "
+    ],
+    "19": [
+        "How do you optimize the performance of a web page? ",
+        "minimize the frequency of HTTP requests, minimize the size of assets, caching resources, using CDN, and code optimization "
+    ],
+    "20": [
+        "Explain the advantage of caching resources to improve web page performace. ",
+        "By caching resources, the browser can reuse them on subsequent page loads, reducing the number of HTTP requests and the amount of data that needs to be transferred. "
+    ],
+    "21": [
+        "Does the order of loading assets effect the performance of a web page? Explain your reasoning. ",
+        "Yes--the order in which assets are loaded can have a significant impact on the performance of a web page. "
+    ],
+    "22": [
+        "Explain how a CDN (content delivery network) impacts the performance of a web page.",
+        "A CDN can help improve the performance by serving assets from a server location that is closer to the user."
     ]
 }
