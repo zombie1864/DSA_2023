@@ -1,0 +1,14 @@
+{
+    "0": [
+        "What 2 kind of typing exist and how do they differ?",
+        "Static typing: the data type of VARs are declared and checked at \\n\\tcompile-time. This means that the data type of the VAR is fixed during compilation, and it cannot \\n\\tchange during the exec of program. The compiler ensures that the type of VAR is correct. \\n\\tType declarations to VARs must be explicitly declared with their dt before they are used. \\n\\tFor example:\\n\\n\\tint x = 10;\\n\\tx = 'Hello'// compilation Err: incompatible types (int and String)\\n\\n\\tDynamic Typing: VARs are not fixed. The type of VAR is determined at runtime meaning that the type checking is performed during the exec of program and the VAR type can change. "
+    ],
+    "1": [
+        "What is a compiler? ",
+        "A software tool that translates source code written in a high-level programming language into machine code that can be exec directly by a computer's hardware or by another software component. The main purpose of a compiler is to help the exec of programs written in high-level, which are easier for humans to read and write, into low-level code that the computer's processor can understand and execute. "
+    ],
+    "2": [
+        "In python what does hint typing do for python that is beneficial to the language itself?",
+        "It provides hints instead of changing Python into a static typing language and aids in preventing bugs."
+    ]
+}
