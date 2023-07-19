@@ -10,5 +10,21 @@
     "2": [
         "In python what does hint typing do for python that is beneficial to the language itself?",
         "It provides hints instead of changing Python into a static typing language and aids in preventing bugs."
+    ],
+    "3": [
+        "How to provide a VAR with two or more dt? I.e. a VAR can hold either dt. ",
+        "Union[dt_1, dt_2]"
+    ],
+    "4": [
+        "In some cases an input VAR to a fn can either be a list, tuple, or other. What is the best hint type to assign this VAR?",
+        "`Iterable` which is a dt. Use this specifically if the \\n\\tVAR is going to be iterated over. "
+    ],
+    "5": [
+        "What is a better type that can be used instead of `Union[int, None]` in which a VAR can either be int or None? ",
+        "`Optional[int]` which tells devs that the VAR can hold \\n\\tint dt or none "
+    ],
+    "6": [
+        "In complex situations it is best to define your won dt. How does the typing module provide a way to create your own type? ",
+        "TypeAlias ex:\\n\\tPostsType: TypeAlias = Dict[int, str]"
     ]
 }
