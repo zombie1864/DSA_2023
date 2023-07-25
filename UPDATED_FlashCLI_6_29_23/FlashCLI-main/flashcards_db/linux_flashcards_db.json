@@ -1,0 +1,14 @@
+{
+    "0": [
+        "What does `sudo` stand for?",
+        "`superuser do`. Its a program that allows users to exec \\n\\tcmds with the privileges of another user, most commonly the root user."
+    ],
+    "1": [
+        "What can a user who is granted sudo access generally perform that would be restricted on other user accounts?",
+        "Installing software and modifying system configurations"
+    ],
+    "2": [
+        "What is the root user also known as?",
+        "superuser--root user is a special user account that has complete control over the system. Root user has the ability to read, write, and exec any file or cmds on the system. "
+    ]
+}
