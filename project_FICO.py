@@ -1,4 +1,10 @@
 from typing import Any, Dict, Union, Tuple
+''' 
+5 yr CD rates  
+BMO: 4.50 
+FIB: 4.59
+C1
+'''
 
 
 _capital_one_bank = {
@@ -37,6 +43,19 @@ def interest_pymt_from(acc:Dict[str, Tuple], view_type:str) -> Union[float, int,
         return tot_interest_money
     else: 
         return 'Not valid view type'
+
+
+
+def interest_calculator(principle:Union[float, int], rate:float, time:int): 
+    ''' 
+    formula used to calculate interest: A = P(1 + r/n)^(nt) 
+    A = the total amount (including both the principal and interest)
+    P = the principal amount (initial deposit) = $44,000
+    r = the annual interest rate (expressed as a decimal) = 4.1% = 0.041
+    n = the number of times interest is compounded per year (typically, CDs are compounded annually, so n = 1)
+    t = the number of years the money is invested for = 5 years
+    '''
+    return round(principle * pow((1 + (rate)), time) - principle, 2)
 
 
 
@@ -86,3 +105,9 @@ if __name__ == '__main__':
     # print(update_account_balance_4(_capital_one_bank, 67))
     # print(project(67,'month'))
     print(f'Amt need to pay: {_monthly_payout - tot_interest_pymt} \nLeft over: {round(1700 - _monthly_payout + tot_interest_pymt, 2)}') 
+    _amt = 44000
+    _time = 5
+    _month = 60 
+    _rate = 0.046
+    print(f'Interest pymt earned in {_time} year {interest_calculator(_amt, _rate, _time)}')
+    print(f'Monthly interest payment {round(interest_calculator(_amt, _rate, _time) / _month, 2)}')
