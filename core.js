@@ -39,6 +39,7 @@
 length and size methods, checking and conversion methods, cloning and copying methods, and Type-specific methods 
     []_arr are ds 4 storing info in a sequential order 
 
+
     []_itr methods {
         []_arr.forEach(cb)  -- itr(arr, el) and applies cb 2 each el 
         []_arr.map(cb)      -- creates new arr and applies cb 2 each el 
@@ -48,6 +49,7 @@ length and size methods, checking and conversion methods, cloning and copying me
         []_arr.some(cb)     -- checks if at least 1 el passes a test defined by the cb 
     }
 
+
     []_searching methods {
         []_arr.indexOf(val)     -- returns the idx of a specific val 
         []_arr.lastIndexOf(val) -- returns last idx of a specified val 
@@ -55,6 +57,7 @@ length and size methods, checking and conversion methods, cloning and copying me
         []_arr.findIndex(cb)    -- returns the idx of the 1st el 2 satisfy cond defined by cb  
         []_arr.includes(val)    -- checks if arr includes val 
     }
+
 
     []_add/rm el(s) {
         []_arr.push(el)     -- adds el to the end of arr 
@@ -67,6 +70,21 @@ length and size methods, checking and conversion methods, cloning and copying me
 
 
     []_manipulating methods {
-        []_
+        []_arr.copyWithin(trg, start, end) -- copies els within the arr 
+        []_arr.fill(val, start, end)       -- fills el with a static value 
+        []_arr.reverse()                   -- reverses the order of els 
+        []_arr.sort(cb)                    -- sorts the el according 2 cb 
+        []_arr.slice(start, end)           -- extracts a section of the arr 
+        []_arr.join(delimiter)             -- converts the arr in2 str, concatenated by the delimiter 
+        []_arr.toString()                  -- alias 4 `.join`
+        []_arr.concat(arr)                 -- combines arrs to create a new arr 
+    }
+
+
+    []_checking and conversion methods {
+        []_arr.isArray(ds)                   -- checks if the ds is an arr 
+        []_arr.from(arrLike, mapFn, thisArg) -- creates a new arr from an arrLike ds 
+        []_arr.of(...els)                    -- creates a new arr from its args 
+        []_arr.length                        -- prop that specifies the num of els in an arr 
     }
 **/
