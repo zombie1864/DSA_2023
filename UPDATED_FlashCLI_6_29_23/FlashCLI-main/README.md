@@ -7,6 +7,7 @@ A CLI (_command line application_) that allows users to create virtual flashcard
 An MVC pattern is designed to handle the storing and retrieving of data, manipluation of data, packaging data, and deliverance of said data to the correct route. The database is directly read and written into memory to allow a serverless application to operate locally on user machine without required network access. Many web frameworks rely on MVC design pattern to handle data requests between user and a database. For this CLI app the "View" layer is the terminal, the "Controller" layer falls under 'utils.FlashcardController', and "Models" layer is 'db_API.py' script. The "physical" database is held in the _flashcards-db/_ dir which stores each flashcard dataset as json file. 
 
 to activate it on mac `source venv/bin/activate`
+to activate it on windows `.\venv\Scripts\activate`
 
 ## Click Over argparse
 ----------------------

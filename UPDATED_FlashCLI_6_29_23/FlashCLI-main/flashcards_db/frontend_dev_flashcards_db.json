@@ -64,8 +64,8 @@
         "\\n\\tdocument.getElementById()\\n\\t\\t[]_allows you to select el by id ATTR\\n\\t\\t[]_returns htmlEl\\n\\tdocument.getElementsByClassName()\\n\\t\\tselects all el that contain the same value for the class ATTR\\n\\t\\t[]_returns an arr of htmlEl\\n\\tdocument.getElementsByTagName()\\n\\t\\t[]_selects all el by tag name in the order that they appear on the DOM\\n\\t\\t[]_returns an arr of htmlEl\\n\\tdocument.querySelector()\\n\\t\\t[]_selects el by selectorValue of either tag name, class value, or id value\\n\\t\\t[]_returns an htmlEl\\n\\tdocument.querySelectorAll()\\n\\t\\treturns an arr of el by selectorValue"
     ],
     "16": [
-        "When working with pure Js, often you will be writing `document...`. What is the best way to reduce the redundancy of writing `document...`? ",
-        "Create a wrapper fn that returns either an htmlEl or aan arr of htmlEl\\n\\tfunction htmlEl(value) {\\n\\t\\treturn document.querySelector((value)\\n\\t}"
+        "In using pure js, often you will be interacting and using the `document` obj. What is the best way 2 reduce the redundancy of writing/ calling the `document` obj? ",
+        "Create a wrapper fn that allows you 2 perform a specific task using the `document` obj. For example a fn that returns either an html el or \\n\\tfunction htmlEl(value) {\\n\\t\\treturn document.querySelector((value)\\n\\t}"
     ],
     "17": [
         "In general what are the common technologies used in the tech industry for frontend development? ",
