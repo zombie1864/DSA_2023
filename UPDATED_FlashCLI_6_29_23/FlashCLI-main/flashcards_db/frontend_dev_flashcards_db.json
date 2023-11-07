@@ -90,5 +90,13 @@
     "22": [
         "Explain how a CDN (content delivery network) impacts the performance of a web page.",
         "A CDN can help improve the performance by serving assets from a server location that is closer to the user."
+    ],
+    "23": [
+        "How can you get a nested el within an html el that acts as either a container or is a parent el?",
+        "Using either the parentNodes method or the querySelector method. \\n\\tparentNode method:\\n\\t\\t`const parent = document.getElementById(\"parentEl\");\\n\\t\\tconst child = parent.<childNodes, firstChild, lastChild>`\\n\\n\\tquerySelector method:\\n\\t\\t`const child = parent.querySelector(<val>)`"
+    ],
+    "24": [
+        "How to get neighboring html els surrounding an html el?",
+        "\\n\\t`const htmlEl = document.querySelector(<val>);\\n\\tconst neighborEl = htmlEl.[nextSibling, previousSibling];`"
     ]
 }
