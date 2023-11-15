@@ -94,7 +94,7 @@ length and size methods, checking and conversion methods, cloning and copying me
 
 
 /**
-@tutorial   : The `switch` statement 
+@tutorial   : THE `switch` STATEMENT 
 @kind       : ADVANCE TOPIC
 @description: Boolean logic looks at cond in order 2 exec blocks of codes. A switch is similar but does not use 
 cond 2 compare against in order 2 exec blocks. Instead it compares val. 
@@ -186,4 +186,19 @@ directly on the obj ds. If it doesn't then it looks up the prototype chain until
         }
     }
 ``` 
+**/
+
+
+
+/**
+@tutorial   : CALLBACKS
+@description: cb r fns that r passed as arg 2 other fns. Methods like `arr.forEach(cb)`, and `arr.map(cb)` take 
+a cb fn as an arg. The concept of cb as arg is an imp feature of asynch programming. 
+@example: ``` 
+    let cb = function() {
+        print('done'); 
+    }; 
+
+    setTimeout(cb, 5000) // prints done after 5sec delay. `setTimeout(cb, t)` is an asynch fn 
+```
 **/
