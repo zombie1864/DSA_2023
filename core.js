@@ -235,11 +235,11 @@ usr input/interaction.
     []_the `.then(cb)` is a consumer method b/c it consumes/proc(data) resp from the server 
     
 @description: The `Promise` class posses 2 traits: 
-    []_it takes a single cb arg known as the executor. The cb itself takes 2 cb args, the `resolve` and `reject` fn 
+    []_it takes a single cb arg known as the executor. The executor takes 2 cb args, the `resolve` and `reject` fn 
     that are provided by js of which the executor exec(resolve) or exec(reject). 
-        []_when the exector obtains the resp from the server it uses either of the cb arg but NEVER both: 
+        []_when the exector obtains a val it uses either of the cb arg but NEVER both and changes the state of the promise: 
             []_`resolve(val)` -- if job finished with result `val`
-            []_`reject(err)` -- if an err occured, yield an err obj 
+            []_`reject(err)` -- if job results in an err, yields an err obj 
     []_a `.then(cb)` proc(data) obtain from the promise obj 
 
     []_schematic design of `Promise` state  

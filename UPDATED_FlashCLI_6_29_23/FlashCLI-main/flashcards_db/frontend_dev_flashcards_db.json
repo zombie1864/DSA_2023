@@ -98,5 +98,17 @@
     "24": [
         "How to get neighboring html els surrounding an html el?",
         "\\n\\t`const htmlEl = document.querySelector(<val>);\\n\\tconst neighborEl = htmlEl.[nextSibling, previousSibling];`"
+    ],
+    "25": [
+        "In js you have the `Promise` constructor. In it is the executor, what is the role of the executor conceptually (no code involved)?",
+        "The executor performs a job (usually something that takes time) and then calls on either the `resolve` or `reject` cb 2 change the state of the promise. "
+    ],
+    "26": [
+        "What r promises and what do they repr? ",
+        "They r objs that repr the eventual completion or failure of an asynch operation and its resulting val "
+    ],
+    "27": [
+        "What do promises help manage? ",
+        "They help manage asynch code and make it easier 2 handle and reason abt asynch tasks"
     ]
 }
