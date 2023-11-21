@@ -202,3 +202,121 @@ a cb fn as an arg. The concept of cb as arg is an imp feature of asynch programm
     setTimeout(cb, 5000) // prints done after 5sec delay. `setTimeout(cb, t)` is an asynch fn 
 ```
 **/
+
+
+
+/**
+@tutorial   : PROMISES
+@description: promises build on the concept of asynch programming. They are objs that repr the eventual completion or failure 
+of an asynch operation and its resulting val. These objs help manage asynch code and make it easier 2 handle and reason abt
+asynch tasks. Asynch operations can include fetching data from a remote server, reading file content, or waiting 4 
+usr input/interaction.  
+        
+@example: The following is a BAD ex. It shows fetch isn't used```
+    function getServerStatus() {
+        let resp = fetch('/server/stat'); 
+
+        // THIS WILL NOT WORK 
+        print('The status from the server is: ', resp.ok) ERR 
+    }
+``` 
+    []_In python this would work but that is b/c it runs synch not asynch 
+
+
+@example: The correct way of fetching data from a server ``` 
+    function gerServerStatus() {
+        let resp = fetch('/server/stat'); 
+
+        resp.then(function(stat) {
+            print('The status from the server is', stat.ok)
+        })
+    }
+``` 
+    []_the `.then(cb)` is a consumer method b/c it consumes/proc(data) resp from the server 
+    
+@description: The `Promise` class posses 2 traits: 
+    []_it takes a single cb arg known as the executor. The cb itself takes 2 cb args, the `resolve` and `reject` fn 
+    that are provided by js of which the executor exec(resolve) or exec(reject). 
+        []_when the exector obtains the resp from the server it uses either of the cb arg but NEVER both: 
+            []_`resolve(val)` -- if job finished with result `val`
+            []_`reject(err)` -- if an err occured, yield an err obj 
+    []_a `.then(cb)` proc(data) obtain from the promise obj 
+
+    []_schematic design of `Promise` state  
+        new Promise(executor)               resolve(val)
+        {                           -->     {
+            state: 'pending',                   state: 'fulfilled', 
+            result: undefined                   result: val 
+        }                                   }
+
+        OR 
+
+        new Promise(executor)               Reject(val)
+        {                           -->     {
+            state: 'pending',                   state: 'rejected', 
+            result: undefined                   result: err
+        }                                   }
+
+@example: ``` 
+    function asynchSum(a, b) {
+        let res = new Promise(function(resolve, reject) {
+            resolve(a + b); 
+        })
+
+        return res // this returns the promise not the val 
+    }
+
+    asynchSum(3, 5).then(function(res) {
+        print(`The result of the addition is: ${res}`); 
+    })
+``` 
+
+@example: short-hand notation``` 
+    function asynchSum(a, b) {
+        return Promise.resolve(a + b); 
+    }
+
+    asynchSum.then(function(res) {
+        print(`The result of the addition is: ${res}`); 
+    })
+``` 
+**/
+
+
+
+/**
+@tutorial   : PROMISE USE CASES
+@description: promises are widely used in js. 
+    []_Fetching data from a db, APIs, or external source where the resp time is unpredictable and making http req 2 
+    fetch(data) is asynch 
+**/
+
+
+
+/**
+@tutorial   : PROMISE W `setTimeout(cb)`
+@description: Using time delay 2 `produce code`
+@example    :```
+    let promise = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            resolve('done')
+        }, 1000)
+    })
+
+    promise.then(function(msg) {
+        print(msg); 
+    })
+``` 
+
+@example    :``` 
+    let promise = new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            reject(new Error('Error!'))
+        }, 1000); 
+    })
+
+    promise.then(function(msg) {
+        print(msg)
+    })
+``` 
+**/
