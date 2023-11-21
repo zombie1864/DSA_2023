@@ -240,7 +240,7 @@ usr input/interaction.
         []_when the exector obtains a val it uses either of the cb arg but NEVER both and changes the state of the promise: 
             []_`resolve(val)` -- if job finished with result `val`
             []_`reject(err)` -- if job results in an err, yields an err obj 
-    []_a `.then(cb)` proc(data) obtain from the promise obj 
+    []_a `.then(cb)` proc(res) obtain from the promise obj 
 
     []_schematic design of `Promise` state  
         new Promise(executor)               resolve(val)
