@@ -35,8 +35,7 @@ class Root:
 
 
 def prob_00_longest_cp(): # RECORD_TIME:  BEST_TIME: 
-    ''' write a fn to find the longest common prefix str in a list[str], if no common prefix 
-    return empty str 
+    ''' find longest common prefix str in a list[str], if none return empty str 
 	'''
     res_1 = _longest_cp(["flower","flow","flight"]) 
     res_2 = _longest_cp(["dog","racecar","car"]) 
@@ -47,22 +46,26 @@ def prob_00_longest_cp(): # RECORD_TIME:  BEST_TIME:
 def _longest_cp(words:List[str]) -> str:
     '''
     '''
-    cp = '' 
-    words = sorted(words) # sorts list[str] in lexicographical order 
-    first_word = words[0]
-    last_word = words[-1]
+    if not words:
+        return ''
 
-    for idx in range(min(len(first_word), len(last_word))): # 
-        if first_word[idx] != last_word[idx]: 
-            return cp 
-        cp += first_word[idx]
+    words.sort() # Sort words alphabetically 2 bring potential common prefixes together
+    first_word      = words[0]
+    last_word       = words[-1]
+    common_prefix   = []
+    
+    for i in range(len(first_word)): #itr(first_word)
+        if i < len(last_word) and first_word[i] == last_word[i]:
+            common_prefix.append(first_word[i])
+        else:
+            break
 
-    return cp 
+    return ''.join(common_prefix)
+
 
 
 def prob_01_plus_one(): 
-    '''  Given a large int, represented as list[int] are ordered from most significant to least in 
-    left to right order. Inc the large integer by one and return the resulting list[int]
+    '''  Given a list[int] inc the last int by one and return the resulting list[int]
     '''
     res_1 = _plus_one([1, 2, 3])
     res_2 = _plus_one([9])
@@ -75,14 +78,15 @@ def prob_01_plus_one():
 
 def _plus_one(nums:List[int]) -> List[int]: 
     '''  
-    ''' 
-    if not nums:  return [1] 
-
-    if nums[-1] < 9: 
-        nums[-1] += 1 
-        return nums 
-    else: 
-        return _plus_one(nums[:-1]) + [0]
+        VAR joined_str_int = ''.join(map(str, nums))
+        VAR res_int = int(joined_str_int) 
+        res_int += 1 
+        RETURN [int(digit) for digit in str(res_int)]
+    '''
+    joined_str_int = ''.join(map(str, nums)) 
+    res_int = int(joined_str_int)
+    res_int += 1 
+    return [int(digit) for digit in str(res_int)]
     
 
 def prob_02_len_of_last_word(): 
@@ -96,70 +100,70 @@ def prob_02_len_of_last_word():
 
 def _len_of_last_word(sent:str) -> int: 
     '''  
-    []_VAR arr = sent.split(' ')
-    []_VAR words = [] 
-    []_itr(arr, el)
-        []_IF el != ' ' 
-            []_words.append(el) 
-    []_RETURN len(words[-1])
-
-    O(n)_t: O(n)
-    O(n)_s: O(n)
+        VAR words = str.split(' ')
+        itr_rev(words, word)
+            IF word == ' '
+                CONTINUE 
+            ELSE 
+                RETURN len(word)
+        RETURN 0
     '''
-    arr, words = sent.split(' '), []
-    
-    for el in arr: 
-        if el != '': 
-            words.append(el)
- 
-    return len(words[-1]) 
+    words = sent.split() 
+
+    if words: 
+        return len(words[-1])
+    else: 
+        return 0
 
 
 def prob_03_top_k_frequent_elements():
-    '''  Given a List[int], nums, and an int k, return the k most frequent el
+    '''  Given a List[int] and a int k, return the k most frequent el
     '''
     res_1 = _top_k_frequent_elements([1, 1, 1, 2, 2, 3], 2) 
-    ans_1 = [1, 2]
+    res_2 = _top_k_frequent_elements([3, 3, 3, 1, 1, 1, 2, 2, 2, 4], 3)
+    res_3 = _top_k_frequent_elements([1, 2, 3, 4], 1)
+    ans_1, ans_2, ans_3 = [1, 2], [1, 2, 3], [1]
     print('pass' if res_1 == ans_1 else res_1)
-
+    print('pass' if res_2 == ans_2 else res_2)
+    print('pass' if res_3 == ans_3 else res_3)
 
 def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]: 
     '''  
-    []_VAR freq = {}
-    []_itr(nums, num)
-        []_IF num in freq
-            []_freq[num] += 1
-        []_ELSE
-            []_freq[num] = 1 
-    []_VAR freq_arr =  [int(key) for key, val in freq.items() if val > 1]
-    RETURN freq_arr[:k + 1]
-    O(n)_t: O(n)
-    O(n)_s: O(n)
+        VAR freq = {} # {'1': 3, '2': 2, '3': 1}, {'1': 3, '2': 3, '3': 3, '4': 1}
+        itr(sorted(nums), num) 
+            IF num IN freq 
+                freq[num] += 1 
+            ELSE 
+                freq[num] = 1
+        VAR sorted_dict = dict(sorted(freq.items()))
+        RETURN sorted([int(k) for k IN range(sorted(sorted_dict.keys()))])
     '''
-    freq = {}
+    freq = {} 
     
-    for num in nums: 
-        if str(num) in freq: 
-            freq[str(num)] += 1 
+    for num in sorted(nums): 
+        if num in freq: 
+            freq[num] += 1
         else: 
-            freq[str(num)] = 1 
-  
-    freq_arr = [int(key) for key, val in freq.items() if val > 1] 
+            freq[num] = 1
+    sorted_dict = sorted(freq.keys(), key=lambda item: freq[item], reverse=True)
+    
+    return sorted(sorted_dict[:k])
 
-    return freq_arr[: k + 1] 
 
 def prob_04_linked_list_rm_dups():
-    ''' Suppose you have a list of random names you wish to put in alphabet order. In memory there 
-    are two ways to do this - first with an array and second with linked list. Using an arr ds has 
-    limitations that a linked list overcomes. The limitations of an arr is its size and inefficient 
-    insertion/deletion operations. The size limitation is tied to low-level/hardware limitation. 
-    Arrs have a fixed size determined at the time of creation. If the initial arr size is too small 
-    it leads to overflow and requires resizing which is time-consuming and memory intensive. A linked 
-    list can grow dynamically eliminating the need for pre-allocation. The insertion/deletion of entries 
-    in array take O(n) to index into arr where linked-list takes O(1) by using pointers to locate data. 
-    Linked-list use pointers | data | addr | -> | data | addr | that points to data in memory and do 
-    not need to be adjacent like an array--existing in "cyber space". B/c of the vectorization nature 
-    of a linked-list their exist different types of linked list. 
+    ''' You have a list of random names you wish to alphabetize. In memory there 
+    are 2 ways to do this - first with an array and second with linked list. 
+    Using an arr ds has limitations that a linked list overcomes. The limitations of an arr 
+    is its size and inefficient insertion/deletion operations. The size limitation is tied to 
+    low-level/hardware limitation. Arrs have a fixed size determined at the time of creation. 
+    If the initial arr size is too small it leads to overflow and requires resizing 
+    which is time-consuming and memory intensive. A linked list can grow dynamically 
+    eliminating the need for pre-allocation. The insertion/deletion of entries in array 
+    take O(n) where linked-list takes O(1) by using pointers to locate data. 
+    Linked-list use pointers that points to data in memory 
+        | data | addr | -> | data | addr | 
+    and do not need to be adjacent like an array--existing in "cyber space". 
+    B/c of the vectorization nature of a linked-list their exist different types of linked list. 
 
         Single linked list: Navigation is forward only 
         Double linked list: forward and backward navigation 
@@ -175,22 +179,8 @@ def prob_04_linked_list_rm_dups():
 
 def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
     '''  
-    []_range(0, len(nums) - 1, idx)
-        []_IF nums[idx] == nums[idx + 1]
-            []_nums.remove(nums[idx])
-    []_RETURN nums 
     '''
-    idx = 0 
 
-    while idx < len(nums) - 1: 
-        if nums[idx] == nums[idx + 1]: 
-            # a == b, arr.remove(a); no update to idx 
-            nums.remove(nums[idx])
-        else: 
-            # allowed to move forward in the arr 
-            idx += 1
-
-    return nums
 
 
 def prob_05_BT_inorder_traversal():
@@ -207,15 +197,7 @@ def prob_05_BT_inorder_traversal():
 
 def _BT_inorder_traversal(Tree:Root, seen:Union[None, int]=[]) -> List[int]: 
     '''  
-    []_IF Tree.val == None 
-        []_RETURN seen 
-    []_IF Tree._left != None
-        []_fn(Tree._left, seen)
-    []_IF Tree._right != None 
-        []_fn(Tree.left, seen.append(Tree.val))
-    []_RETURN fn(Tree, seen.append(Tree.val))
     '''
-    return _BT_inorder_traversal(Tree._left) + [Tree._val] + _BT_inorder_traversal(Tree._right) if Tree else []
 
 
 
@@ -249,28 +231,8 @@ def prob_06_same_BT():
 
 def _same_BT(tree1:Root, tree2:Root) -> bool: 
     '''  
-    []_VAR cond_1 = tree1._val != tree2._val 
-    []_VAR cond_2 = tree1._left IS NOT none AND tree2._left IS none 
-    []_VAR cond_3 = tree1._left IS none AND tree2._left IS NOT none 
-    []_VAR cond_4 = tree1._right IS none AND tree2._right IS NOT none 
-    []_VAR cond_5 = tree1._right IS NOT none AND tree2._right IS none 
-    
-    []_IF cond_1 OR cond_2 OR cond_3 OR cond_4 OR cond_5 
-        []_RETURN false 
-    
-    []_IF tree1._val != tree2._val 
-        []_RETURN false 
-    []_IF tree1._left AND tree2._left 
-        []_RETURN fn(tree1._left, tree2._left)
-    []_IF tree1._right and tree2._right 
-        []_RETURN fn(tree1._right, tree2._right) 
-    []_RETURN true 
     '''
-    if tree1 is None and tree2 is None : # 
-        return True 
-    if tree1 is None or tree2 is None or tree1._val != tree2._val: 
-        return False 
-    return _same_BT(tree1._left, tree2._left) and _same_BT(tree1._right, tree2._right)
+
 
 
 

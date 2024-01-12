@@ -8,6 +8,7 @@ An MVC pattern is designed to handle the storing and retrieving of data, maniplu
 
 to activate it on mac `source venv/bin/activate`
 to activate it on windows `.\venv\Scripts\activate`
+Inside `FlashCLI/` type `python3 -m flashCLI --help` 4 a list of opt 
 
 ## Click Over argparse
 ----------------------
