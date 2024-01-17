@@ -129,17 +129,19 @@ def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]:
 
 
 def prob_04_linked_list_rm_dups():
-    ''' Suppose you have a list of random names you wish to put in alphabet order. In memory there 
-    are two ways to do this - first with an array and second with linked list. Using an arr ds has 
-    limitations that a linked list overcomes. The limitations of an arr is its size and inefficient 
-    insertion/deletion operations. The size limitation is tied to low-level/hardware limitation. 
-    Arrs have a fixed size determined at the time of creation. If the initial arr size is too small 
-    it leads to overflow and requires resizing which is time-consuming and memory intensive. A linked 
-    list can grow dynamically eliminating the need for pre-allocation. The insertion/deletion of entries 
-    in array take O(n) to index into arr where linked-list takes O(1) by using pointers to locate data. 
-    Linked-list use pointers | data | addr | -> | data | addr | that points to data in memory and do 
-    not need to be adjacent like an array--existing in "cyber space". B/c of the vectorization nature 
-    of a linked-list their exist different types of linked list. 
+    ''' You have a list of random names you wish to alphabetize. In memory there 
+    are 2 ways to do this - first with an array and second with linked list. 
+    Using an arr has limitations that linked list overcomes, which are size and inefficient 
+    insertion/deletion operations. The size limitation is tied to 
+    low-level/hardware limitation. Arrs have a fixed size determined at the time of creation. 
+    If the initial arr size is too small it leads to overflow and requires resizing 
+    which is time-consuming and memory intensive. A linked list can grow dynamically 
+    eliminating the need for pre-allocation. The insertion/deletion of entries in array 
+    take O(n) where linked-list takes O(1) by using pointers to locate data. 
+    Linked-list use pointers that points to data in memory 
+        | data | addr | -> | data | addr | 
+    and do not need to be adjacent like an array--existing in "cyber space". 
+    B/c of the vectorization nature of a linked-list their exist different types of linked list. 
 
         Single linked list: Navigation is forward only 
         Double linked list: forward and backward navigation 
@@ -149,28 +151,58 @@ def prob_04_linked_list_rm_dups():
     '''
     res_1 = _linked_list_rm_dups([1, 1, 2])
     res_2 = _linked_list_rm_dups([2, 2, 2, 3, 4, 9, 9])
-    print('pass' if res_1 == [1, 2] else res_1)
-    print('pass' if res_2 == [2, 3, 4, 9] else res_2)
+    print('pass' if _linked_list_2_arr(res_1) == [1, 2] else _linked_list_2_arr(res_1))
+    print('pass' if _linked_list_2_arr(res_2) == [2, 3, 4, 9] else _linked_list_2_arr(res_2))
+
+
+class LinkList: 
+    def __init__(self, val=0, nxt=None): 
+        self._val = val 
+        self._nxt = nxt 
 
 
 def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
     '''  
-    []_range(0, len(nums) - 1, idx)
-        []_IF nums[idx] == nums[idx + 1]
-            []_nums.remove(nums[idx])
-    []_RETURN nums 
     '''
-    idx = 0 
+    head = _arr_2_linked_list(nums) 
 
-    while idx < len(nums) - 1: 
-        if nums[idx] == nums[idx + 1]: 
-            # a == b, arr.remove(a); no update to idx 
-            nums.remove(nums[idx])
+    if not head or not head._nxt: 
+        return head 
+    
+    curr = head 
+
+    while curr._nxt: 
+        if curr._val == curr._nxt._val: 
+            curr._nxt = curr._nxt._nxt 
         else: 
-            # allowed to move forward in the arr 
-            idx += 1
+            curr = curr._nxt
+    
+    return head
 
-    return nums
+
+def _arr_2_linked_list(nums:List[int]): 
+    'converts arr 2 linked_list'
+    if not nums: 
+        return None 
+    
+    head = LinkList(nums[0]) 
+    curr = head 
+
+    for num in nums[1:]: 
+        curr._nxt = LinkList(num) 
+        curr = curr._nxt
+
+    return head
+
+
+def _linked_list_2_arr(head): 
+    res, curr = [], head 
+
+    while curr: 
+        res.append(curr._val)
+        curr = curr._nxt
+
+    return res 
 
 
 def prob_05_BT_inorder_traversal():
@@ -246,11 +278,15 @@ def _same_BT(tree1:Root, tree2:Root) -> bool:
         []_RETURN fn(tree1._right, tree2._right) 
     []_RETURN true 
     '''
-    if tree1 is None and tree2 is None : # 
+    if tree1 is None and tree2 is None: # Both trees are empty, they are the same
         return True 
-    if tree1 is None or tree2 is None or tree1._val != tree2._val: 
+    if tree1 is None or tree2 is None: # One tree is empty, the other is not, they are diff
         return False 
-    return _same_BT(tree1._left, tree2._left) and _same_BT(tree1._right, tree2._right)
+    return (
+        _same_BT(tree1._left, tree2._left)  and 
+        tree1._val == tree2._val            and 
+        _same_BT(tree1._right, tree2._right)
+    )
 
 
 

@@ -153,8 +153,8 @@ def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]:
 def prob_04_linked_list_rm_dups():
     ''' You have a list of random names you wish to alphabetize. In memory there 
     are 2 ways to do this - first with an array and second with linked list. 
-    Using an arr ds has limitations that a linked list overcomes. The limitations of an arr 
-    is its size and inefficient insertion/deletion operations. The size limitation is tied to 
+    Using an arr has limitations that linked list overcomes, which are size and inefficient 
+    insertion/deletion operations. The size limitation is tied to 
     low-level/hardware limitation. Arrs have a fixed size determined at the time of creation. 
     If the initial arr size is too small it leads to overflow and requires resizing 
     which is time-consuming and memory intensive. A linked list can grow dynamically 
@@ -173,14 +173,59 @@ def prob_04_linked_list_rm_dups():
     '''
     res_1 = _linked_list_rm_dups([1, 1, 2])
     res_2 = _linked_list_rm_dups([2, 2, 2, 3, 4, 9, 9])
-    print('pass' if res_1 == [1, 2] else res_1)
-    print('pass' if res_2 == [2, 3, 4, 9] else res_2)
+    print('pass' if _linked_list_2_arr(res_1) == [1, 2] else _linked_list_2_arr(res_1))
+    print('pass' if _linked_list_2_arr(res_2) == [2, 3, 4, 9] else _linked_list_2_arr(res_2))
+
+
+
+class LinkList: 
+    def __init__(self, val=0, nxt=None): 
+        self._val = val 
+        self._nxt = nxt 
 
 
 def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
     '''  
     '''
+    head = _arr_2_linked_list(nums) 
 
+    if not head or not head._nxt: 
+        return head 
+    
+    curr = head 
+
+    while curr._nxt: 
+        if curr._val == curr._nxt._val: 
+            curr._nxt = curr._nxt._nxt 
+        else: 
+            curr = curr._nxt
+    
+    return head
+
+
+def _arr_2_linked_list(nums:List[int]): 
+    'converts arr 2 linked_list'
+    if not nums: 
+        return None 
+    
+    head = LinkList(nums[0]) 
+    curr = head 
+
+    for num in nums[1:]: 
+        curr._nxt = LinkList(num) 
+        curr = curr._nxt
+
+    return head
+
+
+def _linked_list_2_arr(head): 
+    res, curr = [], head 
+
+    while curr: 
+        res.append(curr._val)
+        curr = curr._nxt
+
+    return res 
 
 
 def prob_05_BT_inorder_traversal():
@@ -195,9 +240,10 @@ def prob_05_BT_inorder_traversal():
     print('pass' if res == [1, 3, 2] else res)
 
 
-def _BT_inorder_traversal(Tree:Root, seen:Union[None, int]=[]) -> List[int]: 
+def _BT_inorder_traversal(Tree:Root) -> List[int]: 
     '''  
     '''
+    return _BT_inorder_traversal(Tree._left) + [Tree._val] + _BT_inorder_traversal(Tree._right) if Tree else []
 
 
 
@@ -231,7 +277,20 @@ def prob_06_same_BT():
 
 def _same_BT(tree1:Root, tree2:Root) -> bool: 
     '''  
+        IF NOT tree1._val == tree2._val 
+            RETURN false 
+        _same_BT(tree1._left, tree2._left)
+        _same_BT(tree1._right, tree2._right)
     '''
+    if tree1 is None and tree2 is None: # Both trees are empty, they are the same
+        return True 
+    if tree1 is None or tree2 is None: # One tree is empty, the other is not, they are diff
+        return False 
+    return (
+        _same_BT(tree1._left, tree2._left)  and 
+        tree1._val == tree2._val            and 
+        _same_BT(tree1._right, tree2._right)
+    )
 
 
 

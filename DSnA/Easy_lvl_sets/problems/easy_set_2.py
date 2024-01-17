@@ -68,17 +68,7 @@ def prob_00_sym_tree():
 
 def _sym_tree(tree:BT) -> bool: 
     '''  
-    []_
     '''
-    return _sym(tree, tree)
-
-
-def _sym(t1, t2): 
-    if t1 is None and t2 is None: # BC - empty tree/null tree 
-        return True 
-    if t1 is None or t2 is None: 
-        return False 
-    return t1.val == t2.val and _sym(t1.right, t2.left) and _sym(t1.left, t2.right)
 
 def prob_01_BT_max_depth() -> None: 
     '''  Given the root for a BT find the max depth, i.e. the length of the 
@@ -117,9 +107,6 @@ def prob_01_BT_max_depth() -> None:
 
 def _BT_max_depth(tree:BT) -> int: 
     '''  
-    []_
-    O(n)_t: 
-    O(n)_s: 
     '''
 
 

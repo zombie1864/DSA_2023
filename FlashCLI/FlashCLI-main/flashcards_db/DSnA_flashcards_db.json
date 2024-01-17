@@ -146,5 +146,13 @@
     "36": [
         "What is the diff_btw `ds.method()` and `method(ds)`?", 
         "The former is directly operating on the ds which can lead 2 mutation of the original ds, where as in the latter the method acts on the ds producing a res rather than direct manipualtion"
+    ], 
+    "37": [
+        "Do linked-list exist in py?", 
+        "No they do not, ergo if you wish to work with linked list you must first convert an arr/list in2 a linked-list"
+    ], 
+    "38": [
+        "For BTs (binary trees) what does 'inorder traversal' mean?", 
+        "Search done by visiting the left subtree, current node, and right subtree"
     ]
 }
