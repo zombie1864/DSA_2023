@@ -5,7 +5,7 @@
     ],
     "1": [
         "What is the pseudocode for a listComp and dictComp?",
-        "listComp: [VAR/COND FOR VAR in iter] \\n\\t\\tdictComp: {k:v for k,v in iter.items()}"
+        "listComp: \\n\\t\\t[VAR/COND for VAR in iter] \\n\\t\\tdictComp: {k:v for k,v in iter.items()}"
     ],
     "2": [
         "Given D1 and D2 w type Dict[str,int], how do you determine the max amt that can be generated from D2 if D1 is mapping rubric?",
@@ -29,7 +29,7 @@
     ],
     "7": [
         "What is the diff btw the two pseudo?\\n\\t[VAR/COND FOR iter]\\n\\t\\t-vs-\\n\\t[VAR FOR iter COND]",
-        "[VAR/COND FOR iter] req COND to be ternary, where within the list IF[NOT COND] another value is used in place of the el\\n\\tEX:\\n\\t\\t[n if n % 2 else '_' for n in range(20)] \\n\\t\\t=> ['_', 1, '_', 3, '_', 5, '_', 7, '_', 9, '_', 11, '_', 13, '_', 15, '_', 17, '_', 19]\\nWhere as [VAR FOR iter COND] does not req ternary\\n\\tEX:\\n\\t\\t[n for n in range(20) if n % 2] \\n\\t\\t=> [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\\nNo COND for el in [VAR FOR iter COND]"
+        "[VAR/COND FOR iter] req COND to be ternary, where within the list IF[NOT COND] another value is used in place of the el\\n\\tEX:\\n\\t\\t[n if n % 2 else '_' for n in range(20)] \\n\\t\\t=> ['_', 1, '_', 3, '_', 5, '_', 7, '_', 9, '_', 11, '_', 13, '_', 15, '_', 17, '_', 19]\\n\tWhere as [VAR FOR iter COND] does not req ternary\\n\\tEX:\\n\\t\\t[n for n in range(20) if n % 2] \\n\\t\\t=> [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]\\n\tNo COND for el in [VAR FOR iter COND]"
     ],
     "8": [
         "What is the pseudo for a listComp that does double iter?",
@@ -61,7 +61,7 @@
     ],
     "15": [
         "What is O(n)_t for 'in' operator in py?",
-        "for List/Tuple O(n)\\n\\t\\tfor set/Dict O(1)"
+        "\n\tfor List/Tuple O(n)\\n\\t\\tfor set/Dict O(1)"
     ],
     "16": [
         "What is the O(n)t for List.sort()?",
@@ -73,11 +73,11 @@
     ],
     "18": [
         "What method is used to find the idx of a sub_str within a str?",
-        "    str.find(sub_str)\\n\\t[EX]:\\n\\t\\t'python'.find('p') \\t#=> 0\\n\\t\\t'python'.find('thon') \\t#=> 2\\n\\t\\t'python'.find('P') \\t#=> -1\\n\\t\\t'python'.find('z') \\t#=> -1"
+        "    str.find(sub_str)\\n\\t[EX]:\\n\\t\\t'python'.find('p') \\t#=> 0\\n\\t\\t'python'.find('thon') \\t#=> 2\\n\\t\\t'python'.find('P') \\t#=> -1\\n\\t\\t'python'.find('z') \\t#=> -1\\n\\tstr.index(sub_str) also can be used. If sub_str not found returns ValueError"
     ],
     "19": [
         "How to check if multiple keys exist in a dict? I.e. does key_1, ..., key_n exist in dict?",
-        "UnOpt method:\\n\\t\\t\\tIF ('key_1', ...,'key_n') IN dict.keys()\\n\\t\\tOpt method:\\n\\t\\t\\treq_keys = ('key_1', ...,'key_n')\\n\\t\\t\\tIF all(key IN dict FOR key in req_keys)"
+        "UnOpt method:\\n\\t\\t\\tIF ('key_1', ...,'key_n') IN dict.keys()\\n\\t\\tOpt method:\\n\\t\\t\\treq_keys:Set = ('key_1', ...,'key_n')\\n\\t\\t\\tIF all(key IN dict FOR key in req_keys)"
     ],
     "20": [
         "What is the scope of a WHILE loop, i.e. what VAR access does the business logic have within a WHILE loop?",
@@ -104,7 +104,7 @@
         "max(num1, num2)"
     ],
     "26": [
-        "Classes take in init data when inst e.g. `VAR ex = SomeEx(data)`. \\nHow do you store the data internally in a class? ",
+        "Classes take in init data when inst e.g. `VAR ex = SomeEx(data)`. \\n\tHow do you store the data internally in a class? ",
         "All data are stored within the `def __init__(self, data)`. To have the \\n data be made globally accessable to all other class methods you store the \\n data within `__init__` as `self._data = data`, where the `_` after `self`\\n signifies \"internal/private\" usage to the class. "
     ],
     "27": [
@@ -113,11 +113,11 @@
     ],
     "28": [
         "What is the output of the following len(44)?",
-        "TypeError: Object of type 'int' has no len()\\n`len(str)` can only be performed on str type"
+        "TypeError: Object of type 'int' has no len()\\n`len(str)` can only be performed on str or list type"
     ],
     "29": [
         "Is the following possible in py, list(num), where num = 1234? (Can you convert an int in2 a list[int]?)",
-        "No, list(num) is possible if num = '1234'. However if num:int then \\nlistComp:[int(n) for n in list(str(num))]"
+        "No, list(num) is possible if num = '1234'. However if num:int then \\n\tlistComp:[int(n) for n in str(num)]"
     ],
     "30": [
         "What is the diff(str.index(sub_str), str.find(sub_str))?",
@@ -129,18 +129,18 @@
     ], 
     "32": [
         "What is the diff(sorted(), .sort())", 
-        "The sorted() method does not mutate it's input val where as .sort() is a M.I.P op"
+        "The sorted() method does not mutate it's input val where as .sort() is a M.P.O"
     ], 
     "33": [
         "How do you take a list[int], where each int is a digit, and convert it to a single num? ", 
-        "VAR joined_str = ''.join(map(str, ints))\n\t\tVAR res_int = int(joined_str)"
+        "\n\tVAR joined_str = ''.join(map(str, list[int]))\n\tVAR res_int = int(joined_str)"
     ], 
     "34": [
         "What is the pseudo code and an actual example of iterating in reverse an iter?", 
-        "itr_rev(iter, item)\n\t\tEX:\n\t\tnums = [1, 2, 3, 4, 5]\n\t\tfor n in reversed(nums):\n\t\t\tprint(n)\n\t\t#=> 5, 4, 3, 2, 1"
+        "rev_itr(iter, el)\n\t\tEX:\n\t\tnums = [1, 2, 3, 4, 5]\n\t\tfor n in reversed(nums):\n\t\t\tprint(n)\n\t\t#=> 5, 4, 3, 2, 1"
     ], 
     "35": [
-        "Given a str with an unknown amount of white spaces\n\t\tEx: `hello world`\n\t\tEx: `   fly me   to   the moon  `\n\t   How do you remove all spaces?",
+        "Given a str with an unknown amount of white spaces\n\t\tEx: `hello world`\n\t\tEx: `   fly me   to   the moon  `\n\tHow do you remove all spaces and return a list of words?",
         "str.split()"
     ], 
     "36": [
@@ -154,5 +154,17 @@
     "38": [
         "For BTs (binary trees) what does 'inorder traversal' mean?", 
         "Search done by visiting the left subtree, current node, and right subtree"
+    ], 
+    "39": [
+        "Suppose you need 2 create an arr of a given N size. What is the naive way of doing this and the expert way of doing this?", 
+        "\n\tNaive - list comprehension:\n\t\t[n for n in range(N)]\n\tExpert - list method\n\t\tlist(range(N))"
+    ], 
+    "40": [
+        "Both .index(el) and .find(el) work on str dt. Does it also work on list dt? ", 
+        "No\n\t.index(el) works on list but .find(el) does not work on list dt"
+    ], 
+    "41": [
+        "Given arr = [1, 2, 3] how do you reverse this arr?", 
+        "using the method `reversed(arr)` which returns a reversed iter\n\tThus it is best 2 store the rev_iter as \n\trev_arr = reversed(arr)"
     ]
 }
