@@ -1,10 +1,39 @@
 {
     "0": [
         "Tell me about a time when you had to meet a tight deadline. How did you prioritize and organize your work?",
-        "At ombligo, we encountered a scenario where we needed 2 meet a deadline for a major e-commerce platform overhaul. The goal was 2 enhance the UI/UX on the site. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and ensure each aspect of the overhaul was on schedule. I collaborated with the sales team and the COO 2 ensure every1 was on the same page. I leveraged AI tools to streamline problem-solving and decision-making, regularly evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more intuitive and accessible storefront, garnering positive feedbacks from the sales team, COO, and customers. "
-    ], 
+        "@ ombligo, i encountered a scenario where i needed 2 meet a deadline for a major e-commerce platform overhaul. The goal was 2 enhance the UI/UX on the site. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and ensure each aspect of the overhaul was on schedule. I collaborated with the sales team 2 ensure every1 was on the same page. I leveraged AI tools to streamline problem-solving and decision-making, regularly evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more intuitive and accessible storefront, garnering positive feedbacks from the sales team, and customers. "
+    ],
     "1": [
-        "Tell me abt ur self.", 
-        "I am a seasoned software developer with over 2 years, specalizing in full-stack development. I have a strong foundation in programming languages such as JS, and PY, coupled with expertise in frameworks likes React.js, and Flask.\n\tIn my recent role at Ombligo, i played a pivotal role in revamping their E-commerce website and managing other sales channels, resulting in a more accessible and intuitive storefront. This initiative significantly boosted company sales by optimizing UI/UX for both desktop and mobile views, showcasing my ability 2 drive tangible business outcomes.\n\tDuring my time @ GAL I contributed keys features to their elevator monitoring software elevating its competitiveness within the industry. This showcased my proficiency in developing software that interfaces seamlessly with embedded systems, demonstrating my expertise in real-time data processing.\n\tThroughout my career, I've demonstrated a knack for problem-solving and a commitment to code quality and maintainability.\n\tI am excited about the opportunity at hand and believe my technical proficiencies, collaborative mindset, and passion for creating efficient and UI-friendly applications makes me a valuable candidate for this position and I look forward to the opportunity to bring my unique perspective and expertise to your team."
+        "Tell me abt ur self.",
+        "I am a seasoned swe w over 2yrs, specalizing in full-stack development. I have a strong foundation in programming languages such as JS, and PY, coupled with expertise in frameworks likes React.js, and Flask.\n\tIn my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website and managing other sales channels, resulting in a more accessible and intuitive storefront. This initiative significantly boosted company sales by optimizing UI/UX for both desktop and mobile views, showcasing my ability 2 drive tangible business outcomes.\n\tDuring my time @ GAL I contributed keys features to their elevator monitoring sw elevating its competitiveness within the industry. This showcased my proficiency in developing sw that interfaces seamlessly with embedded sys, demonstrating my expertise in real-time data processing.\n\tI am excited about the opportunity at hand and believe my technical proficiencies, collaborative mindset, and passion for creating UI-friendly applications makes me a valuable candidate for this position and I look forward to the opportunity to bring my unique perspective and expertise to your team."
+    ],
+    "2": [
+        "What r 3 accomplishments u r most proud of?",
+        "\n\t1. Strategic product placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, designed an intuitive and informative product page w detailed images \n\t\tresulting in enhanced consumer exp. \n\t2. Automation sw 4 PO order processing: addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact through enhanced storefront navigation: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. "
+    ],
+    "3": [
+        "What job-related skills have u developed?",
+        "Throughout my professional journey, \n\tI've honed a diverse set of job-related skills that contribute 2my effectiveness in various roles. \n\t\tSWE-skills: \n\t\t\texp in coding, debugging, and maintaining sw apps. \n\t\tSW-design skills: \n\t\t\thands-on involvement in swe design and familiarity w sw development life cycle and best practices. \n\t\tcollaboration skills, and \n\t\tbusiness operations skills. "
+    ],
+    "4": [
+        "Tell me about your achievements during your tenure @ ombligo.",
+        "@ ombligo, i played a pivitol role in revamping their E-commerce website and managing their other sales channels, resulting in a more accessible and intuitive storefront. This initiative significantly boosted company sales by optimizing UI/UX for both desktop and mobile views, showcasing my ability 2 drive tangible business outcomes. "
+    ],
+    "5": [
+        "Tell me abt ur time w GAL manufacturing. ",
+        "@ GAL i contributed key features 2 their elevator monitoring sw elevating its competitiveness within the industry. This showcased my proficiency in developing sw that interfaces seamlessly w embedded sys, demostrating my expertise in real-time data processing."
+    ],
+    "6": [
+        "Tell me abt ur self--what makes u the perfect candidate?",
+        "I am excited abt da opp @ hand and believe my tech prof, collab mindset, and passion 4 creating UI-friendly apps makes me a val cand 4 this position and i look 4ward 2da opp 2 bring my unique perspective and expertise 2 ur team.",
+        "COMMENT:opp = opportunity, tech = technical, prof = proficiencies, collab = collaborative, val = valuable, cand = candidate"
+    ],
+    "7": [
+        "Tell me abt a time when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (P from PAR--state da prob)",
+        "@ ombligo i encountered a scenario where i needed 2 meet a deadline 4a major e-commerce platform overhaul"
+    ],
+    "8": [
+        "While @ ombligo how did u manage their products and inventory?",
+        "Utilizing PY and shopify API 2 oversee inventory, generating reports that informed size of inventory and effective campaigns 4 specific products. "
     ]
 }

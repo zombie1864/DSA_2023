@@ -166,5 +166,33 @@
     "41": [
         "Given arr = [1, 2, 3] how do you reverse this arr?", 
         "using the method `reversed(arr)` which returns a reversed iter\n\tThus it is best 2 store the rev_iter as \n\trev_arr = reversed(arr)"
+    ], 
+    "42": [
+        "Explain what the zip() method does?", 
+        "Combines two or more iter 2 create a tuple iter where each el of the tuple contains the ith el from each of the input iter.\n\tEx:\n\t\ttuple1 = ('a', 'b', 'c')\n\t\tlist2 = [1, 2, 3]\n\t\tres = zip(tuple1, list2)\n\t\tres_list = list(res)\n\t\tprint(res_list) #=> [('a', 1), ('b', 2), ('c', 3)]" 
+    ], 
+    "43": [
+        "How do you unzip a ziped iter, where the iter is `zipped:list[tuple[str, int]] = [('a', 1), ('b', 2), ('c', 3)]`?", 
+        "\n\tunzipped = list(zip(*zipped))\n\tprint(unzipped) #=> [('a', 'b', 'c'), (1, 2, 3)]"
+    ], 
+    "44": [
+        "In problems it is useful 2 keep track of certain data, a VAR `seen` dt set is often used. What is the benefit of storing data in `seen`?", 
+        "\n\t`seen` is useful when dealing w iterative processes. Used 2 keep track\n\tof els that have been encountered during the exec of an algo. Here r a few reasons why VAR `seen`\n\tis useful:\n\t\t1. Detecting Cycles: \n\t\t\tIf a repetition is detected, it can be an indication of a cycle, helpful 2 prevent inf loops\n\t\tAvoid duplicates:\n\t\t\tA need 4 unique el, `seen` helps reducing redudntant computations\n\t\tEfficient membership testing:\n\t\t\tSets in py offer contant-time avg look up O(1) making it performance efficient in both time and space complexities." 
+    ], 
+    "45": [
+        "Explain what is happening in the following code: \n\tsum(1 for num in arr if num > 0)\n\tWhat does the code produce?", 
+        "The expression inside `sum` is a generator expression that produces val `1` for each el in the arr\n\tthat meets the cond. Essentially an arr of 1s and returns the sum of 1s"
+    ],
+    "46": [
+        "You are iter thr a List[int], how do you swap two num that meet a cond such that the original arr is mutated in place? Only give the piece of code that performs the swap", 
+        "arr[i], arr[i + 1] = arr[i + 1], arr[i]"
+    ], 
+    "47": [
+        "Given a List[int], u r tasked w moving all nonzero el to the left that mutates in place the input arr. How do you acheive this?", 
+        "\n\ti = 0\n\tfor num in arr:\n\t\tif num != 0:\n\t\t\tarr[i] = num\n\t\t\ti +=1\n\n\tarr[i:] = [0] * (len(arr) - i)"
+    ], 
+    "48": [
+        "Given a num as a str dt, how do you split da num into its digits? Ex: '12' -> ['1', '2']", 
+        "list(num)"
     ]
 }

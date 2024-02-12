@@ -34,8 +34,68 @@ class BT:
         self.right = right 
 
 
+class Root:
+    def __init__(self, val=0, left=None, right=None): 
+        self._val   = val 
+        self._left  = left 
+        self._right = right 
 
-def prob_00_sym_tree():
+
+
+def prob_00_BT_inorder_traversal():
+    ''' Given the root of a binary treet (BT), return the `inorder` traversal of 
+    its nodes' value
+    '''
+    root                = Root(1)
+    root._right         = Root(2)
+    root._right._left   = Root(3)
+    res  = _BT_inorder_traversal(root)
+    
+    print('pass' if res == [1, 3, 2] else res)
+
+
+def _BT_inorder_traversal(Tree:Root) -> List[int]: 
+    '''  
+    '''
+
+
+
+
+def prob_01_same_BT():
+    ''' Given the roots of two BTs p and q, write a fn to check if they are the same or not.
+    '''
+    p           = Root(1)
+    p._left     = Root(2) 
+    p._right    = Root(3) 
+    q           = Root(1) 
+    q._left     = Root(2) 
+    q._right    = Root(3) 
+    n           = Root(1)
+    n._left     = Root(2)
+    m           = Root(1) 
+    m._right    = Root(2)
+    x           = Root(1)
+    x._left     = Root(2) 
+    x._right    = Root(1) 
+    y           = Root(1)
+    y._left     = Root(1)
+    y._right    = Root(2) 
+    res_1 = _same_BT(p, q)
+    res_2 = _same_BT(n, m)
+    res_3 = _same_BT(x, y)
+    print('pass' if res_1 else res_1)
+    print('pass' if not res_2 else res_2)
+    print('pass' if not res_3 else res_3)
+
+
+
+def _same_BT(tree1:Root, tree2:Root) -> bool: 
+    '''  
+    '''
+
+
+
+def prob_02_sym_tree():
     '''  Given the root of a BT, check whether it is symmetric 
     sym_tree:        tree: 
             1            1 
@@ -70,7 +130,7 @@ def _sym_tree(tree:BT) -> bool:
     '''  
     '''
 
-def prob_01_BT_max_depth() -> None: 
+def prob_03_BT_max_depth() -> None: 
     '''  Given the root for a BT find the max depth, i.e. the length of the 
     deepest node from its root
 
