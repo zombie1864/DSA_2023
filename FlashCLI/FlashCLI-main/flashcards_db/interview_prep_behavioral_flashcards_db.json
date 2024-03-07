@@ -1,7 +1,7 @@
 {
     "0": [
         "Tell me about a time when you had to meet a tight deadline. How did you prioritize and organize your work?",
-        "@ ombligo, i encountered a scenario where i needed 2 meet a deadline for a major e-commerce platform overhaul. The goal was 2 enhance the UI/UX on the site. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and ensure each aspect of the overhaul was on schedule. I collaborated with the sales team 2 ensure every1 was on the same page. I leveraged AI tools to streamline problem-solving and decision-making, regularly evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more intuitive and accessible storefront, garnering positive feedbacks from the sales team, and customers. "
+        "@ ombligo, i encountered a scenario where i needed 2 meet a deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline problem-solving and decision-making, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. "
     ],
     "1": [
         "Tell me abt ur self.",
@@ -9,7 +9,7 @@
     ],
     "2": [
         "What r 3 accomplishments u r most proud of?",
-        "\n\t1. Strategic product placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, designed an intuitive and informative product page w detailed images \n\t\tresulting in enhanced consumer exp. \n\t2. Automation sw 4 PO order processing: addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact through enhanced storefront navigation: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. "
+        "\n\t1. Strategic product placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, resulting in enhanced consumer exp. \n\t2. Automation sw 4 PO order processing: addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact through enhanced storefront: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. "
     ],
     "3": [
         "What job-related skills have u developed?",
@@ -25,7 +25,7 @@
     ],
     "6": [
         "Tell me abt ur self--what makes u the perfect candidate?",
-        "I am excited abt da opp @ hand and believe my tech prof, collab mindset, and passion 4 creating UI-friendly apps makes me a val cand 4 this position and i look 4ward 2da opp 2 bring my unique perspective and expertise 2 ur team.",
+        "I am excited abt da opp @ hand and believe my tech prof, collab mindset, and passion 4 creating digital assets makes me a val cand 4 this position and i look 4ward 2da opp 2 bring my unique perspective and expertise 2 ur team.",
         "COMMENT:opp = opportunity, tech = technical, prof = proficiencies, collab = collaborative, val = valuable, cand = candidate"
     ],
     "7": [
@@ -34,6 +34,6 @@
     ],
     "8": [
         "While @ ombligo how did u manage their products and inventory?",
-        "Utilizing PY and shopify API 2 oversee inventory, generating reports that informed size of inventory and effective campaigns 4 specific products. "
+        "Utilizing PY and shopify API 2 oversee inventory, and generating statistical reports 4 effective campaigns of specific products. "
     ]
 }

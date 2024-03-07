@@ -117,6 +117,42 @@ def _letter_combinations(num:str, rule:Dict[str, str]):
     return res 
 
 
+def prob_02_lonely_int():
+    '''
+    Given a List[int], where all el but 1 occur twice, find the unique el
+    '''
+    arr_1 = [1, 2, 3, 4, 3, 2, 1]
+    arr_2 = [0, 9, 3, 3, 1, 0, 9]
+    arr_3 = [0, 0, 1, 1, 3, 2, 3] 
+    print('pass' if _lonely_int(arr_1) == 4 else _lonely_int(arr_1))
+    print('pass' if _lonely_int(arr_2) == 1 else _lonely_int(arr_2))
+    print('pass' if _lonely_int(arr_3) == 2 else _lonely_int(arr_3))
+
+def _lonely_int(arr:List[int]) -> int: 
+    '''
+    '''
+
+    unique_el = 0 
+    for num in sorted(arr): 
+        unique_el ^= num # use of da XOR op 
+
+    return unique_el
+
+
+def prob_02_diagonal_diff():
+    '''
+    Given a square matrix, find da abs diff btw da sums of its diagonals 
+    '''
+
+def _diag_diff(arr:List[List[int]]) -> int: 
+    ''''''
+    col_len = len(arr) 
+    lhs_diag_sum = sum(arr[i][i] for i in range(col_len)) 
+    rhs_diag_sum = sum(arr[i][col_len - 1 - i] for i in range(col_len))
+
+    return abs(lhs_diag_sum - rhs_diag_sum)
+
+
 if __name__ == '__main__':
     '''  
     https://www.dollartimes.com/calculators/hours-minutes-calculator

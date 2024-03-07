@@ -131,6 +131,9 @@ def prob_03_front_back_exchanged(): #RECORD_TIME: 4min 30sec BEST_TIME: 2min 21s
 def _front_back_exchanged(string:str) -> str: 
     '''  
     '''
+    if len(string) <= 1: 
+        return string
+    return string[-1:] + string[1:-1] + string[0]
 
 
 def prob_04_count_last_2(): #RECORD_TIME: 19min 55sec BEST_TIME: 6min 8sec 
@@ -150,6 +153,16 @@ def prob_04_count_last_2(): #RECORD_TIME: 19min 55sec BEST_TIME: 6min 8sec
 def _count_last_2(string: str) -> int: 
     '''  
     '''
+    key = string[-2:]
+    count = 0
+    for i in range(len(string[:-1]) - 1): 
+        curr_char = string[i] 
+        nxt_char = string[i + 1] 
+
+        if curr_char + nxt_char == key: 
+            count += 1
+
+    return count 
 
 
 if __name__ == '__main__':
