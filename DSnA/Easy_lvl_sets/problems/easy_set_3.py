@@ -18,14 +18,14 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
-def prob_00_is_truthiness(): #RECORD_TIME: 12min BEST_TIME: 3min 56sec 
+def prob_01_is_truthiness(): #RECORD_TIME: 12min BEST_TIME: 3min 56sec 
     ''' Given 2 ints return true if one is neg and the other pos or 0. 
     Return true if both are negative and 3rd param is true. 
     NOTE it is best practice to write your fn begining with `is` to identify the output of
@@ -56,7 +56,7 @@ def _is_truthiness(a:int, b:int, neg:bool=False) -> bool:
 
 
 
-def prob_01_is_in_range_of_target(): #RECORD_TIME: 3min
+def prob_02_is_in_range_of_target(): #RECORD_TIME: 3min
     ''' Given an int n, return true if it is within threshold of the trg or twice the trg value 
 
     TAGS:
@@ -78,7 +78,7 @@ def _is_in_range_of_target(num:int, trg:int=100, threshold:int=10) -> bool:
     '''
 
 
-def prob_02_remove_str_at_index(): #RECORD_TIME: 5min 40sec BEST_TIME: 3min 42sec 
+def prob_03_remove_str_at_index(): #RECORD_TIME: 5min 40sec BEST_TIME: 3min 42sec 
     ''' Given a str, return a new str with the given index removed. 
     Raises ValueError with message "string cannot be zero length" if empty string. 
     
@@ -98,7 +98,7 @@ def _remove_str_at_index(txt:str, idx:int) -> str:
 
 
 
-def prob_03_heptiptup(): #RECORD_TIME: 4min 13sec
+def prob_04_heptiptup(): #RECORD_TIME: 4min 13sec
     '''
     Given an int return a str given the rules:
         * If n is a factor of 3 the string should contain `Hep` 
@@ -136,7 +136,7 @@ def _heptiptup(n:int) -> str:
     '''
 
 
-def prob_04_calculate_slope(): #RECORD_TIME 9min 55sec
+def prob_05_calculate_slope(): #RECORD_TIME 9min 55sec
     """Given two Dict repr points containing keys x and y, calculate the slope btw two points. 
     If points are equal return float type infinity using float('inf'). Raise ValueError if 
     x or y are not present in the either point.
@@ -165,7 +165,7 @@ def _calculate_slope(point_a: Dict[str,float], point_b: Dict[str, float]) -> flo
     '''
 
 
-def prob_05_custom_heptiptup(): #RECORD_TIME: 9min
+def prob_06_custom_heptiptup(): #RECORD_TIME: 9min
     """ Given an int and a mapping dict that checks if the int is divisible by 3 natural nums: 
     x, y, and z, with x < y < z and returns a str given the following rules:
         • If n is a factor of x the string should contain `A` 

@@ -19,14 +19,14 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
-def prob_00_mapping_letters(): # actual meta qstn 
+def prob_01_mapping_letters(): # actual meta qstn 
     '''
     Given a mapping from digits 2 List[str] of arbitrary length determine all possible ways 2 
     replace da digits w chars
@@ -74,23 +74,64 @@ def _mapping_letters(num:str, rule:Dict[str, List[str]]) -> List[str]:
 
 
 
-if __name__ == '__main__':
+def prob_02_():
     '''  
-    https://www.dollartimes.com/calculators/hours-minutes-calculator
-    TOT_RUN_TIME: 1hr, 32min, 14sec 
-    DSGN-DOC:
-        []_In the future you will be competing against your run time for each problem 
-            []_RECORD_TIME vs BEST_TIME vs OPT_TIME 
-                []_RECORD_TIME: is the duration of an initial attempt to a problem 
-                []_BEST_TIME: is the recorded duration that beats RECORD_TIME 
-                []_OPT_TIME: is the statical time AVG of at least 2 or 3 recorded BEST_TIME 
-                    ⮑ ex: BEST_TIME: 2min BEST_TIME: 1min 50sec BEST_TIME: 2min 25sec 
-                        []_OPT_TIME: 2min 5sec [calculated using time average tool online]
-                            ⮑ future attempts will not be recorded instead the OPT_TIME is that best time you are 
-                            trying to compete against 
+    Ur given a game board represented as a 2D arr of zeros and ones. Zero stands for passable positions and one stands for impassable positions. Design an algorithm to find a path from top left corner to bottom right corner
+    EX:
+            0 0 0 0 0 0 0 
+            0 0 1 0 0 1 0 
+            0 0 1 0 1 0 0 
+            0 0 1 0 1 1 1
+            0 0 0 0 0 0 0 
 
-        []_You will also be adding tags to each problem to well DOC each problem by some category 
+    Start-> + + + + 0 0 0 
+            0 0 1 + 0 1 0 
+            0 0 1 + 1 0 0 
+            0 0 1 + 1 1 1
+            0 0 0 + + + + -> end 
     '''
+    M = [
+        [0, 0, 0, 0, 0, 0, 0], 
+        [0, 0, 1, 0, 0, 1, 0], 
+        [0, 0, 1, 0, 1, 0, 0], 
+        [0, 0, 1, 0, 1, 1, 1], 
+        [0, 0, 0, 0, 0, 0, 0]
+    ]
+    print('pass' if _path_finder(M) else _path_finder(M)) 
+
+def _path_finder(board):
+    rows, cols = len(board), len(board[0])
+
+    dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]# Defines: up, down, left, right
+
+    # Queue for BFS
+    queue = [(0, 0)]
+    queue_index = 0
+
+    while queue_index < len(queue):
+        row, col = queue[queue_index]
+        queue_index += 1
+
+        # Check if reached the bottom right corner
+        if row == rows - 1 and col == cols - 1:
+            return True
+
+        # Mark the current position as visited
+        board[row][col] = 1
+
+        # Explore neighbors
+        for dr, dc in dirs:
+            nr, nc = row + dr, col + dc
+
+            # Check if the neighbor is within bounds and is passable
+            if 0 <= nr < rows and 0 <= nc < cols and board[nr][nc] == 0:
+                queue.append((nr, nc))
+
+    # If the queue is empty and no path is found
+    return False
+
+if __name__ == '__main__':
+    ''' '''
     print('\n----------[ START ]----------\n')
     main()
     print('\n----------[ END ]----------\n') 

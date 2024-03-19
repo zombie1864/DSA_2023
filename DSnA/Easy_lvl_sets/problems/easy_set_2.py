@@ -18,7 +18,7 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
@@ -42,7 +42,7 @@ class Root:
 
 
 
-def prob_00_BT_inorder_traversal():
+def prob_01_BT_inorder_traversal():
     ''' Given the root of a binary treet (BT), return the `inorder` traversal of 
     its nodes' value
     '''
@@ -61,7 +61,7 @@ def _BT_inorder_traversal(Tree:Root) -> List[int]:
 
 
 
-def prob_01_same_BT():
+def prob_02_same_BT():
     ''' Given the roots of two BTs p and q, write a fn to check if they are the same or not.
     '''
     p           = Root(1)
@@ -95,7 +95,7 @@ def _same_BT(tree1:Root, tree2:Root) -> bool:
 
 
 
-def prob_02_sym_tree():
+def prob_03_sym_tree():
     '''  Given the root of a BT, check whether it is symmetric 
     sym_tree:        tree: 
             1            1 
@@ -130,7 +130,7 @@ def _sym_tree(tree:BT) -> bool:
     '''  
     '''
 
-def prob_03_BT_max_depth() -> None: 
+def prob_04_BT_max_depth() -> None: 
     '''  Given the root for a BT find the max depth, i.e. the length of the 
     deepest node from its root
 

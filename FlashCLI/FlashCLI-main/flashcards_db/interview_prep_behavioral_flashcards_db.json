@@ -1,14 +1,15 @@
 {
     "0": [
         "Tell me about a time when you had to meet a tight deadline. How did you prioritize and organize your work?",
-        "@ ombligo, i encountered a scenario where i needed 2 meet a deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline problem-solving and decision-making, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. "
+        "@ ombligo, i encountered a scenario where i needed 2 meet a 3-month deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline productivity, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. "
     ],
     "1": [
         "Tell me abt ur self.",
-        "I am a seasoned swe w over 2yrs, specalizing in full-stack development. I have a strong foundation in programming languages such as JS, and PY, coupled with expertise in frameworks likes React.js, and Flask.\n\tIn my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website and managing other sales channels, resulting in a more accessible and intuitive storefront. This initiative significantly boosted company sales by optimizing UI/UX for both desktop and mobile views, showcasing my ability 2 drive tangible business outcomes.\n\tDuring my time @ GAL I contributed keys features to their elevator monitoring sw elevating its competitiveness within the industry. This showcased my proficiency in developing sw that interfaces seamlessly with embedded sys, demonstrating my expertise in real-time data processing.\n\tI am excited about the opportunity at hand and believe my technical proficiencies, collaborative mindset, and passion for creating UI-friendly applications makes me a valuable candidate for this position and I look forward to the opportunity to bring my unique perspective and expertise to your team."
+        "I'm an accomplished swe w over 2yrs, specializing in FSD. W a strong foundation in programming lang sas JS, and PY, coupled with expertise in frameworks likes React.js, and Flask. I have consistently delivered impactful solutions across diverse industries.\n\tIn my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website implementing cutting-edge features such as a dynamic navigation bar revamped product cards, and a redsigned product page, resulting in a more accessible and intuitive storefront. This initiative led to a 20% increase in customer reviews and a substantial boost in online sales by 15%.\n\t@ GAL manufacturing, I developed key features 2 their elevator monitoring sw, including a real-time visualization of elevator movements and a robust backup procedures for SQL databases of elev traffic data. These enhancements improved the efficiency of elevator monitoring system and resulted in a 30% increase in understanding elevator position in real-time by field engineers.\n\tDuring my tenure at the Research Foundation CUNY, I played a vital role in developing sw solutions to generate customized reports, resulting in a 50% enhancement in data scraping from FTP servers. \n\tI am excited about the opportunity at hand and believe my technical proficiencies, collaborative mindset, and passion for creating digital assets makes me a valuable candidate for this position and I look forward to the opportunity to bring my unique perspective and expertise to your team.", 
+        "NOTE lang = languages, sas = such as"
     ],
     "2": [
-        "What r 3 accomplishments u r most proud of?",
+        "What r 3 accomplishments u r most proud of, in ur recent role?",
         "\n\t1. Strategic product placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, resulting in enhanced consumer exp. \n\t2. Automation sw 4 PO order processing: addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact through enhanced storefront: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. "
     ],
     "3": [
@@ -17,23 +18,53 @@
     ],
     "4": [
         "Tell me about your achievements during your tenure @ ombligo.",
-        "@ ombligo, i played a pivitol role in revamping their E-commerce website and managing their other sales channels, resulting in a more accessible and intuitive storefront. This initiative significantly boosted company sales by optimizing UI/UX for both desktop and mobile views, showcasing my ability 2 drive tangible business outcomes. "
+        "In my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website implementing cutting-edge features such as a dynamic navigation bar revamped product cards, and a redsigned product page, resulting in a more accessible and intuitive storefront. This initiative resulted in a 20% increase in customer reviews and a substantial boost in online sales by 15%."
     ],
     "5": [
         "Tell me abt ur time w GAL manufacturing. ",
-        "@ GAL i contributed key features 2 their elevator monitoring sw elevating its competitiveness within the industry. This showcased my proficiency in developing sw that interfaces seamlessly w embedded sys, demostrating my expertise in real-time data processing."
+        "@ GAL manufacturing, I developed key features 2 their elevator monitoring sw, including a real-time visualization of elevator movements and implementing robust backup procedures for SQL databases of elev traffic data. These enhancements improved the efficiency of elevator monitoring system and also resulted in a 30% increase in understanding elevator data location in real-time by field engineers."
     ],
     "6": [
         "Tell me abt ur self--what makes u the perfect candidate?",
         "I am excited abt da opp @ hand and believe my tech prof, collab mindset, and passion 4 creating digital assets makes me a val cand 4 this position and i look 4ward 2da opp 2 bring my unique perspective and expertise 2 ur team.",
-        "COMMENT:opp = opportunity, tech = technical, prof = proficiencies, collab = collaborative, val = valuable, cand = candidate"
+        "NOTE:opp = opportunity, tech = technical, prof = proficiencies, collab = collaborative, val = valuable, cand = candidate"
     ],
     "7": [
         "Tell me abt a time when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (P from PAR--state da prob)",
-        "@ ombligo i encountered a scenario where i needed 2 meet a deadline 4a major e-commerce platform overhaul"
+        "@ ombligo i encountered a scenario where i needed 2 meet a 3-month deadline 4a major e-commerce platform overhaul"
     ],
     "8": [
         "While @ ombligo how did u manage their products and inventory?",
-        "Utilizing PY and shopify API 2 oversee inventory, and generating statistical reports 4 effective campaigns of specific products. "
+        "Utilizing Py and Shopify API 2 streamline inventory management, creating reports that enhanced marketing campaigns with data-driven strategies, leading 2 increased sales and improved product performance "
+    ], 
+    "9": [
+        "Tell me abt ur time @ Research Foundation CUNY. ", 
+        "During my tenure at the Research Foundation CUNY, I played a vital role in developing sw solutions to generate customized energy reports, resulting in a 50% enhancement in data scraping from FTP servers."
+    ], 
+    "10": [
+        "What's your take away from each role you had in your prof journey?", 
+        "\n\t@RFCUNY: Dev sws 2 gen customized reports from FTP servers and creating data-pipe 4 machine learning models\n\t@GAL: contr key ft 2 their elev mon sw and utilizing js 2 comm w embedded sys\n\t@omb: revamping their e-comm website making it more acc and intui that boosted online sales"
+    ], 
+    "11": [
+        "How did you aid in revamping ombligo's website, what was your process like?", 
+        "I cond a through analysis of da site, understanding da scope, breaking down del, and ident'in opp.", 
+        "NOTE: del = deliverables, ident'in opp = identifying opportunities"
+    ], 
+    "12": [
+        "What res did leading the initiative of revamping the website 4 omb had?", 
+        "This init res'ed in a 20% inc in customer review and a sub boost in online sales by 15%"
+    ], 
+    "13": [
+        "What were the res of ur contr 2 GAL's elev mon sw?", 
+        "These enh improved da eff of elev mon sys and res'ed in a 30% inc in understanding elev data location in real-time by field eng", 
+        "NOTE: contr = contribution, mon = monitoring, eff = efficiency, eng = engineers"
+    ], 
+    "14": [
+        "What were the res of ur work @RFCUNY?",
+        "a 50% enh in data-scraping from FTP servers" 
+    ], 
+    "15": [
+        "What actions did you take when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (A from PAR--state da prob)", 
+        "I est milestones 2 track progress and leveraged AI tools 2 streamline productivity, eval progress against set milestones"
     ]
 }

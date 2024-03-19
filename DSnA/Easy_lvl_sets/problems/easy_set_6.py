@@ -19,14 +19,14 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
-def prob_00_mapping_letters(): # actual meta qstn 
+def prob_01_mapping_letters(): # actual meta qstn 
     '''
     Given a mapping from digits 2 List[str] of two length determine all possible ways 2 
     replace da digits w chars
@@ -81,7 +81,7 @@ def _map_chars(char_set_1, char_set_2, res):
     
     return res 
 
-def prob_01_phone_letter_combinations():
+def prob_02_phone_letter_combinations():
     '''
     given a str containing digits from 2-9, return all possible letter combinations that the 
     num could represent. Solve this using da algo technique called `Backtracking`--used 
@@ -117,7 +117,7 @@ def _letter_combinations(num:str, rule:Dict[str, str]):
     return res 
 
 
-def prob_02_lonely_int():
+def prob_03_lonely_int():
     '''
     Given a List[int], where all el but 1 occur twice, find the unique el
     '''
@@ -139,7 +139,7 @@ def _lonely_int(arr:List[int]) -> int:
     return unique_el
 
 
-def prob_02_diagonal_diff():
+def prob_04_diagonal_diff():
     '''
     Given a square matrix, find da abs diff btw da sums of its diagonals 
     '''
@@ -152,6 +152,33 @@ def _diag_diff(arr:List[List[int]]) -> int:
 
     return abs(lhs_diag_sum - rhs_diag_sum)
 
+def prob_05_is_continous_seq():
+    '''  
+    Given a seq of ints and an int trg, return a bool whether a continous sequence of int 
+    sums up to the trg
+    '''
+    arr_1 = [1, 3, 1, 4, 23]
+    print('pass' if _is_continous_seq(arr_1, 8) else _is_continous_seq(arr_1, 8))
+    print('pass' if not _is_continous_seq(arr_1, 7) else _is_continous_seq(arr_1, 7))
+
+def _is_continous_seq(arr, trg): 
+    '''  '''
+    j = 0
+    sum = 0
+
+    for i in range(len(arr)):
+        sum += arr[i]
+
+        while sum > trg:
+            sum -= arr[j]
+            j += 1
+            if sum < 0: 
+                return False 
+
+        if sum == trg:
+            return True
+
+    return False
 
 if __name__ == '__main__':
     '''  

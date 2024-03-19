@@ -26,7 +26,7 @@ def main():
 
 
 
-def prob_00_longest_cp(): # RECORD_TIME:  BEST_TIME: 
+def prob_01_longest_cp(): # RECORD_TIME:  BEST_TIME: 
     ''' find longest common prefix str in a list[str], if none return empty str 
 	'''
     res_1 = _longest_cp(["flower","flow","flight"]) 
@@ -41,7 +41,7 @@ def _longest_cp(words:List[str]) -> str:
 
 
 
-def prob_01_plus_one(): 
+def prob_02_plus_one(): 
     '''  Given a list[int] inc the last int by one and return the resulting list[int]
     '''
     res_1 = _plus_one([1, 2, 3])
@@ -59,7 +59,7 @@ def _plus_one(nums:List[int]) -> List[int]:
 
     
 
-def prob_02_len_of_last_word(): 
+def prob_03_len_of_last_word(): 
     ''' Given a str consisting of words and spaces, return the len of the last word
     '''
     res_1 = _len_of_last_word('hello world')
@@ -73,7 +73,7 @@ def _len_of_last_word(sent:str) -> int:
     '''
 
 
-def prob_03_top_k_frequent_elements():
+def prob_04_top_k_frequent_elements():
     '''  Given a List[int] and a int k, return the k most frequent el
     '''
     res_1 = _top_k_frequent_elements([1, 1, 1, 2, 2, 3], 2) 
@@ -90,7 +90,7 @@ def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]:
 
 
 
-def prob_04_linked_list_rm_dups():
+def prob_05_linked_list_rm_dups():
     ''' You have a list of random names you wish to alphabetize. In memory there 
     are 2 ways to do this - first with an array and second with linked list. 
     Using an arr has limitations that linked list overcomes, which are size and inefficient 

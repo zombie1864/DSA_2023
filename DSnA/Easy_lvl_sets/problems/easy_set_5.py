@@ -19,38 +19,48 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
-def prob_00_is_happy_num() :
+def prob_01_is_happy_num() :
     '''
-    A happy num is defined as an integer in which the following sequence ends with the num 1.
-    Sum of the square of each individual digit equal to 1, then the number is happy.
-    A num is unhappy once the same number occurs multiple times in a sequence.
+    A happy num is defined as an int in which the sum of the square of 
+    each individual digit equal to 1.
+    A num is unhappy once the same num occurs multiple times in a sequence.
 
     Ex: 7 is a "happy" number:
-    7² = 49 --> 4² + 9² = 97 --> 9² + 7² = 130 --> 1² + 3² + 0² = 10 --> 1² + 0² = 1
+    7² = 49  --> 4² + 9² = 97
+         97  --> 9² + 7² = 130
+         130 --> 1² + 3² + 0² = 10
+         10  --> 1² + 0² = 1
 
     Ex: 6 is not a happy number as the sequence that is generated is the following:
-    6, 36, 45, 41, 17, 50, 25, 29, 85, [89], 145, 42, 20, 4, 16, 37, 58, [89]
+    6² = 36 --> 3² + 6² = 45 
+         45 --> 4² + 5² = 41, 
+         .
+         .
+         .          ... = 89 1st occurance 
+         .
+         .
+         .          ... = 89 2nd occurance 
 
     When da same num occurs twice, the sequence is guaranteed to go on infinitely.
     Write a fn that returns a list of all happy nums from 1 to n inclusive.
     '''
     ans = [1, 7, 10, 13, 19, 23, 28, 31, 32, 44, 49, 68, 70, 79, 82, 86, 91, 94, 97, 100]
     ans2 = [1, 7, 10, 13, 19, 23, 28, 31, 32, 44, 49, 68, 70, 79, 82, 86, 91, 94, 97, 100, 103, 109, 129, 130, 133, 139, 167, 176, 188, 190, 192, 193, 203, 208, 219, 226, 230, 236, 239, 262, 263, 280, 291, 293, 301, 302, 310, 313, 319, 320, 326, 329, 331, 338, 356, 362, 365, 367, 368, 376, 379, 383, 386, 391, 392, 397, 404, 409, 440, 446, 464, 469, 478, 487, 490, 496, 536, 556, 563, 565, 566, 608, 617, 622, 623, 632, 635, 637, 638, 644, 649, 653, 655, 656, 665, 671, 673, 680, 683, 694, 700, 709, 716, 736, 739, 748, 761, 763, 784, 790, 793, 802, 806, 818, 820, 833, 836, 847, 860, 863, 874, 881, 888, 899, 901, 904, 907, 910, 912, 913, 921, 923, 931, 932, 937, 940, 946, 964, 970, 973, 989, 998]
-    print('pass' if _is_happy(100) == ans else _is_happy(100))
+    print('pass' if _happy_num(100) == ans else _happy_num(100))
 
 
-def _is_happy(n):
+def _happy_num(n):
     '''
     '''
 
 
-def prob_01_plus_minus(): 
+def prob_02_plus_minus(): 
     '''
     Given a list[int], find the ratios of its elements that are pos, neg, and zero. Print the decimal val of each fraction on a new line with 6 decimal places.
 
@@ -61,7 +71,8 @@ def prob_01_plus_minus():
         0.400000
         0.400000
         0.200000
-    the fn should not return a val.
+    the fn should not return a val. Write the fn in a `pythonic` 
+    w/o using a for loop. 
     '''
     arr = [-4, 3, -9, 0, 4, 1]
     _plus_minus(arr) #=> 0.5, 0.333333, 0.166667
@@ -73,7 +84,7 @@ def _plus_minus(arr:List[int]) -> None:
 
 
 
-def prob_02_min_max_sum(): 
+def prob_03_min_max_sum(): 
     '''
     Given five pos ints, find the min and max vals that can be calculated by summing exactly four
     of the five ints. Return da respective min and max vals as a single line of two 
@@ -92,7 +103,7 @@ def _min_max_sum(arr:List[int]) -> str:
 
 
 
-def prob_03_time_converstion(): 
+def prob_04_time_converstion(): 
     '''
     Given a time in 12-hour AM/PM format, return a str w the time converted to military (24-hour) time.
     Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
@@ -113,7 +124,7 @@ def _time_converstion(time:str) -> str:
     '''
 
 
-def prob_04_nonzero_2_da_left(): # actual meta qstn 
+def prob_05_nonzero_2_da_left(): # actual meta qstn 
     '''
     U r given a list[int]. Write an algo that brings all nonzero els to the left of the arr, 
     and returns the num of nonzero els. The algo should operate in place and should not create 

@@ -19,14 +19,14 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
-def prob_00_filter_out_even_numbers(): #RECORD_TIME: 2min 
+def prob_01_filter_out_even_numbers(): #RECORD_TIME: 2min 
     ''' w/o using if statement filter out even vals from a List[int] and return the new List[int]
 
     TAGS:
@@ -45,7 +45,7 @@ def _filter_out_even_numbers(nums: List[int]) ->List[int]:
     '''
 
 
-def prob_01_total_of_2d_arr(): #RECORD_TIME: 1min 30sec BEST_TIME: 1min 30sec 
+def prob_02_total_of_2d_arr(): #RECORD_TIME: 1min 30sec BEST_TIME: 1min 30sec 
     ''' Return the sum of a List[List[int]] using listCom
 
     TAGS:
@@ -62,7 +62,7 @@ def _total_of_2d_arr(arr: List[List[int]]) -> int:
     '''
 
 
-def prob_02_list_of_records(): #RECORD_TIME: 16min 17sec BEST_TIME: 11min 35sec 
+def prob_03_list_of_records(): #RECORD_TIME: 16min 17sec BEST_TIME: 11min 35sec 
     """Given matrix and a tuple of col_names, return a List[Dict[str,int]], 
     where each val is associated with a given colname. 
     NOTE performance needs to be considered 
@@ -92,7 +92,7 @@ def _list_of_records(rows: List[List[int]], col_names: Tuple[str]) -> List[Dict[
 
 
 
-def prob_03_front_back_exchanged(): #RECORD_TIME: 4min 30sec BEST_TIME: 2min 21sec 
+def prob_04_front_back_exchanged(): #RECORD_TIME: 4min 30sec BEST_TIME: 2min 21sec 
     '''Given a str, return a new str where the first and last chars have been exchanged'''
     res_1 = _front_back_exchanged('code')
     res_2 = _front_back_exchanged('a')
@@ -109,7 +109,7 @@ def _front_back_exchanged(string:str) -> str:
     '''
 
 
-def prob_04_count_last_2(): #RECORD_TIME: 19min 55sec BEST_TIME: 6min 8sec 
+def prob_05_count_last_2(): #RECORD_TIME: 19min 55sec BEST_TIME: 6min 8sec 
     '''Given a str, return the number of times that the last 2 chars appear in the str. Do not count the last substring, 
     use it only as an identifier.
     '''
