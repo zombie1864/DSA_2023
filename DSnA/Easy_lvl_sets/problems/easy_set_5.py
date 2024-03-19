@@ -60,7 +60,7 @@ def _happy_num(n):
     '''
 
 
-def prob_02_plus_minus(): 
+def prob_02_pos_neg_zero_ratios(): 
     '''
     Given a list[int], find the ratios of its elements that are pos, neg, and zero. Print the decimal val of each fraction on a new line with 6 decimal places.
 
@@ -75,10 +75,10 @@ def prob_02_plus_minus():
     w/o using a for loop. 
     '''
     arr = [-4, 3, -9, 0, 4, 1]
-    _plus_minus(arr) #=> 0.5, 0.333333, 0.166667
+    _pos_neg_zero_ratios(arr) #=> 0.5, 0.333333, 0.166667
 
 
-def _plus_minus(arr:List[int]) -> None:  
+def _pos_neg_zero_ratios(arr:List[int]) -> None:  
     '''
     '''
 
