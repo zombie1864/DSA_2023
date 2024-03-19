@@ -148,20 +148,6 @@ def _nonzero(arr:List[int]) -> int:
 
 if __name__ == '__main__':
     '''  
-    https://www.dollartimes.com/calculators/hours-minutes-calculator
-    TOT_RUN_TIME: 1hr, 32min, 14sec 
-    DSGN-DOC:
-        []_In the future you will be competing against your run time for each problem 
-            []_RECORD_TIME vs BEST_TIME vs OPT_TIME 
-                []_RECORD_TIME: is the duration of an initial attempt to a problem 
-                []_BEST_TIME: is the recorded duration that beats RECORD_TIME 
-                []_OPT_TIME: is the statical time AVG of at least 2 or 3 recorded BEST_TIME 
-                    ⮑ ex: BEST_TIME: 2min BEST_TIME: 1min 50sec BEST_TIME: 2min 25sec 
-                        []_OPT_TIME: 2min 5sec [calculated using time average tool online]
-                            ⮑ future attempts will not be recorded instead the OPT_TIME is that best time you are 
-                            trying to compete against 
-
-        []_You will also be adding tags to each problem to well DOC each problem by some category 
     '''
     print('\n----------[ START ]----------\n')
     main()
