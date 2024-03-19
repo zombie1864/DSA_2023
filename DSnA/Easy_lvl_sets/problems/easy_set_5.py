@@ -60,6 +60,7 @@ def _happy_num(n):
     '''
 
 
+
 def prob_02_pos_neg_zero_ratios(): 
     '''
     Given a list[int], find the ratios of its elements that are pos, neg, and zero. Print the decimal val of each fraction on a new line with 6 decimal places.
@@ -113,15 +114,15 @@ def prob_04_time_converstion():
     time_ex_1 = '07:05:45PM'
     time_ex_2 = '12:40:22AM'
     time_ex_3 = '12:45:00PM'
-    print('pass' if _time_converstion(time_ex_1) == '19:05:45' else _time_converstion())
-    print('pass' if _time_converstion(time_ex_2) == '00:40:22' else _time_converstion())
-    print('pass' if _time_converstion(time_ex_3) == '12:45:00' else _time_converstion())
+    print('pass' if _time_converter(time_ex_1) == '19:05:45' else _time_converter(time_ex_1))
+    print('pass' if _time_converter(time_ex_2) == '00:40:22' else _time_converter(time_ex_2))
+    print('pass' if _time_converter(time_ex_3) == '12:45:00' else _time_converter(time_ex_3))
 
 
-
-def _time_converstion(time:str) -> str: 
+def _time_converter(time:str) -> str: 
     '''
     '''
+
 
 
 def prob_05_nonzero_2_da_left(): # actual meta qstn 
@@ -138,7 +139,6 @@ def prob_05_nonzero_2_da_left(): # actual meta qstn
     print('pass' if _nonzero(arr_1) == 4 else _nonzero(arr_1))
     print('pass' if _nonzero(arr_2) == 5 else _nonzero(arr_2))
     print('pass' if _nonzero(arr_3) == 0 else _nonzero(arr_3))
-
 
 
 def _nonzero(arr:List[int]) -> int: 
