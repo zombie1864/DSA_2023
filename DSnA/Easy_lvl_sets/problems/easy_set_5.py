@@ -127,8 +127,8 @@ def _time_converter(time:str) -> str:
 
 def prob_05_nonzero_2_da_left(): # actual meta qstn 
     '''
-    U r given a list[int]. Write an algo that brings all nonzero els to the left of the arr, 
-    and returns the num of nonzero els. The algo should operate in place and should not create 
+    You are given a list[int]. Write an function that brings all nonzero els to the left of the arr, 
+    and returns the number of nonzero els. The function should operate in place and should not create 
     a new arr. The order of the nonzero els does not matter. The nums that remain in the right
     portion of the array can be anything. Ex: [1, 0, 2, 0, 0, 3, 4], a possible ans
     is [4, 1, 3, 2, ?, ?, ?, ?], 4 non-zero elements, where “?” Can be any number.  

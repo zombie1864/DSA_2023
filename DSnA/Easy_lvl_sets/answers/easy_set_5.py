@@ -156,46 +156,28 @@ def prob_04_nonzero_2_da_left(): # actual meta qstn
 
 
 def _nonzero(arr:List[int]) -> int: 
-    nonzero_els = 0
-    
-    while True:
-        for i in range(0, len(arr) - 1):
-            curr_num = arr[i]
-            nxt_num = arr[i + 1] 
+    non_zeros = 0
+    i = 0
+    j = len(arr) - 1
 
-            if curr_num == 0 and nxt_num != 0:
-                arr[i], arr[i + 1] = arr[i + 1], arr[i]
-        
-        nonzero_idx = arr.index(0)
-        right_arr = arr[nonzero_idx:]
+    while i <= j:
+        if arr[i] != 0:
+            i += 1
+            non_zeros += 1
+        elif arr[j] == 0:
+            j -= 1
+        else:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+            j -= 1
+            non_zeros += 1
 
-        if all(num == 0 for num in right_arr):
-            break 
-
-    for num in arr:
-        if num != 0: 
-            nonzero_els += 1 
-    
-    return nonzero_els
+    return non_zeros
 
 
 
 if __name__ == '__main__':
     '''  
-    https://www.dollartimes.com/calculators/hours-minutes-calculator
-    TOT_RUN_TIME: 1hr, 32min, 14sec 
-    DSGN-DOC:
-        []_In the future you will be competing against your run time for each problem 
-            []_RECORD_TIME vs BEST_TIME vs OPT_TIME 
-                []_RECORD_TIME: is the duration of an initial attempt to a problem 
-                []_BEST_TIME: is the recorded duration that beats RECORD_TIME 
-                []_OPT_TIME: is the statical time AVG of at least 2 or 3 recorded BEST_TIME 
-                    ⮑ ex: BEST_TIME: 2min BEST_TIME: 1min 50sec BEST_TIME: 2min 25sec 
-                        []_OPT_TIME: 2min 5sec [calculated using time average tool online]
-                            ⮑ future attempts will not be recorded instead the OPT_TIME is that best time you are 
-                            trying to compete against 
-
-        []_You will also be adding tags to each problem to well DOC each problem by some category 
     '''
     print('\n----------[ START ]----------\n')
     main()
