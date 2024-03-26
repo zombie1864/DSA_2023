@@ -25,54 +25,42 @@ def main():
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
-class BT(): 
-    def __init__(self, val) -> None:
-        self.val    = val 
-        self.left   = None 
-        self.right  = None 
 
 
+def prob_01_counting_sort(): 
+    '''  
+    Quicksort runs n*log(n) which is the fastest sorting can get. Sorting methods 
+    rely on comparing els, counting sort does not require comparing els. Instead, u 
+    create a List[int], known as an int arr, whose index range covers the entire 
+    range of vals in the original arr. Each time a val occurs in the original 
+    arr, u inc the counter at that idx. 
+    EX: 
+        arr     = [1, 1, 3, 2, 1] 
+        int_arr = [0, 0, 0, 0, 0]
 
-def prob_01_validate_BST(): 
-    bt_1                = BT(2)
-    bt_1.left           = BT(1) 
-    bt_1.right          = BT(3)
-    bt_2                = BT(2) 
-    bt_2.right          = BT(3) 
-    bt_2.right.right    = BT(4)
-    bt_3                = BT(2)
-    bt_3.left           = BT(3) 
-    bt_3.right          = BT(1)
-    bt_4                = BT(5)
-    bt_4.left           = BT(4) 
-    bt_4.left.left      = BT(3)
-    bt_4.left.right     = BT(6)
-    print('pass' if _validate_BST(bt_1) else _validate_BST(bt_1)) 
-    print('pass' if _validate_BST(bt_2) else _validate_BST(bt_1)) 
-    print('pass' if not _validate_BST(bt_3) else _validate_BST(bt_3)) 
-    print('pass' if not _validate_BST(bt_4) else _validate_BST(bt_4)) 
+        idx     val     int_arr
+        0       1       [0, 1, 0, 0, 0] += 1 @int_arr_idx int_arr[val]
+        1       1       [0, 2, 0, 0, 0]
+        2       3       [0, 2, 0, 1, 0]
+        3       2       [0, 2, 1, 1, 0]
+        4       1       [0, 3, 1, 1, 0]
+    Given a List[int], count and return da num of times each val appears as a List[int]
+    '''
+    arr_1 = [2, 2, 3, 0, 1, 5]
+    ans_1 = [1, 1, 2, 1, 0, 1]
 
-def _validate_BST(BT): 
-    def _inorder_path(BT): 
-        return _inorder_path(BT.left) + [BT.val] + _inorder_path(BT.right) if BT else []
-    vals = _inorder_path(BT)       
-    for i in range(len(vals) - 1): 
-        n = vals[i]
-        m = vals[i + 1]
+    arr_2 = [1, 1, 1, 2, 8, 1, 2, 1, 0]
+    ans_2 = [1, 5, 2, 0, 0, 0, 0, 0, 1]
 
-        if n > m: 
-            return False 
-        
-    return True
+    print('pass' if _count_sort(arr_1) == ans_1 else _count_sort(arr_1)) 
+    print('pass' if _count_sort(arr_2) == ans_2 else _count_sort(arr_2)) 
 
-def prob_02(): 
-    pass
-
-
-
-
-def prob_03(): 
-    pass 
+def _count_sort(arr:List[int]) -> List[int]: 
+    '''  '''
+    arr_int = [0] * len(arr)
+    for n in arr: 
+        arr_int[n] += 1
+    return arr_int
 
 
 

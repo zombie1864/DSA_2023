@@ -130,6 +130,61 @@ def _path_finder(board):
     # If the queue is empty and no path is found
     return False
 
+def prob_03_(): 
+        # VISUAL OF TEST GRAPH:
+
+# A -- B
+# |    |
+# C -- D
+# |
+# E -- F -- G -- H
+#      | \
+#      O   I -- J -- K
+#               |
+#               L
+
+# P -- Q
+# |  /
+# R
+        graph = {
+        "A": ["B", "C"],
+        "B": ["D"],
+        "C": ["D", "E"],
+        "D": ["B", "C"],
+        "E": ["C", "F"],
+        "F": ["E", "O", "I", "G"],
+        "G": ["F", "H"],
+        "H": ["G"],
+        "I": ["F", "J"],
+        "O": ["F"],
+        "J": ["K", "L", "I"],
+        "K": ["J"],
+        "L": ["J"],
+        "P": ["Q", "R"],
+        "Q": ["P", "R"],
+        "R": ["P", "Q"],
+        }
+        start_node = 'A'
+        end_node = 'F'
+        print(_has_route(graph, start_node, end_node))  # Output: True
+        print(_has_route(graph, 'Q', 'G'))  # Output: Flase 
+        print(_has_route(graph, 'A', 'L'))  # Output: True 
+        
+
+def _has_route(graph, start, end):
+    visited = set()
+    queue = [start]
+
+    while queue:
+        node = queue.pop(0)
+        if node == end:
+            return True
+        visited.add(node)
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                queue.append(neighbor)
+    return False
+
 if __name__ == '__main__':
     ''' '''
     print('\n----------[ START ]----------\n')

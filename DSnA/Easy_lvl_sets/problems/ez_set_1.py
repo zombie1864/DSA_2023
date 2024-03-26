@@ -18,7 +18,7 @@ def main():
         member[0] for member in getmembers(sys.modules[__name__], isfunction) 
         if member[0] != 'main' and member[0] != 'getmembers' and member[0] != 'isfunction' and member[0][0] != '_'
     ]
-    dict_of_avail_funcs = dict(enumerate(public_func_list))
+    dict_of_avail_funcs = dict(enumerate(public_func_list, start=1))
     pprint.pprint(dict_of_avail_funcs) # prints a nicely formatted dict in terminal 
     exec_func = int(input('\nPick a number from the dict: '))
     print(f'\nExecuting order {exec_func}:\n')

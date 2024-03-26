@@ -93,12 +93,7 @@ def prob_02_len_of_last_word():
 def _len_of_last_word(sent:str) -> int: 
     '''  
     '''
-    words = sent.split(' ')
-
-    if words: 
-        return len(words[-1])
-    else: 
-        return 0
+    return len(sent.split()[-1])
 
 
 def prob_03_top_k_frequent_elements():

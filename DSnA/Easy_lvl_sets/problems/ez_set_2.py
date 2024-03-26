@@ -26,29 +26,32 @@ def main():
 
 
 
-class BT:
-    ''' Class to build BTs '''
+class Root:
     def __init__(self, val=0, left=None, right=None): 
         self.val   = val 
         self.left  = left 
         self.right = right 
+        self.children = [] 
 
 
-class Root:
-    def __init__(self, val=0, left=None, right=None): 
-        self._val   = val 
-        self._left  = left 
-        self._right = right 
+    def add_child(self, val): 
+        self.children.append(Root(val))
+        return self 
 
+
+    def depth_first_search(self, arr): 
+        '''  
+        '''
+        pass
 
 
 def prob_01_BT_inorder_traversal():
     ''' Given the root of a binary treet (BT), return the `inorder` traversal of 
     its nodes' value
     '''
-    root                = Root(1)
-    root._right         = Root(2)
-    root._right._left   = Root(3)
+    root              = Root(1)
+    root.right        = Root(2)
+    root.right.left   = Root(3)
     res  = _BT_inorder_traversal(root)
     
     print('pass' if res == [1, 3, 2] else res)
@@ -65,21 +68,21 @@ def prob_02_same_BT():
     ''' Given the roots of two BTs p and q, write a fn to check if they are the same or not.
     '''
     p           = Root(1)
-    p._left     = Root(2) 
-    p._right    = Root(3) 
+    p.left      = Root(2) 
+    p.right     = Root(3) 
     q           = Root(1) 
-    q._left     = Root(2) 
-    q._right    = Root(3) 
+    q.left      = Root(2) 
+    q.right     = Root(3) 
     n           = Root(1)
-    n._left     = Root(2)
+    n.left      = Root(2)
     m           = Root(1) 
-    m._right    = Root(2)
+    m.right     = Root(2)
     x           = Root(1)
-    x._left     = Root(2) 
-    x._right    = Root(1) 
+    x.left      = Root(2) 
+    x.right     = Root(1) 
     y           = Root(1)
-    y._left     = Root(1)
-    y._right    = Root(2) 
+    y.left      = Root(1)
+    y.right     = Root(2) 
     res_1 = _same_BT(p, q)
     res_2 = _same_BT(n, m)
     res_3 = _same_BT(x, y)
@@ -97,38 +100,39 @@ def _same_BT(tree1:Root, tree2:Root) -> bool:
 
 def prob_03_sym_tree():
     '''  Given the root of a BT, check whether it is symmetric 
-    sym_tree:        tree: 
+    sym_tree:        unsym_tree: 
             1            1 
            / \          / \
           2   2        2   2
          / \ / \        \   \
         3  4 4  3        3   3
     '''
-    sym_tree                = BT(1)
-    sym_tree.left           = BT(2)
-    sym_tree.left.left      = BT(3)
-    sym_tree.left.right     = BT(4)
-    sym_tree.right          = BT(2)
-    sym_tree.right.left     = BT(4)
-    sym_tree.right.right    = BT(3)
+    sym_tree                = Root(1)
+    sym_tree.left           = Root(2)
+    sym_tree.left.left      = Root(3)
+    sym_tree.left.right     = Root(4)
+    sym_tree.right          = Root(2)
+    sym_tree.right.left     = Root(4)
+    sym_tree.right.right    = Root(3)
     #-----------------------------
-    tree                    = BT(1)
-    tree.left               = BT(2)
-    tree.left.right         = BT(3)
-    tree.right              = BT(2)
-    tree.right.right        = BT(3)
+    unsym_tree              = Root(1)
+    unsym_tree.left         = Root(2)
+    unsym_tree.left.right   = Root(3)
+    unsym_tree.right        = Root(2)
+    unsym_tree.right.right  = Root(3)
 
     res_1 = _sym_tree(sym_tree) 
-    res_2 = _sym_tree(tree) 
+    res_2 = _sym_tree(unsym_tree) 
 
     print('pass' if res_1 else res_1)
     print('pass' if not res_2 else res_2)
 
 
-
-def _sym_tree(tree:BT) -> bool: 
+def _sym_tree(bt:Root) -> bool: 
     '''  
     '''
+
+    
 
 def prob_04_BT_max_depth() -> None: 
     '''  Given the root for a BT find the max depth, i.e. the length of the 
@@ -145,19 +149,19 @@ def prob_04_BT_max_depth() -> None:
                     / \
                    6   7 
     '''
-    tree_1              = BT(3)
-    tree_1.left         = BT(9)
-    tree_1.right        = BT(20)
-    tree_1.right.left   = BT(15) 
-    tree_1.right.right  = BT(7)
+    tree_1              = Root(3)
+    tree_1.left         = Root(9)
+    tree_1.right        = Root(20)
+    tree_1.right.left   = Root(15) 
+    tree_1.right.right  = Root(7)
     #----------------------
-    tree_2                          = BT(1)
-    tree_2.left                     = BT(2)
-    tree_2.right                    = BT(3)
-    tree_2.right.left               = BT(4)
-    tree_2.right.left.right         = BT(5) 
-    tree_2.right.left.right.left    = BT(6) 
-    tree_2.right.left.right.right   = BT(7) 
+    tree_2                          = Root(1)
+    tree_2.left                     = Root(2)
+    tree_2.right                    = Root(3)
+    tree_2.right.left               = Root(4)
+    tree_2.right.left.right         = Root(5) 
+    tree_2.right.left.right.left    = Root(6) 
+    tree_2.right.left.right.right   = Root(7) 
     res_1 = _BT_max_depth(tree_1)
     res_2 = _BT_max_depth(tree_2)
 
@@ -165,9 +169,50 @@ def prob_04_BT_max_depth() -> None:
     print('pass' if res_2 == 5 else res_2)
 
 
-def _BT_max_depth(tree:BT) -> int: 
+def _BT_max_depth(bt:Root) -> int: 
     '''  
     '''
+    def _depth_len(node, lvl=0): 
+        if node is None: 
+            return lvl 
+        lhs_depth = _depth_len(node.left, lvl + 1)
+        rhs_depth = _depth_len(node.right, lvl + 1) 
+
+        return max(lhs_depth, rhs_depth) 
+    return _depth_len(bt)
+
+
+
+
+def prob_05__depth_first_search(): # RECORD_TIME: 
+    '''  U're given a `Root` class that takes a val and an arr of optional 
+    `children` nodes. Impl the `depth_first_serach` on the `Root` class, which takes in an 
+    empty arr, traverse the tree using the method from left to right, stores all of the 
+    nodes names in an array, and returns it. 
+    Ex: 
+    tree =    A
+            / | \
+           B  C  D
+          / \   / \
+         E   F G   H
+            / \ \
+           I   J K
+    '''
+    root   = Root('A')
+    root.add_child('B')
+    root.add_child('E')
+    root.add_child('F')
+    root.add_child('I')
+    root.add_child('J')
+    root.add_child('C')
+    root.add_child('D')
+    root.add_child('G')
+    root.add_child('K')
+    root.add_child('H')
+    ans = ['A', 'B', 'E', 'F', 'I', 'J', 'C', 'D', 'G', 'K', 'H']
+    res = root.depth_first_search([])
+    print('pass' if res == ans else res)
+
 
 
 if __name__ == '__main__':

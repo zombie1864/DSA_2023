@@ -152,20 +152,19 @@ def prob_02_sym_tree():
     print('pass' if not res_2 else res_2)
 
 
-
-def _sym_tree(tree:BT) -> bool: 
+def _sym_tree(bt:BT) -> bool: 
     '''  
     []_
     '''
-    return _sym(tree, tree)
+    def _sym(lhs, rhs): 
+        if lhs is None and rhs is None: # base case, both subtrees r None 
+            return True 
+        if lhs is None or rhs is None or lhs.val != rhs.val: 
+            return False 
+        return _sym(lhs.left, rhs.right) and _sym(lhs.right, rhs.left)
+    return _sym(bt.left, bt.right)
 
 
-def _sym(t1, t2): 
-    if t1 is None and t2 is None: # BC - empty tree/null tree 
-        return True 
-    if t1 is None or t2 is None: 
-        return False 
-    return t1.val == t2.val and _sym(t1.right, t2.left) and _sym(t1.left, t2.right)
 
 def prob_03_BT_max_depth() -> None: 
     '''  Given the root for a BT find the max depth, i.e. the length of the 
@@ -202,12 +201,15 @@ def prob_03_BT_max_depth() -> None:
     print('pass' if res_2 == 5 else res_2)
 
 
-def _BT_max_depth(tree:BT) -> int: 
-    '''  
-    []_
-    O(n)_t: 
-    O(n)_s: 
-    '''
+def _BT_max_depth(bt:BT) -> int: 
+    def _depth_len(node, lvl=0): 
+        if node is None: 
+            return lvl 
+        lhs_depth = _depth_len(node.left, lvl + 1)
+        rhs_depth = _depth_len(node.right, lvl + 1) 
+
+        return max(lhs_depth, rhs_depth) 
+    return _depth_len(bt)
 
 
 if __name__ == '__main__':
