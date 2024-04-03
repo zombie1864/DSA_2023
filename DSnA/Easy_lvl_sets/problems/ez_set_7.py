@@ -12,6 +12,7 @@ The getmembers() function retrieves the members of an object such as a class or 
 '''
 
 
+
 def main():
     ''' Main will ask you which algo to exec '''
     print('Choose which algo to execute:\n')
@@ -25,42 +26,141 @@ def main():
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
+class Node:
+    def __init__(self, val) -> None:
+        self.val = val 
+        self.nxt = None
 
 
-def prob_01_counting_sort(): 
+class LList():
+    def __init__(self) -> None:
+        pass
+
+    def add_node(self, val): 
+        '''  '''
+        
+    def rm_dups(self): 
+        '''  '''
+
+    def print_list(self): 
+        '''  '''
+
+
+def prob_01_add_nodes_2_LL():
     '''  
-    Quicksort runs n*log(n) which is the fastest sorting can get. Sorting methods 
-    rely on comparing els, counting sort does not require comparing els. Instead, u 
-    create a List[int], known as an int arr, whose index range covers the entire 
-    range of vals in the original arr. Each time a val occurs in the original 
-    arr, u inc the counter at that idx. 
-    EX: 
-        arr     = [1, 1, 3, 2, 1] 
-        int_arr = [0, 0, 0, 0, 0]
-
-        idx     val     int_arr
-        0       1       [0, 1, 0, 0, 0] += 1 @int_arr_idx int_arr[val]
-        1       1       [0, 2, 0, 0, 0]
-        2       3       [0, 2, 0, 1, 0]
-        3       2       [0, 2, 1, 1, 0]
-        4       1       [0, 3, 1, 1, 0]
-    Given a List[int], count and return da num of times each val appears as a List[int]
+    In prob set 1 we intro'ed del nodes from a link list by rm'in dups. 
+    Write an algo that appends nodes 2 da end of a ll and prints da res'in ll 
     '''
-    arr_1 = [2, 2, 3, 0, 1, 5]
-    ans_1 = [1, 1, 2, 1, 0, 1]
+    llist = LList() 
+    llist.add_node(1)
+    llist.add_node(2)
+    llist.add_node(3)
+    llist.print_list() # 1 -> 2 -> 3 -> None
+        
 
-    arr_2 = [1, 1, 1, 2, 8, 1, 2, 1, 0]
-    ans_2 = [1, 5, 2, 0, 0, 0, 0, 0, 1]
 
-    print('pass' if _count_sort(arr_1) == ans_1 else _count_sort(arr_1)) 
-    print('pass' if _count_sort(arr_2) == ans_2 else _count_sort(arr_2)) 
+def prob_02_sum_links():
+    '''  
+    U have 2 ints repr'ed by a llist, where each node contains a single 
+    digit. Da order of the num is reversed, such that the head of da
+    llist is at da tail. Write a fn that adds da 2 num and returns 
+    da sym a reversed llist. 
+    EX: 
+        input: (7 -> 1 -> 6) + (5 -> 9 -> 2) // 617 + 295
+        output: 2 -> 1 -> 9 // 617 + 295 = 912 
+    '''
+    llist_1 = LList() 
+    llist_1.add_node(7)
+    llist_1.add_node(1)
+    llist_1.add_node(6)
 
-def _count_sort(arr:List[int]) -> List[int]: 
+    llist_2 = LList() 
+    llist_2.add_node(5)
+    llist_2.add_node(9)
+    llist_2.add_node(2)
+
+    _sum_links(llist_1, llist_2)
+
+def _sum_links(ll1, ll2): 
     '''  '''
-    arr_int = [0] * len(arr)
-    for n in arr: 
-        arr_int[n] += 1
-    return arr_int
+
+
+
+def prob_03_rm_dups():
+    '''  
+    rm dups from an unsorted llist
+    '''
+    llist = LList() 
+    llist.add_node(1)
+    llist.add_node(2)
+    llist.add_node(3)
+    llist.add_node(2)
+    llist.add_node(4)
+    llist.add_node(3) 
+    llist.print_list() #output: 1->2->3->2->4->3->None 
+    llist.rm_dups()
+    llist.print_list() #output: 1->2->3->4->None 
+
+
+
+def prob_04_del_mid_node(): 
+    '''  
+    Impl code 2 del a node in btw(first_node, last_node) in a single llist, 
+    given acc only 2 that node. Da code returns None. 
+    Ex: 
+        llist: a->b->c->d->e->f
+        input: 'c' 
+        output: a->b->d->e->f 
+    '''
+    a = Node('a')
+    b = Node('b')
+    c = Node('c')
+    d = Node('d')
+    e = Node('e')
+    f = Node('f') 
+    a.nxt = b 
+    b.nxt = c 
+    c.nxt = d 
+    d.nxt = e
+    e.nxt = f 
+
+    _del_node(c) 
+
+    curr_node = a 
+    while curr_node is not None: 
+        print(curr_node.val, end=' -> ') 
+        curr_node = curr_node.nxt 
+    print('None') 
+
+def _del_node(node): 
+    '''  ''' 
+
+
+def prob_05_palindrome_llist():
+    '''  
+    impl a fn 2 check if a llist is a palindrome. A palindrome is a ds 
+    that is the same forward and backwards. 
+    EX:
+        1->2->3->2->1 // true 
+        1->2->1->0 // false 
+    '''
+    llist_1 = LList() 
+    llist_2 = LList() 
+    llist_1.add_node(1)
+    llist_1.add_node(2)
+    llist_1.add_node(3)
+    llist_1.add_node(2)
+    llist_1.add_node(1)
+    llist_2.add_node(1)
+    llist_2.add_node(2)
+    llist_2.add_node(1)
+    llist_2.add_node(0)
+    print('pass' if _palindrome_llist(llist_1) else _palindrome_llist(llist_1))
+    print('pass' if not _palindrome_llist(llist_2) else _palindrome_llist(llist_2))
+
+
+def _palindrome_llist(ll):
+    '''  '''
 
 
 

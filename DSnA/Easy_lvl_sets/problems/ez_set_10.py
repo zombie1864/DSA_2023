@@ -25,89 +25,55 @@ def main():
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
-
-
-def prob_01_grouped_anagrams_w_o_hasing(): 
-    '''  
-    Given a List[str], group anagrams together with its variants as el in a container
-    arr and return the res'in arr. Anagrams are words that when its characters r 
-    rearranged it forms another word. Impl w/o using hashing. 
-    '''
-    res = _group_anagrams_w_o_hashing(["eat", "tea", "tan", "ate", "nat", "bat"])
-    ans = [["eat","tea","ate"],["tan","nat"],["bat"]]
-    print('pass' if res == ans else res)
-
-
-def _group_anagrams_w_o_hashing(arr): 
-    '''  
-    '''
+class BT(): 
+    def __init__(self, val) -> None:
+        self.val    = val 
+        self.left   = None 
+        self.right  = None 
 
 
 
-def prob_02_grouped_anagrams_w_hasing():
-    '''  
-    Given a List[str], group anagrams together with its variants as el in a container
-    arr and return the res'in arr. Anagrams are words that when its characters r 
-    rearranged it forms another word. Impl w/o using hashing. 
-    '''
-    res = _group_anagrams_w_hashing(["eat", "tea", "tan", "ate", "nat", "bat"])
-    ans = [["eat","tea","ate"],["tan","nat"],["bat"]]
-    print('pass' if res == ans else res)
+def prob_01_validate_BST(): 
+    bt_1                = BT(2)
+    bt_1.left           = BT(1) 
+    bt_1.right          = BT(3)
+    bt_2                = BT(2) 
+    bt_2.right          = BT(3) 
+    bt_2.right.right    = BT(4)
+    bt_3                = BT(2)
+    bt_3.left           = BT(3) 
+    bt_3.right          = BT(1)
+    bt_4                = BT(5)
+    bt_4.left           = BT(4) 
+    bt_4.left.left      = BT(3)
+    bt_4.left.right     = BT(6)
+    print('pass' if _validate_BST(bt_1) else _validate_BST(bt_1)) 
+    print('pass' if _validate_BST(bt_2) else _validate_BST(bt_1)) 
+    print('pass' if not _validate_BST(bt_3) else _validate_BST(bt_3)) 
+    print('pass' if not _validate_BST(bt_4) else _validate_BST(bt_4)) 
 
+def _validate_BST(BT): 
+    def _inorder_path(BT): 
+        return _inorder_path(BT.left) + [BT.val] + _inorder_path(BT.right) if BT else []
+    vals = _inorder_path(BT)       
+    for i in range(len(vals) - 1): 
+        n = vals[i]
+        m = vals[i + 1]
 
-def _group_anagrams_w_hashing(arr):
-    '''  
-    '''
+        if n > m: 
+            return False 
+        
+    return True
 
-
-
-def prob_03_check_str_nPr(): 
-    '''  
-    Given 2 strs, write a fn 2 decide if one is a permutation of da other. 
-    NOTE: in math nPr means permutation 
-    '''
-    print('pass' if _check_nPr('cat', 'act') else _check_nPr('cat', 'act'))
-    print('pass' if not _check_nPr('cat', 'dog') else _check_nPr('cat', 'dog'))
-    print('pass' if not _check_nPr('cat', 'at') else _check_nPr('cat', 'at'))
-
-
-def _check_nPr(str1, str2): 
-    '''  
-    '''
-
-
-
-def prob_04_palindrome_permutation():
-    '''  
-    Given a str, write a fn to check if it is a permutation of a palindrome. 
-    A palindrome is a word or phrase that is the same forwards and backwards. 
-    A permutation is a rearrangement of letters. The palindrome does not 
-    need to be limited to just dictionary words.
-    EX:
-        Input:  Tact Coa
-        Output: True (permutations: "taco cat", "atco cta", etc.)
-    '''
-    print('pass' if _palindrome_nPr('Tact Coa') else _palindrome_nPr('Tact Coa'))
-
-
-def _palindrome_nPr(txt): 
-    '''  
-    '''
+def prob_02(): 
+    pass
 
 
 
-def prob_05_two_sum():
-    '''  
-    Given a List[int] and a trg, return the 2 indicies of the 2 ints such that 
-    they add up to da trg, achieve this in O(logN) and NOT O(N) 
-    '''
-    print('pass' if _two_sum([2, 7, 11, 15], 9) == [0, 1] else _two_sum([2, 7, 11, 15], 9))
 
+def prob_03(): 
+    pass 
 
-def _two_sum(arr, trg): 
-    '''  
-    '''
-  
 
 
 if __name__ == '__main__':

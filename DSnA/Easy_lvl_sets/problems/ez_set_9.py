@@ -25,54 +25,132 @@ def main():
     print(f'\nExecuting order {exec_func}:\n')
     eval(dict_of_avail_funcs[exec_func] + '()')
 
-class BT(): 
+
+def prob_01_BFS_undirected_graph(): 
+    '''  
+    An undirected graph is a network of interconnected nodes that do not have a 
+    general direction or flow. They represent the relationship between entities 
+    in both direction, often forming a symmetric shape. For example, in a social network
+    usr A is friends w usr B, then usr B is also friends w usr A, making it model as an 
+    undirected graph. They key point of these graphs is it's symmetry. A corner stone 
+    and fundamental concept in graph theory. 
+
+    The conncections, often called `adjacency`, btw two vertices/nodes that r 
+    connected by an edge is a collection of arrs. Each arr repr vertect in da 
+    graph. 
+    EX:  
+            A
+         /     \
+        B-------C
+    Da adjacency repr this graph is 
+    @ Node A: [B, C] 
+    @ Node B: [A, C] 
+    @ Node C: [A, B]
+
+    Given an undirected graph repr as an adjacency list (a ds used 2 repr a graph)
+    and a src node, impl BFS (Breadth-First Search) 2 traverse da graph starting 
+    from the given src node. Print the nodes visted during BFS traversal, note
+    that the order does not matter. 
+    '''
+    src_node = 'A' 
+    graph = {
+        'A': {'B', 'C'}, 
+        'B': {'A', 'D', 'E'}, 
+        'C': {'A', 'F'}, 
+        'D': {'B'}, 
+        'E': {'B', 'F'}, 
+        'F': {'C', 'E'} 
+    }
+    print(_BFS_undirected_graph(graph, src_node)) #=> 'A B C D E F' @least 
+
+def _BFS_undirected_graph(G, src): 
+    '''  '''
+    seen    = set() 
+    queue   = [src]
+
+    while queue: 
+        node = queue.pop(0)
+        if node not in seen: 
+            print(node, end=' ') 
+            seen.add(node)
+            queue.extend(G[node] - seen) # extend appens an iter like set 2 list
+
+
+
+def prob_02_BT_BFS(): 
+    '''  
+    Given a BT, impl BFS 2 print the node in level order travsersal
+    '''
+    root                = BT(1) 
+    root._left          = BT(2)
+    root._right         = BT(3)
+    root._left._left    = BT(4)
+    root._left._right   = BT(5)
+    root._right._left   = BT(6)
+    root._right._right  = BT(7)
+    print(_BT_BFS(root)) #=> 1 2 3 4 5 6 7 
+
+class BT:
     def __init__(self, val) -> None:
-        self.val    = val 
-        self.left   = None 
-        self.right  = None 
+        self._val   = val 
+        self._left  = None 
+        self._right = None 
 
+def _BT_BFS(root:BT) -> None: 
+    '''  '''
+    if not root: 
+        return 
+    queue = [root] 
 
-
-def prob_01_validate_BST(): 
-    bt_1                = BT(2)
-    bt_1.left           = BT(1) 
-    bt_1.right          = BT(3)
-    bt_2                = BT(2) 
-    bt_2.right          = BT(3) 
-    bt_2.right.right    = BT(4)
-    bt_3                = BT(2)
-    bt_3.left           = BT(3) 
-    bt_3.right          = BT(1)
-    bt_4                = BT(5)
-    bt_4.left           = BT(4) 
-    bt_4.left.left      = BT(3)
-    bt_4.left.right     = BT(6)
-    print('pass' if _validate_BST(bt_1) else _validate_BST(bt_1)) 
-    print('pass' if _validate_BST(bt_2) else _validate_BST(bt_1)) 
-    print('pass' if not _validate_BST(bt_3) else _validate_BST(bt_3)) 
-    print('pass' if not _validate_BST(bt_4) else _validate_BST(bt_4)) 
-
-def _validate_BST(BT): 
-    def _inorder_path(BT): 
-        return _inorder_path(BT.left) + [BT.val] + _inorder_path(BT.right) if BT else []
-    vals = _inorder_path(BT)       
-    for i in range(len(vals) - 1): 
-        n = vals[i]
-        m = vals[i + 1]
-
-        if n > m: 
-            return False 
+    while queue: 
+        node = queue.pop(0)
+        print(node._val, end=' ') 
         
-    return True
-
-def prob_02(): 
-    pass
-
-
+        if node._left: 
+            queue.append(node._left) 
+        if node._right: 
+            queue.append(node._right) 
 
 
-def prob_03(): 
-    pass 
+
+def prob_03_shortest_path():
+    '''  
+    Given a grid with obstacles, find da shortest path from da top-left corner 2 da 
+    bottom-right corner. 
+    '''
+    grid = [
+        [0, 0, 0, 0], 
+        [1, 1, 0, 1], 
+        [0, 0, 0, 0], 
+        [0, 1, 1, 0]
+    ]
+    res = _shortest_path(grid)
+    print(res) 
+
+def _shortest_path(M:List[List[int]]) -> int: 
+    '''  '''
+    dirs        = [(1, 0), (-1, 0), (0, 1), (0, -1)] 
+    rows, cols  = len(M), len(M[0]) 
+    queue       = [(0, 0, 0)] # (x, y, dis) | x, y = 0 start coord | dis = 0 (distance) 
+
+    while queue: 
+        x, y, dis = queue.pop(0) 
+        if (x, y) == (rows - 1, cols - 1): # (rows - 1, cols - 1) bottom right corner 
+            
+            return dis + 1
+        
+        for a, b in dirs: 
+            dx = x + a 
+            dy = y + b 
+
+            if 0 <= dx < rows and 0 <= dy < cols and M[dx][dy] == 0: 
+                queue.append((dx, dy, dis + 1)) 
+
+    return -1 
+
+            
+
+
 
 
 

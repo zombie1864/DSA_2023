@@ -136,36 +136,8 @@ def _heptiptup(n:int) -> str:
     '''
 
 
-def prob_05_calculate_slope(): #RECORD_TIME 9min 55sec
-    """Given two Dict repr points containing keys x and y, calculate the slope btw two points. 
-    If points are equal return float type infinity using float('inf'). Raise ValueError if 
-    x or y are not present in the either point.
 
-    TAGS:
-        [compSciFund, math]
-    """ 
-    res_1 = _calculate_slope({'x': 0, 'y': 1}, {'x': 1, 'y': 1})
-    res_2 = _calculate_slope({'x': 1, 'y': 1}, {'x': 2, 'y': 2})
-    res_3 = _calculate_slope({'x': 1, 'y': 3}, {'x': 2, 'y': 6})
-    res_4 = _calculate_slope({'x': 0, 'y': 1}, {'x': 0, 'y': 2})
-    res_5 = _calculate_slope({'x': 0,}, {'x': 1, 'y': 1})
-    res_6 = _calculate_slope({'x': 0, 'x': 9, 'y': 10}, {'x': 1, 'y': 1}) # NOTE explain what is happening here 
-    res_7 = _calculate_slope({'z': 9, 'y': 10}, {'x': 1, 'y': 1})
-    print('pass' if res_1 == 0.0 else res_1)                            #=> 0.0
-    print('pass' if res_2 == 1.0 else res_2)                            #=> 1.0
-    print('pass' if res_3 == 3.0 else res_3)                            #=> 3.0
-    print('pass' if res_6 == 1.125 else res_6)                          #=> 1.125
-    print('pass' if res_4 == float('inf') else res_4)                   #=> float('inf')
-    print('pass' if res_5 == "ValueError('preReq missing')" else res_5) #=> ValueError
-    print('pass' if res_7 == "ValueError('preReq missing')" else res_7) #=> ValueError
-
-
-def _calculate_slope(point_a: Dict[str,float], point_b: Dict[str, float]) -> float: 
-    '''   
-    '''
-
-
-def prob_06_custom_heptiptup(): #RECORD_TIME: 9min
+def prob_05_custom_heptiptup(): #RECORD_TIME: 9min
     """ Given an int and a mapping dict that checks if the int is divisible by 3 natural nums: 
     x, y, and z, with x < y < z and returns a str given the following rules:
         • If n is a factor of x the string should contain `A` 
@@ -201,20 +173,6 @@ def _custom_heptiptup(num: int, rule: Dict[str, int]) -> str:
 
 if __name__ == '__main__':
     '''  
-    https://www.dollartimes.com/calculators/hours-minutes-calculator
-    TOT_RUN_TIME: 1hr, 32min, 14sec 
-    DSGN-DOC:
-        []_In the future you will be competing against your run time for each problem 
-            []_RECORD_TIME vs BEST_TIME vs OPT_TIME 
-                []_RECORD_TIME: is the duration of an initial attempt to a problem 
-                []_BEST_TIME: is the recorded duration that beats RECORD_TIME 
-                []_OPT_TIME: is the statical time AVG of at least 2 or 3 recorded BEST_TIME 
-                    ⮑ ex: BEST_TIME: 2min BEST_TIME: 1min 50sec BEST_TIME: 2min 25sec 
-                        []_OPT_TIME: 2min 5sec [calculated using time average tool online]
-                            ⮑ future attempts will not be recorded instead the OPT_TIME is that best time you are 
-                            trying to compete against 
-
-        []_You will also be adding tags to each problem to well DOC each problem by some category 
     '''
     print('\n----------[ START ]----------\n')
     main()

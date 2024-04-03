@@ -26,131 +26,71 @@ def main():
     eval(dict_of_avail_funcs[exec_func] + '()')
 
 
-def prob_01_BFS_undirected_graph(): 
+
+def prob_01_counting_sort(): 
     '''  
-    An undirected graph is a network of interconnected nodes that do not have a 
-    general direction or flow. They represent the relationship between entities 
-    in both direction, often forming a symmetric shape. For example, in a social network
-    usr A is friends w usr B, then usr B is also friends w usr A, making it model as an 
-    undirected graph. They key point of these graphs is it's symmetry. A corner stone 
-    and fundamental concept in graph theory. 
+    Quicksort runs n*log(n) which is the fastest sorting can get. Sorting methods 
+    rely on comparing els, counting sort does not require comparing els. Instead, u 
+    create a List[int], known as an int arr, whose index range covers the entire 
+    range of vals in the original arr. Each time a val occurs in the original 
+    arr, u inc the counter at that idx. 
+    EX: 
+        arr     = [1, 1, 3, 2, 1] 
+        int_arr = [0, 0, 0, 0, 0]
 
-    The conncections, often called `adjacency`, btw two vertices/nodes that r 
-    connected by an edge is a collection of arrs. Each arr repr vertect in da 
-    graph. 
-    EX:  
-            A
-         /     \
-        B-------C
-    Da adjacency repr this graph is 
-    @ Node A: [B, C] 
-    @ Node B: [A, C] 
-    @ Node C: [A, B]
-
-    Given an undirected graph repr as an adjacency list (a ds used 2 repr a graph)
-    and a src node, impl BFS (Breadth-First Search) 2 traverse da graph starting 
-    from the given src node. Print the nodes visted during BFS traversal, note
-    that the order does not matter. 
+        idx     val     int_arr
+        0       1       [0, 1, 0, 0, 0] += 1 @int_arr_idx int_arr[val]
+        1       1       [0, 2, 0, 0, 0]
+        2       3       [0, 2, 0, 1, 0]
+        3       2       [0, 2, 1, 1, 0]
+        4       1       [0, 3, 1, 1, 0]
+    Given a List[int], count and return da num of times each val appears as a List[int]
     '''
-    src_node = 'A' 
-    graph = {
-        'A': {'B', 'C'}, 
-        'B': {'A', 'D', 'E'}, 
-        'C': {'A', 'F'}, 
-        'D': {'B'}, 
-        'E': {'B', 'F'}, 
-        'F': {'C', 'E'} 
-    }
-    print(_BFS_undirected_graph(graph, src_node)) #=> 'A B C D E F' @least 
+    arr_1 = [2, 2, 3, 0, 1, 5]
+    ans_1 = [1, 1, 2, 1, 0, 1]
 
-def _BFS_undirected_graph(G, src): 
+    arr_2 = [1, 1, 1, 2, 8, 1, 2, 1, 0]
+    ans_2 = [1, 5, 2, 0, 0, 0, 0, 0, 1]
+
+    print('pass' if _count_sort(arr_1) == ans_1 else _count_sort(arr_1)) 
+    print('pass' if _count_sort(arr_2) == ans_2 else _count_sort(arr_2)) 
+
+def _count_sort(arr:List[int]) -> List[int]: 
     '''  '''
-    seen    = set() 
-    queue   = [src]
-
-    while queue: 
-        node = queue.pop(0)
-        if node not in seen: 
-            print(node, end=' ') 
-            seen.add(node)
-            queue.extend(G[node] - seen) # extend appens an iter like set 2 list
+    arr_int = [0] * len(arr)
+    for n in arr: 
+        arr_int[n] += 1
+    return arr_int
 
 
 
-def prob_02_BT_BFS(): 
-    '''  
-    Given a BT, impl BFS 2 print the node in level order travsersal
+def prob_02_calculate_slope(): #RECORD_TIME 9min 55sec
+    """Given two Dict repr points containing keys x and y, calculate the slope btw two points. 
+    If points are equal return float type infinity using float('inf'). Raise ValueError if 
+    x or y are not present in the either point.
+
+    TAGS:
+        [compSciFund, math]
+    """ 
+    res_1 = _calculate_slope({'x': 0, 'y': 1}, {'x': 1, 'y': 1})
+    res_2 = _calculate_slope({'x': 1, 'y': 1}, {'x': 2, 'y': 2})
+    res_3 = _calculate_slope({'x': 1, 'y': 3}, {'x': 2, 'y': 6})
+    res_4 = _calculate_slope({'x': 0, 'y': 1}, {'x': 0, 'y': 2})
+    res_5 = _calculate_slope({'x': 0,}, {'x': 1, 'y': 1})
+    res_6 = _calculate_slope({'x': 0, 'x': 9, 'y': 10}, {'x': 1, 'y': 1}) # NOTE explain what is happening here 
+    res_7 = _calculate_slope({'z': 9, 'y': 10}, {'x': 1, 'y': 1})
+    print('pass' if res_1 == 0.0 else res_1)                            #=> 0.0
+    print('pass' if res_2 == 1.0 else res_2)                            #=> 1.0
+    print('pass' if res_3 == 3.0 else res_3)                            #=> 3.0
+    print('pass' if res_6 == 1.125 else res_6)                          #=> 1.125
+    print('pass' if res_4 == float('inf') else res_4)                   #=> float('inf')
+    print('pass' if res_5 == "ValueError('preReq missing')" else res_5) #=> ValueError
+    print('pass' if res_7 == "ValueError('preReq missing')" else res_7) #=> ValueError
+
+
+def _calculate_slope(point_a: Dict[str,float], point_b: Dict[str, float]) -> float: 
+    '''   
     '''
-    root                = BT(1) 
-    root._left          = BT(2)
-    root._right         = BT(3)
-    root._left._left    = BT(4)
-    root._left._right   = BT(5)
-    root._right._left   = BT(6)
-    root._right._right  = BT(7)
-    print(_BT_BFS(root)) #=> 1 2 3 4 5 6 7 
-
-class BT:
-    def __init__(self, val) -> None:
-        self._val   = val 
-        self._left  = None 
-        self._right = None 
-
-def _BT_BFS(root:BT) -> None: 
-    '''  '''
-    if not root: 
-        return 
-    queue = [root] 
-
-    while queue: 
-        node = queue.pop(0)
-        print(node._val, end=' ') 
-        
-        if node._left: 
-            queue.append(node._left) 
-        if node._right: 
-            queue.append(node._right) 
-
-
-
-def prob_03_shortest_path():
-    '''  
-    Given a grid with obstacles, find da shortest path from da top-left corner 2 da 
-    bottom-right corner. 
-    '''
-    grid = [
-        [0, 0, 0, 0], 
-        [1, 1, 0, 1], 
-        [0, 0, 0, 0], 
-        [0, 1, 1, 0]
-    ]
-    res = _shortest_path(grid)
-    print(res) 
-
-def _shortest_path(M:List[List[int]]) -> int: 
-    '''  '''
-    dirs        = [(1, 0), (-1, 0), (0, 1), (0, -1)] 
-    rows, cols  = len(M), len(M[0]) 
-    queue       = [(0, 0, 0)] # (x, y, dis) | x, y = 0 start coord | dis = 0 (distance) 
-
-    while queue: 
-        x, y, dis = queue.pop(0) 
-        if (x, y) == (rows - 1, cols - 1): # (rows - 1, cols - 1) bottom right corner 
-            
-            return dis + 1
-        
-        for a, b in dirs: 
-            dx = x + a 
-            dy = y + b 
-
-            if 0 <= dx < rows and 0 <= dy < cols and M[dx][dy] == 0: 
-                queue.append((dx, dy, dis + 1)) 
-
-    return -1 
-
-            
-
-
 
 
 
