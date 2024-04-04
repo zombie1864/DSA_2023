@@ -5,8 +5,8 @@
     ],
     "1": [
         "Tell me abt ur self.",
-        "I'm an accomplished swe w over 2yrs, specializing in FSD. W a strong foundation in programming lang sas JS, and PY, coupled with expertise in frameworks likes React.js, and Flask. I have consistently delivered impactful solutions across diverse industries.\n\tIn my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website implementing cutting-edge features such as a dynamic navigation bar revamped product cards, and a redsigned product page, resulting in a more accessible and intuitive storefront. This initiative led to a 20% increase in customer reviews and a substantial boost in online sales by 15%.\n\t@ GAL manufacturing, I developed key features 2 their elevator monitoring sw, including a real-time visualization of elevator movements and a robust backup procedures for SQL databases of elev traffic data. These enhancements improved the efficiency of elevator monitoring system and resulted in a 30% increase in understanding elevator position in real-time by field engineers.\n\tDuring my tenure at the Research Foundation CUNY, I developed sw solutions to generate customized reports, resulting in a 50% enhancement in data scraping from FTP servers. \n\tI am excited about the opportunity at hand and believe my technical proficiencies, collaborative mindset, and passion for creating digital assets makes me a valuable candidate for this position and I look forward to the opportunity to bring my unique perspective and expertise to your team.", 
-        "NOTE lang = languages, sas = such as"
+        "I'm an accomplished swe w over 2yrs, specializing in FSD. W a strong found in prog lang sas JS, and PY, coupled with expertise in frameworks likes React.js, and Flask. I have consis del'ed impactful sol across diverse industries.\n\tIn my recent role @Omb, i played a piv role in revamping their e-comm website impl'in cutting-edge fts sas a dyn nav bar, revamped prod cards, and a redsigned prod page, res'in in a more acc and intui storef. This init led to a 20% inc in pos customer reviews and a substantial boost in online sales by 15%.\n\t@GAL, I dev'ed key fts 2 their elev mon'in sw, incl'in a real-t visualization of elev movements and a robust backup procedures for SQL databases of elev traffic data. These enh imp'ed the eff of elev mon'in system and res'ed in a 30% inc in understanding elev position in real-t by field engineers.\n\tDuring my tenure @RFCUNY, I dev'ed sws to gen cust reports, res'in in a 50% enh in data scraping from FTP servers. \n\tI am excited about the opp @hand and bel my tech prof, collab mindset, and passion for creating dass makes me a valuable can for this position and I look forward to the opp to bring my uniq perspective and expertise to your team.", 
+        "NOTE found = foundation, prog = programming lang = languages, sas = such as, consis = consistently, del'ed = delivered, sol = solutions, piv = pivotal, e-comm = e-commerce, impl'in = implementing, fts = features, dyn = dynamic, prod = product, res'in = resulting, acc = accessible, intui = intuitive, storef = storefront, init = initiative, inc = increase, pos = positive, dev'ed = developed, elev = elevator, mon'in = monitoring, incl'in = including, real-t = real-time, enh = enhancements, imp'ed = improved, eff = efficiency, res'ed = resulted, sws = software solutions, gen = generate, opp = opportunity, bel = believe, tech = technical, prof = proficiencies, collab = collaborative, dass = digital assets, can = candidate, uniq = unique, cust = custom"
     ],
     "2": [
         "What r 3 accomplishments u r most proud of, in ur recent role?",
@@ -35,7 +35,8 @@
     ],
     "8": [
         "While @ ombligo how did u manage their products and inventory?",
-        "Utilizing Py and Shopify API 2 streamline inventory management, creating reports that enhanced marketing campaigns with data-driven strategies, leading 2 increased sales and improved product performance "
+        "Util py and Shopify api 2 streamline inv mgmt, creating reports that enh mkt'in campaigns w data-driven strategies, leading 2 inc'ed sales and imp prod performance ", 
+        "NOTE: util = utilized, inv = inventory, mgmt = management, enh = enhanced, mkt'in = marketing"
     ], 
     "9": [
         "Tell me abt ur time @ Research Foundation CUNY. ", 
@@ -65,6 +66,7 @@
     ], 
     "15": [
         "What actions did you take when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (A from PAR--state da prob)", 
-        "I est milestones 2 track progress and leveraged AI tools 2 streamline productivity, eval progress against set milestones"
+        "I cond'ed a thr-o analysis of da site unders'in da scope, breaking down del, and iden'in opp. I est milestones 2 track progress and leveraged AI tools 2 streamline productivity, eval progress against set milestones", 
+        "NOTE: cond'ed = conducted, thr-o = through, unders'in = understanding, del = deliverables, iden'in = identifying, opp = opportunities"
     ]
 }

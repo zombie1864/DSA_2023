@@ -94,6 +94,68 @@ def _calculate_slope(point_a: Dict[str,float], point_b: Dict[str, float]) -> flo
 
 
 
+def prob_03_filter_by_lengths(): #RECORD_TIME: 2min 13sec 
+    ''' Write a fn that takes a List[str] and an int and returns a List[str] that 
+    have str of at least the given length int. 
+    The length argument should be optional; if no length is passed in, 
+    then 5 should be used as the length. 
+
+    TAGS:
+        [language]
+    '''
+    res_1 = _filter_by_lengths(["pear", "dragonfruit", "fig", "clementine"], 4)
+    res_2 = _filter_by_lengths(["pear", "dragonfruit", "fig", "clementine"])
+    res_3 = _filter_by_lengths(["cat", "dog", "capybara", "mouse"], 7)
+    res_4 = _filter_by_lengths(["cat", "dog", "capybara", "mouse"])
+    print('pass' if res_1 == ["pear", "dragonfruit", "clementine"] else res_1) #=> ["pear", "dragonfruit", "clementine"]
+    print('pass' if res_2 == ["dragonfruit", "clementine"] else res_2) #=> ["dragonfruit", "clementine"]
+    print('pass' if res_3 == ["capybara"] else res_3) #=> ["capybara"]
+    print('pass' if res_4 == ["capybara", "mouse"] else res_4) #=> ["capybara", "mouse"]
+
+
+def _filter_by_lengths(list_of_str:List[str], length:int=5) -> List[str]:
+    '''  '''
+
+
+
+def prob_04_max_number(): #RECORD_TIME: 17sec 
+    ''' Write a func that accepts any amount of numbers arguments and returns the largest number 
+
+    TAGS:
+        [compSciFund]
+    '''
+    res_1 = _max_number(1, -4, 0, 7, 5)
+    res_2 = _max_number(30, 28, 18)
+    print('pass' if res_1 == 7 else res_1) #=> 7
+    print('pass' if res_2 == 30 else res_2) #=> 30 
+
+
+def _max_number(*args:Tuple[int]) -> int:
+    '''  '''
+
+
+
+def prob_05_is_only_vowels(): #RECORD_TIME: 3min 7sec
+    ''' Write a func that takes a str and returns true if the str contains only vowels, false otherwise
+
+    TAGS:
+        [language]
+    '''
+    res_1 = _is_only_vowels("aaoeee")
+    res_2 = _is_only_vowels("iou")
+    res_3 = _is_only_vowels("cat")
+    res_4 = _is_only_vowels("over")
+    print('pass' if res_1 else res_1) #=> True
+    print('pass' if res_2 else res_2) #=> True
+    print('pass' if not res_3 else res_3) #=> False
+    print('pass' if not res_4 else res_4) #=> False
+
+
+def _is_only_vowels(string:str) -> bool:
+    '''  '''
+
+
+
 if __name__ == '__main__':
     '''  '''
     print('\n----------[ START ]----------\n')
