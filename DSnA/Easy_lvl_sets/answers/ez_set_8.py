@@ -57,7 +57,10 @@ def prob_01_counting_sort():
 
 def _count_sort(arr:List[int]) -> List[int]: 
     '''  '''
-
+    arr_int = [0] * len(arr)
+    for n in arr: 
+        arr_int[n] += 1
+    return arr_int
 
 
 
