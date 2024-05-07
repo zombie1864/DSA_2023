@@ -1,50 +1,53 @@
 {
     "0": [
         "Tell me about a time when you had to meet a tight deadline. How did you prioritize and organize your work?",
-        "@ ombligo, i encountered a scenario where i needed 2 meet a 3-month deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline productivity, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. "
+        "@omb, i encountered a scenario where i needed 2 meet a 3-month deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline productivity, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. "
     ],
     "1": [
         "Tell me abt ur self.",
-        "I'm an accomplished swe w over 2yrs, specializing in FSD. W a strong found in prog lang sas JS, and PY, coupled with expertise in frameworks likes React.js, and Flask. I have consis del'ed impactful sol across diverse industries.\n\tIn my recent role @Omb, i played a piv role in revamping their e-comm website impl'in cutting-edge fts sas a dyn nav bar, revamped prod cards, and a redsigned prod page, res'in in a more acc and intui storef. This init led to a 20% inc in pos customer reviews and a substantial boost in online sales by 15%.\n\t@GAL, I dev'ed key fts 2 their elev mon'in sw, incl'in a real-t visualization of elev movements and a robust backup procedures for SQL databases of elev traffic data. These enh imp'ed the eff of elev mon'in system and res'ed in a 30% inc in understanding elev position in real-t by field engineers.\n\tDuring my tenure @RFCUNY, I dev'ed sws to gen cust reports, res'in in a 50% enh in data scraping from FTP servers. \n\tI am excited about the opp @hand and bel my tech prof, collab mindset, and passion for creating dass makes me a valuable can for this position and I look forward to the opp to bring my uniq perspective and expertise to your team.", 
+        "I'm an accomplished swe w over 2yrs, specializing in FSD. W a strong found in prog lang sas JS, and PY, coupled with expertise in frameworks likes React.js, and Flask. \n\tIn my recent role @Omb, i played a piv role in revamping their e-comm website impl'in cutting-edge fts sas a dyn nav bar, revamped prod cards, and a redsigned prod page, res'in in a more acc and intui storef. This init led to a 20% inc in pos customer reviews and a sig boost in online sales by 15%.\n\t@GAL, I dev'ed key fts 2 their elev mon'in sw, incl'in a real-t visualization of elev movements and a robust backup procedures of SQL databases for elev traffic data. These enh res'ed in a 30% inc in understanding elev data loc in real-t by field engineers.\n\tDuring my tenure @RFCUNY, I dev'ed sws to gen cust reports, res'in in a 50% enh in data scraping from FTP servers. \n\tI am excited about the opp @hand and bel my tech prof, collab mindset, and passion for creating dass makes me a valuable can for this position.", 
         "NOTE found = foundation, prog = programming lang = languages, sas = such as, consis = consistently, del'ed = delivered, sol = solutions, piv = pivotal, e-comm = e-commerce, impl'in = implementing, fts = features, dyn = dynamic, prod = product, res'in = resulting, acc = accessible, intui = intuitive, storef = storefront, init = initiative, inc = increase, pos = positive, dev'ed = developed, elev = elevator, mon'in = monitoring, incl'in = including, real-t = real-time, enh = enhancements, imp'ed = improved, eff = efficiency, res'ed = resulted, sws = software solutions, gen = generate, opp = opportunity, bel = believe, tech = technical, prof = proficiencies, collab = collaborative, dass = digital assets, can = candidate, uniq = unique, cust = custom"
     ],
     "2": [
         "What r 3 accomplishments u r most proud of, in ur recent role?",
-        "\n\t1. Strategic product placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, resulting in enhanced consumer exp. \n\t2. Automation sw 4 PO order processing: addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact through enhanced storefront: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. "
+        "\n\t1. Strategic prod placement: collab'ed w sales team 2 strategically position key products \n\t\ton da storefront, resulting in enhanced consumer exp. \n\t2. asw that addressed critical workflow needs. \n\t\tSuccessfully reduced human err by automating the splitting of PO orders, \n\t\tassigning components 2 builders and reassembling back 2 original order. \n\t\tDemonstrated a commitment 2 efficiency and accuracy in da operational process. \n\t3. Sales impact thr enh'ed storefront: impl UI-friendly navigation bar on the storefront, \n\t\tsignificantly improving product searchability, contributing 2da overall success of \n\t\tsales strategy thr effective website optimization. ", 
+        "NOTE: prod = product, asw = Automation sw, thr = through, enh'ed = enhanced" 
     ],
     "3": [
         "What job-related skills have u developed?",
-        "Throughout my professional journey, \n\tI've honed a diverse set of job-related skills that contribute 2my effectiveness in various roles. \n\t\tSWE-skills: \n\t\t\texp in coding, debugging, and maintaining sw apps. \n\t\tSW-design skills: \n\t\t\thands-on involvement in swe design and familiarity w sw development life cycle and best practices. \n\t\tcollaboration skills, and \n\t\tbusiness operations skills. "
+        "\n\tI've honed a diverse set of job-related skills that contribute 2my effectiveness in various roles. \n\t\tSWE-skills: \n\t\t\texp in coding, debugging, and maintaining sw apps. \n\t\tSW-design skills: \n\t\t\thands-on involvement in swe design and familiarity w sw development life cycle and best practices. \n\t\tcollaboration skills, and \n\t\tbusiness operations skills. "
     ],
     "4": [
-        "Tell me about your achievements during your tenure @ ombligo.",
+        "Tell me about your achievements during your tenure @omb.",
         "In my recent role @ Ombligo, i played a pivotal role in revamping their E-commerce website implementing cutting-edge features such as a dynamic navigation bar revamped product cards, and a redsigned product page, resulting in a more accessible and intuitive storefront. This initiative resulted in a 20% increase in customer reviews and a substantial boost in online sales by 15%."
     ],
     "5": [
         "Tell me abt ur time w GAL manufacturing. ",
-        "@ GAL manufacturing, I developed key features 2 their elevator monitoring sw, including a real-time visualization of elevator movements and implementing robust backup procedures for SQL databases of elev traffic data. These enhancements improved the efficiency of elevator monitoring system and also resulted in a 30% increase in understanding elevator data location in real-time by field engineers."
+        "@GAL manufacturing, I contr key fts 2 their elev mon'in sw, including a real-t visualization of elev movements and a robust backup procedures of SQL databases for elev traffic data. These enhs res'ed in a 30% inc in under'in elev data loc in real-t by field eng.", 
+        "NOTE:dev'ed = developed, fts = features, elev = elevator, mon'in = monitoring, real-t = real-time, enhs = enhancements, res'ed = resulted under'in = understanding, inc = increase, loc = location, eng = engineers"
     ],
     "6": [
         "Tell me abt ur self--what makes u the perfect candidate?",
-        "I am excited abt da opp @ hand and believe my tech prof, collab mindset, and passion 4 creating digital assets makes me a val cand 4 this position and i look 4ward 2da opp 2 bring my unique perspective and expertise 2 ur team.",
-        "NOTE:opp = opportunity, tech = technical, prof = proficiencies, collab = collaborative, val = valuable, cand = candidate"
+        "I am excited abt da opp @hand and bel my tech prof, collab mindset, and passion 4 creating dass makes me a val cand 4 this position.",
+        "NOTE:opp = opportunity, bel = believe, tech = technical, prof = proficiencies, collab = collaborative, dass = digital assets, val = valuable, cand = candidate"
     ],
     "7": [
         "Tell me abt a time when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (P from PAR--state da prob)",
         "@ ombligo i encountered a scenario where i needed 2 meet a 3-month deadline 4a major e-commerce platform overhaul"
     ],
     "8": [
-        "While @ ombligo how did u manage their products and inventory?",
-        "Util py and Shopify api 2 streamline inv mgmt, creating reports that enh mkt'in campaigns w data-driven strategies, leading 2 inc'ed sales and imp prod performance ", 
+        "While @omb how did u manage their products and inventory?",
+        "Util'ed py and Shopify api 2 streamline inv mgmt, creating reports that enh mkt'in campaigns w data-driven strategies, leading 2 inc'ed sales and imp'ed prod performance ", 
         "NOTE: util = utilized, inv = inventory, mgmt = management, enh = enhanced, mkt'in = marketing"
     ], 
     "9": [
-        "Tell me abt ur time @ Research Foundation CUNY. ", 
-        "During my tenure at the Research Foundation CUNY, I developed sw solutions to generate customized energy reports, resulting in a 50% enhancement in data scraping from FTP servers."
+        "Tell me abt ur time @RFCUNY. ", 
+        "During my tenure @RFCUNY, I dev'ed sws to gen custom reports, res'in in a 50% enh in data scraping from FTP servers.",
+        "NOTE: dev'ed = developed, sws = sw solutions, gen = generate, res'in = resulting, enh = enhancement"
     ], 
     "10": [
         "What's your take away from each role you had in your prof journey?", 
-        "\n\t@RFCUNY: Dev sws 2 gen customized reports from FTP servers and creating data-pipe 4 machine learning models\n\t@GAL: contr key ft 2 their elev mon sw and utilizing js 2 comm w embedded sys\n\t@omb: revamping their e-comm website making it more acc and intui that boosted online sales"
+        "\n\t@RFCUNY: Dev'in sws 2 gen customized reports from FTP servers and creating data-pipelines 4 ml models\n\t@GAL: contr key ft 2 their elev mon sw and utilizing js 2 comm w embedded sys\n\t@omb: revamping their e-comm website making it more acc and intui that boosted online sales"
     ], 
     "11": [
         "How did you aid in revamping ombligo's website, what was your process like?", 
@@ -57,16 +60,25 @@
     ], 
     "13": [
         "What were the res of ur contr 2 GAL's elev mon sw?", 
-        "These enh improved da eff of elev mon sys and res'ed in a 30% inc in understanding elev data location in real-time by field eng", 
-        "NOTE: contr = contribution, mon = monitoring, eff = efficiency, eng = engineers"
+        "These enh res'ed in a 30% inc in understanding elev data location in real-time by field eng", 
+        "NOTE: contr = contribution, mon = monitoring, loc = location, eng = engineers"
     ], 
     "14": [
         "What were the res of ur work @RFCUNY?",
         "a 50% enh in data-scraping from FTP servers" 
     ], 
     "15": [
-        "What actions did you take when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (A from PAR--state da prob)", 
-        "I cond'ed a thr-o analysis of da site unders'in da scope, breaking down del, and iden'in opp. I est milestones 2 track progress and leveraged AI tools 2 streamline productivity, eval progress against set milestones", 
-        "NOTE: cond'ed = conducted, thr-o = through, unders'in = understanding, del = deliverables, iden'in = identifying, opp = opportunities"
+        "What actions did you take when u had 2 meet a tight deadline. How did you prioritize and organize ur work? (A from PAR--state da action)", 
+        "I cond'ed a thr-o analysis of da site under'in da scope, breaking down del, and iden'in opp. I est'ed milestones 2 track progress and leveraged AI tools 2 streamline productivity, eval'in progress against set milestones", 
+        "NOTE: cond'ed = conducted, thr-o = through, under'in = understanding, del = deliverables, iden'in = identifying, opp = opportunities"
+    ], 
+    "16": [
+        "Can you discuss a time when you had to support a client directly with software applications, including any challenges you faced and how you resolved them?", 
+        "@omb, i enc'ed a scen-o where i needed 2 meet a 3-month deadline for a major e-commerce platform overhaul. The goal was 2 enhance the webite. I conducted a thorough analysis of the site, understanding the scope, breaking down deliverables, and identifying opportunities. I established milestones to track progress and leveraged AI tools to streamline productivity, evaluating progress against set milestones. Despite the challenging deadline, I successfully completed the overhaul on time, resulting in a more accessible and intuitive storefront, garnering positive feedbacks from the sales team, and customers. ", 
+        "NOTE: enc'ed = encountered, scen-o = scenario, cond'ed = conducted"
+    ], 
+    "17": [
+        "In your last position, what strategies did you employ to manage inventory effectively?", 
+        "Util'ed py and Shopify api 2 streamline inv mgmt, creating reports that enh mkt'in campaigns w data-driven strategies, leading 2 inc'ed sales and imp'ed prod performance"
     ]
 }

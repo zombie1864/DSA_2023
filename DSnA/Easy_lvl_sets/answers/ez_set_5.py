@@ -156,6 +156,15 @@ def prob_04_nonzero_2_da_left(): # actual meta qstn
 
 
 def _nonzero(arr:List[int]) -> int: 
+    '''  
+    first_0_i = arr.index(0) 
+    while any(el !=0 for el in arr[first_0_i:]): 
+        for i in range(1, len(arr)): 
+            if arr[i] != 0: 
+                arr[i - 1], arr[i] = arr[i], arr[i - 1] 
+        first_0_i = arr.index(0)
+    return len(arr[:first_0_i])
+    '''
     non_zeros = 0
     i = 0
     j = len(arr) - 1

@@ -65,7 +65,15 @@ def prob_01_BFS_undirected_graph():
 
 def _BFS_undirected_graph(G, src): 
     '''  '''
+    seen    = set() 
+    queue   = [src]
 
+    while queue: 
+        node = queue.pop(0)
+        if node not in seen: 
+            print(node, end=' ') 
+            seen.add(node)
+            queue.extend(G[node] - seen) # extend appens an iter like set 2 list
 
 
 
@@ -90,7 +98,18 @@ class BT:
 
 def _BT_BFS(root:BT) -> None: 
     '''  '''
+    if not root: 
+        return 
+    queue = [root] 
 
+    while queue: 
+        node = queue.pop(0)
+        print(node._val, end=' ') 
+        
+        if node._left: 
+            queue.append(node._left) 
+        if node._right: 
+            queue.append(node._right) 
 
 
 
@@ -110,7 +129,24 @@ def prob_03_shortest_path():
 
 def _shortest_path(M:List[List[int]]) -> int: 
     '''  '''
+    dirs        = [(1, 0), (-1, 0), (0, 1), (0, -1)] 
+    rows, cols  = len(M), len(M[0]) 
+    queue       = [(0, 0, 0)] # (x, y, dis) | x, y = 0 start coord | dis = 0 (distance) 
 
+    while queue: 
+        x, y, dis = queue.pop(0) 
+        if (x, y) == (rows - 1, cols - 1): # (rows - 1, cols - 1) bottom right corner 
+            
+            return dis + 1
+        
+        for a, b in dirs: 
+            dx = x + a 
+            dy = y + b 
+
+            if 0 <= dx < rows and 0 <= dy < cols and M[dx][dy] == 0: 
+                queue.append((dx, dy, dis + 1)) 
+
+    return -1 
 
             
 

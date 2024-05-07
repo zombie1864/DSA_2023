@@ -123,19 +123,18 @@ def prob_02_sum_links():
 
 
 def _sum_links(ll1, ll2): 
-    nums1 = [] 
-    nums2 = [] 
+    digits1, digits2 = [], [] 
 
-    def append_nodes_2_list(ll, arr): 
-        curr_node = ll.head
+    def _traverse_N_track(ll, arr): 
+        curr_node = ll.head 
         while curr_node is not None: 
             arr.append(curr_node.val) 
             curr_node = curr_node.nxt 
 
-    append_nodes_2_list(ll1, nums1) 
-    append_nodes_2_list(ll2, nums2) 
-    val1 = int(''.join([str(n) for n in reversed(nums1)]))
-    val2 = int(''.join([str(n) for n in reversed(nums2)]))
+    _traverse_N_track(ll1, digits1) 
+    _traverse_N_track(ll2, digits2) 
+    val1 = int(''.join([str(n) for n in reversed(digits1)]))
+    val2 = int(''.join([str(n) for n in reversed(digits2)]))
     res = val1 + val2
     res_arr = [int(n) for n in str(res)]
     return _convert_list_2_ll(list(reversed(res_arr)))

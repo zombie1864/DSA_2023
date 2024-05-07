@@ -163,22 +163,12 @@ def prob_05_is_continous_seq():
 
 def _is_continous_seq(arr, trg): 
     '''  '''
-    j = 0
-    sum = 0
+    for i in range(len(arr)): 
+        for j in range(1, len(arr)): 
+            if sum(arr[i:j + 1]) == trg: 
+                return True 
+    return False 
 
-    for i in range(len(arr)):
-        sum += arr[i]
-
-        while sum > trg:
-            sum -= arr[j]
-            j += 1
-            if sum < 0: 
-                return False 
-
-        if sum == trg:
-            return True
-
-    return False
 
 if __name__ == '__main__':
     '''  
