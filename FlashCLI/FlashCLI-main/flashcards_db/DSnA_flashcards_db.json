@@ -1,7 +1,7 @@
 {
     "0": [
         "Given an iter, how can you determine if an iter contains any item which satifies some condition? How can you determine if all items in the iter satifies said condition?",
-        "\\n\\tPseudo: \\n\\t\\tANY[cond FOR iter]\\n\\t\\tALL[cond FOR iter]\\n\\tCode:\\n\\t\\tany(iter)\\n\\t\\tall(iter)"
+        "\\n\\tPseudo: \\n\\t\\tany(cond for iter)\\n\\t\\tall(cond for iter)\\n\\tCode:\\n\\t\\tany(iter)\\n\\t\\tall(iter)"
     ],
     "1": [
         "What is the pseudocode for a listComp and dictComp?",
@@ -202,5 +202,9 @@
     "50": [
         "When is the XOR op used in py?", 
         "XOR is commonly used 2 find da unique el in an arr"
+    ], 
+    "51": [
+        "Sometimes it is useful 2 have words in an array be lexicographical order. How do you acheive this so that the words are alphabetized", 
+        "words = sorted(words)"
     ]
 }

@@ -118,25 +118,21 @@ def prob_05_linked_list_rm_dups():
     print('pass' if _linked_list_2_arr(res_2) == [2, 3, 4, 9] else _linked_list_2_arr(res_2))
 
 
-
-class LinkList: 
+class LList: 
     def __init__(self, val=0, nxt=None): 
-        self._val = val 
-        self._nxt = nxt 
+        self.val = val 
+        self.nxt = nxt 
 
-
-def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
+def _linked_list_rm_dups(nums:List[int]) -> LList: 
     '''  
-    '''
-
-
+    ''' 
 
 def _linked_list_2_arr(head): 
     res, curr = [], head 
 
     while curr: 
-        res.append(curr._val)
-        curr = curr._nxt
+        res.append(curr.val)
+        curr = curr.nxt
 
     return res 
 

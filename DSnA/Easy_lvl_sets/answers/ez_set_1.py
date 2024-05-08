@@ -51,10 +51,10 @@ def _longest_cp(words:List[str]) -> str:
     first_word = words[0]
     last_word = words[-1]
 
-    for idx in range(min(len(first_word), len(last_word))): # 
-        if first_word[idx] != last_word[idx]: 
+    for i in range(min(len(first_word), len(last_word))): # 
+        if first_word[i] != last_word[i]: 
             return cp 
-        cp += first_word[idx]
+        cp += first_word[i]
 
     return cp 
 
@@ -75,10 +75,9 @@ def prob_01_plus_one():
 def _plus_one(nums:List[int]) -> List[int]: 
     '''  
     ''' 
-    joined_str_int = ''.join(map(str, nums)) 
-    res_int = int(joined_str_int)
-    res_int += 1 
-    return [int(digit) for digit in str(res_int)]
+    n = int(''.join(map(str, nums)))
+    n += 1 
+    return [int(k) for k in str(n)]
     
 
 def prob_02_len_of_last_word(): 
@@ -113,14 +112,14 @@ def _top_k_frequent_elements(nums:List[int], k:int) -> List[int]:
     '''
     freq = {} 
     
-    for num in sorted(nums): 
-        if num in freq: 
-            freq[num] += 1
+    for n in sorted(nums): 
+        if n in freq: 
+            freq[n] += 1
         else: 
-            freq[num] = 1
-    sorted_dict = sorted(freq.keys(), key=lambda item: freq[item], reverse=True)
+            freq[n] = 1
+    sorted_dict = sorted(freq.keys(), key=lambda m: freq[m], reverse=True)
     
-    return sorted(sorted_dict[:k])
+    return sorted_dict[:k]
 
 
 def prob_04_linked_list_rm_dups():
@@ -150,52 +149,35 @@ def prob_04_linked_list_rm_dups():
     print('pass' if _linked_list_2_arr(res_2) == [2, 3, 4, 9] else _linked_list_2_arr(res_2))
 
 
-class LinkList: 
+class LList: 
     def __init__(self, val=0, nxt=None): 
-        self._val = val 
-        self._nxt = nxt 
+        self.val = val 
+        self.nxt = nxt 
 
-
-def _linked_list_rm_dups(nums:List[int]) -> List[int]: 
+def _linked_list_rm_dups(nums:List[int]) -> LList: 
     '''  
     '''
-    head = _arr_2_linked_list(nums) 
+    head = LList(nums.pop(0))
+    curr_node, node = head, head 
 
-    if not head or not head._nxt: 
-        return head 
-    
-    curr = head 
+    while nums: 
+        curr_node.nxt = LList(nums.pop(0)) 
+        curr_node = curr_node.nxt
 
-    while curr._nxt: 
-        if curr._val == curr._nxt._val: 
-            curr._nxt = curr._nxt._nxt 
+    while node.nxt is not None: 
+        if node.val == node.nxt.val: 
+            node.nxt = node.nxt.nxt 
         else: 
-            curr = curr._nxt
-    
-    return head
+            node = node.nxt  
 
-
-def _arr_2_linked_list(nums:List[int]): 
-    'converts arr 2 linked_list'
-    if not nums: 
-        return None 
-    
-    head = LinkList(nums[0]) 
-    curr = head 
-
-    for num in nums[1:]: 
-        curr._nxt = LinkList(num) 
-        curr = curr._nxt
-
-    return head
-
+    return head 
 
 def _linked_list_2_arr(head): 
     res, curr = [], head 
 
     while curr: 
-        res.append(curr._val)
-        curr = curr._nxt
+        res.append(curr.val)
+        curr = curr.nxt
 
     return res 
 
